@@ -1,9 +1,10 @@
-# code2llm/evolution | 556 func | 62f | 2026-04-19
+# code2llm/evolution | 581 func | 63f | 2026-09-08
+# generated in 0.01s
 
 NEXT[10] (ranked by impact):
   [1] !! SPLIT           toonic/autopilot/scaffold.py
-      WHY: 580L, 2 classes, max CC=23
-      EFFORT: ~4h  IMPACT: 13340
+      WHY: 605L, 2 classes, max CC=23
+      EFFORT: ~4h  IMPACT: 13915
 
   [2] !  SPLIT-FUNC      check_event_and_emit  CC=19  fan=27
       WHY: CC=19 exceeds 15
@@ -42,13 +43,14 @@ NEXT[10] (ranked by impact):
       EFFORT: ~1h  IMPACT: 297
 
 
-RISKS[1]:
+RISKS[2]:
+  ⚠ Splitting planfile.yaml may break 0 import paths
   ⚠ Splitting toonic/autopilot/scaffold.py may break 5 import paths
 
 METRICS-TARGET:
-  CC̄:          4.4 → ≤3.1
+  CC̄:          4.3 → ≤3.0
   max-CC:      38 → ≤19
-  god-modules: 1 → 0
+  god-modules: 2 → 0
   high-CC(≥15): 18 → ≤9
   hub-types:   0 → ≤0
 
@@ -77,4 +79,4 @@ PATTERNS (language parser shared logic):
     - Standardized FunctionInfo/ClassInfo models
 
 HISTORY:
-  (first run — no previous data)
+  prev CC̄=4.4 → now CC̄=4.3

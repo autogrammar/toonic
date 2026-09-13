@@ -1,0 +1,20 @@
+flowchart TD
+%% generated in 0.02s
+    examples___helpers["examples._helpers<br/>2 funcs"]
+    examples__archive_monitoring["examples.archive-monitoring<br/>1 funcs"]
+    examples__programmatic_api["examples.programmatic-api<br/>11 funcs"]
+    examples__protocol_recipes["examples.protocol-recipes<br/>1 funcs"]
+    examples__run_all["examples.run_all<br/>12 funcs"]
+    examples__security_audit["examples.security-audit<br/>69 funcs"]
+    toonic__cli["toonic.cli<br/>15 funcs"]
+    toonic__formats["toonic.formats<br/>130 funcs"]
+    toonic__pipeline["toonic.pipeline<br/>6 funcs"]
+    toonic__server["toonic.server<br/>379 funcs"]
+    examples__security_audit ==>|4| toonic__server
+    examples__programmatic_api ==>|4| toonic__server
+    toonic__cli -->|3| examples__run_all
+    examples__archive_monitoring -->|2| examples___helpers
+    examples__run_all -->|1| toonic__server
+    examples__archive_monitoring -->|1| toonic__server
+    examples__protocol_recipes -->|1| toonic__server
+    toonic__pipeline -->|1| toonic__formats

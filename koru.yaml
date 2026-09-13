@@ -1,0 +1,146 @@
+# koru.yaml — project pipeline (schema 1.0)
+# Created by `koru --init` when this file was missing. Edit freely and commit.
+#
+# Paths use `--project .` — run these from the repository root (same on Linux, macOS, CI).
+# `koru --init --agent-lane auto` picks a lane from the first present marker, in order:
+#   .cursor → .windsurf → .vscode → .idea → .zed → else `local`.
+# When CI=true or GITHUB_ACTIONS=true, auto lane is always `local` (no IDE socket from markers).
+
+schema: "1.0"
+project: local
+description: >
+  When to run koru, planfile, and local quality commands. Koru reads this file
+  for briefs/doctor; it does not auto-run shell steps.
+
+extends_profile: null
+# Optional shared snippets for `koru --context` (see docs / large-repo examples):
+# extends_profile: .koru/profiles/default.yaml
+
+# Optional markdown ↔ sprint sync (uncomment and tune `.planfile/config.yaml` keys first):
+# planfile_markdown_todo:
+#   config_path: .planfile/config.yaml
+#   config_key: koru.markdown_todo
+#   active_profile: default
+#   alternate_profiles: []
+
+environment:
+  # Fold semcod exports into `koru scan` / `koru scan --apply` (off unless set):
+  # KORU_SCAN_SEMCOD_ARTIFACTS: "1"
+  #
+  # Autopilot + queue lane (after init, prefer: `source .planfile/.koru/shell-env.sh`):
+  # KORU_AUTOPILOT_INSTANCE: "main"       # unique per IDE window; default from init lane
+  # KORU_AUTOPILOT_SOCKET: ""            # absolute Unix socket path (overrides instance path)
+  # KORU_AUTOPILOT_IDE: "auto"           # auto | cursor | windsurf | vscode | jetbrains | zed
+  # KORU_SUGGESTED_QUEUE_ACTOR: ""       # planfile queue actor hint (koru-<lane> from init)
+
+when:
+  bootstrap:
+    description: First-time planfile + koru runtime wiring.
+    commands:
+      - koru --init --project .
+      - koru --doctor --project .
+
+  ticket_iteration:
+    description: Each coding iteration — claim work, refresh brief, gate.
+    commands:
+      - task tickets:next
+      - koru --project .
+      - task quality:regix:local
+
+  backlog_hygiene:
+    description: Turn repo signals into planfile tickets (dry-run first).
+    commands:
+      - koru scan --project .
+      - koru scan --apply --project .
+      - koru scan --apply --semcod-artifacts --project .
+
+  autonomous_outer_loop:
+    description: >
+      Unattended cycle (scan → queue → optional autopilot). Tune flags with
+      `koru autonomous up -h` (e.g. --sleep-seconds, --keep-waiting-input). If the queue
+      shows claim_failed, start the planfile HTTP/WebSocket API for your stack. `--agent-lane auto`
+      matches the marker order in the header comments (or pass an explicit lane).
+    commands:
+      - koru autonomous up --project . --max-cycles 1 --agent-lane auto
+
+  before_complete_ticket:
+    description: Right before `planfile ticket done` / policy CI hook.
+    commands:
+      - koru ci run --project .
+
+  publication:
+    description: After CI passes, dispatch validator-agent for protected merge.
+    commands:
+      - koru ci publish --ticket <TICKET_ID> --merge
+
+autonomy:
+  strategy:
+    schema: '1.0'
+    id: accordion_detail_to_general
+    description: 'Default autonomy rhythm: execute concrete planfile tickets first;
+      when the queue is empty, broaden to whole-project discovery and turn findings
+      back into focused planfile tickets.'
+    source_of_truth: planfile
+    default_pipeline:
+      order:
+      - planfile_queue
+      - idle_scan
+      - whole_project_discovery
+      - ticket_generation
+      - queue_execution
+      proposal_policy: explain_before_mutating
+    idle_discovery:
+      enabled: true
+      min_interval_seconds: 60
+      duplicate_cooldown_behavior: continue_to_general_discovery
+      ide_follow_up:
+        enabled: true
+        workflow: standardized_project_discovery_ticket
+        trigger: no_tickets_after_scan_code2llm_todo2code_ticket2dsl
+        prompt: Co jeszcze zostalo do wykonania? zrob z tego nastepne tickety do planfile.
+        expected_output: new_planfile_tickets_only
+      tools:
+        automated:
+        - koru_scan
+        - code2llm
+        - todo2code
+        - ticket2dsl
+        artifact_sources:
+        - jscpd
+        - redup
+        - testql
+        - vallm
+        - pyqual
+        - prefact
+        - regix
+        - redsl
+        - metrun
+        - pfix
+        - todo2code
+        advisory:
+        - goal
+        - costs
+    planning_assistant:
+      enabled: true
+      provider_order:
+      - subllm_cursor
+      subllm_cursor:
+        application: koru-agent
+        function: planning-assistant
+        mode: cursor_sdk
+        fail_closed: true
+      editable_sections:
+      - autonomy.strategy
+      - when
+      - environment
+      update_policy: propose_yaml_patch
+    heuristics:
+      signals:
+      - open_planfile_tickets
+      - idle_streak
+      - scan_duplicate_cooldown
+      - code2llm_artifact_age
+      - semcod_tool_availability
+      - test_health
+      prefer_specific_work_until_queue_empty: true
+      prefer_general_discovery_when_idle: true

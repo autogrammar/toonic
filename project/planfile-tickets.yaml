@@ -1,0 +1,3127 @@
+source: code2llm
+schema: code2llm.planfile_tickets.v1
+project_root: /home/tom/github/autogrammar/toonic
+tickets:
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.autopilot.executor.ActionExecutor._execute_code_change
+    (CC=27)'
+  description: 'code2llm reports `toonic.autopilot.executor.ActionExecutor._execute_code_change`
+    at `toonic/autopilot/executor.py:99` with cyclomatic complexity 27 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/autopilot/executor.py
+  dedupe_key: code2llm:cc:toonic/autopilot/executor.py:toonic.autopilot.executor.ActionExecutor._execute_code_change
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.server.core.query.QueryAdapter._try_local_parse
+    (CC=38)'
+  description: 'code2llm reports `toonic.server.core.query.QueryAdapter._try_local_parse`
+    at `toonic/server/core/query.py:121` with cyclomatic complexity 38 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/server/core/query.py
+  dedupe_key: code2llm:cc:toonic/server/core/query.py:toonic.server.core.query.QueryAdapter._try_local_parse
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _build_argument_parser'
+  description: 'code2llm reports `God Function: _build_argument_parser` in `toonic/cli.py:220`.
+
+
+    Function ''_build_argument_parser'' is oversized: CC=1, fan-out=9, mutations=39.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/cli.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/cli.py:220:God Function: _build_argument_parser'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _extract_roi_crops'
+  description: 'code2llm reports `God Function: _extract_roi_crops` in `toonic/server/watchers/stream/events.py:157`.
+
+
+    Function ''_extract_roi_crops'' is oversized: CC=6, fan-out=10, mutations=30.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/stream/events.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/stream/events.py:157:God
+    Function: _extract_roi_crops'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `examples/run_all.py:494`.
+
+
+    Function ''main'' is oversized: CC=13, fan-out=16, mutations=18.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/run_all.py
+  dedupe_key: 'code2llm:smell:god_function:examples/run_all.py:494:God Function: main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: register_broxeen_routes'
+  description: 'code2llm reports `God Function: register_broxeen_routes` in `toonic/server/transport/broxeen_bridge.py:24`.
+
+
+    Function ''register_broxeen_routes'' is oversized: CC=1, fan-out=44, mutations=77.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/transport/broxeen_bridge.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/transport/broxeen_bridge.py:24:God
+    Function: register_broxeen_routes'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: builder'
+  description: 'code2llm reports `Shotgun Surgery: builder` in `toonic/server/quick/presets.py:56`.
+
+
+    Mutation of variable ''builder'' spans 7 functions in /home/tom/github/autogrammar/toonic/toonic/server/quick/presets.py.
+    Changing this logic requires work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - toonic/server/quick/presets.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:toonic/server/quick/presets.py:56:Shotgun
+    Surgery: builder'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: data'
+  description: 'code2llm reports `Shotgun Surgery: data` in `toonic/server/client.py:166`.
+
+
+    Mutation of variable ''data'' spans 9 functions in /home/tom/github/autogrammar/toonic/toonic/server/client.py.
+    Changing this logic requires work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - toonic/server/client.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:toonic/server/client.py:166:Shotgun
+    Surgery: data'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: overrides'
+  description: 'code2llm reports `Shotgun Surgery: overrides` in `toonic/server/quick/presets.py:56`.
+
+
+    Mutation of variable ''overrides'' spans 7 functions in /home/tom/github/autogrammar/toonic/toonic/server/quick/presets.py.
+    Changing this logic requires work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - toonic/server/quick/presets.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:toonic/server/quick/presets.py:56:Shotgun
+    Surgery: overrides'
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: examples.run_all.execute_all (CC=17)'
+  description: 'code2llm reports `examples.run_all.execute_all` at `examples/run_all.py:346`
+    with cyclomatic complexity 17 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - examples/run_all.py
+  dedupe_key: code2llm:cc:examples/run_all.py:examples.run_all.execute_all
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.autopilot.loop.AutopilotLoop.run (CC=18)'
+  description: 'code2llm reports `toonic.autopilot.loop.AutopilotLoop.run` at `toonic/autopilot/loop.py:69`
+    with cyclomatic complexity 18 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/autopilot/loop.py
+  dedupe_key: code2llm:cc:toonic/autopilot/loop.py:toonic.autopilot.loop.AutopilotLoop.run
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.autopilot.prompts.AutopilotPrompt.build
+    (CC=15)'
+  description: 'code2llm reports `toonic.autopilot.prompts.AutopilotPrompt.build`
+    at `toonic/autopilot/prompts.py:20` with cyclomatic complexity 15 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/autopilot/prompts.py
+  dedupe_key: code2llm:cc:toonic/autopilot/prompts.py:toonic.autopilot.prompts.AutopilotPrompt.build
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.autopilot.scaffold.ProjectScaffold.detect_spec
+    (CC=23)'
+  description: 'code2llm reports `toonic.autopilot.scaffold.ProjectScaffold.detect_spec`
+    at `toonic/autopilot/scaffold.py:394` with cyclomatic complexity 23 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/autopilot/scaffold.py
+  dedupe_key: code2llm:cc:toonic/autopilot/scaffold.py:toonic.autopilot.scaffold.ProjectScaffold.detect_spec
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.autopilot.scaffold.ProjectScaffold.generate
+    (CC=20)'
+  description: 'code2llm reports `toonic.autopilot.scaffold.ProjectScaffold.generate`
+    at `toonic/autopilot/scaffold.py:455` with cyclomatic complexity 20 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/autopilot/scaffold.py
+  dedupe_key: code2llm:cc:toonic/autopilot/scaffold.py:toonic.autopilot.scaffold.ProjectScaffold.generate
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.core.detector.SpecDetector.detect (CC=23)'
+  description: 'code2llm reports `toonic.core.detector.SpecDetector.detect` at `toonic/core/detector.py:15`
+    with cyclomatic complexity 23 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/core/detector.py
+  dedupe_key: code2llm:cc:toonic/core/detector.py:toonic.core.detector.SpecDetector.detect
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.formats.data.CsvHandler.parse (CC=16)'
+  description: 'code2llm reports `toonic.formats.data.CsvHandler.parse` at `toonic/formats/data.py:111`
+    with cyclomatic complexity 16 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/formats/data.py
+  dedupe_key: code2llm:cc:toonic/formats/data.py:toonic.formats.data.CsvHandler.parse
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.formats.database.SqlHandler._extract_columns
+    (CC=15)'
+  description: 'code2llm reports `toonic.formats.database.SqlHandler._extract_columns`
+    at `toonic/formats/database.py:146` with cyclomatic complexity 15 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/formats/database.py
+  dedupe_key: code2llm:cc:toonic/formats/database.py:toonic.formats.database.SqlHandler._extract_columns
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.server.llm.parser.ResponseParser.parse_raw_to_dict
+    (CC=18)'
+  description: 'code2llm reports `toonic.server.llm.parser.ResponseParser.parse_raw_to_dict`
+    at `toonic/server/llm/parser.py:73` with cyclomatic complexity 18 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/server/llm/parser.py
+  dedupe_key: code2llm:cc:toonic/server/llm/parser.py:toonic.server.llm.parser.ResponseParser.parse_raw_to_dict
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.server.transport.routes.api.get_events_file
+    (CC=19)'
+  description: 'code2llm reports `toonic.server.transport.routes.api.get_events_file`
+    at `toonic/server/transport/routes/api.py:112` with cyclomatic complexity 19 (limit
+    15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/server/transport/routes/api.py
+  dedupe_key: code2llm:cc:toonic/server/transport/routes/api.py:toonic.server.transport.routes.api.get_events_file
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.server.transport.routes.api.get_exchanges
+    (CC=15)'
+  description: 'code2llm reports `toonic.server.transport.routes.api.get_exchanges`
+    at `toonic/server/transport/routes/api.py:181` with cyclomatic complexity 15 (limit
+    15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/server/transport/routes/api.py
+  dedupe_key: code2llm:cc:toonic/server/transport/routes/api.py:toonic.server.transport.routes.api.get_exchanges
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.server.triggers.scheduler.RuleState.evaluate
+    (CC=21)'
+  description: 'code2llm reports `toonic.server.triggers.scheduler.RuleState.evaluate`
+    at `toonic/server/triggers/scheduler.py:65` with cyclomatic complexity 21 (limit
+    15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/server/triggers/scheduler.py
+  dedupe_key: code2llm:cc:toonic/server/triggers/scheduler.py:toonic.server.triggers.scheduler.RuleState.evaluate
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.server.watchers.database_watcher.DatabaseWatcher._detect_changes
+    (CC=18)'
+  description: 'code2llm reports `toonic.server.watchers.database_watcher.DatabaseWatcher._detect_changes`
+    at `toonic/server/watchers/database_watcher.py:292` with cyclomatic complexity
+    18 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/server/watchers/database_watcher.py
+  dedupe_key: code2llm:cc:toonic/server/watchers/database_watcher.py:toonic.server.watchers.database_watcher.DatabaseWatcher._detect_changes
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.server.watchers.directory_watcher.DirectoryWatcher._check_changes
+    (CC=18)'
+  description: 'code2llm reports `toonic.server.watchers.directory_watcher.DirectoryWatcher._check_changes`
+    at `toonic/server/watchers/directory_watcher.py:114` with cyclomatic complexity
+    18 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/server/watchers/directory_watcher.py
+  dedupe_key: code2llm:cc:toonic/server/watchers/directory_watcher.py:toonic.server.watchers.directory_watcher.DirectoryWatcher._check_changes
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.server.watchers.network_watcher.NetworkWatcher._detect_changes
+    (CC=15)'
+  description: 'code2llm reports `toonic.server.watchers.network_watcher.NetworkWatcher._detect_changes`
+    at `toonic/server/watchers/network_watcher.py:308` with cyclomatic complexity
+    15 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/server/watchers/network_watcher.py
+  dedupe_key: code2llm:cc:toonic/server/watchers/network_watcher.py:toonic.server.watchers.network_watcher.NetworkWatcher._detect_changes
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.server.watchers.stream.capture.capture_opencv
+    (CC=16)'
+  description: 'code2llm reports `toonic.server.watchers.stream.capture.capture_opencv`
+    at `toonic/server/watchers/stream/capture.py:18` with cyclomatic complexity 16
+    (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/server/watchers/stream/capture.py
+  dedupe_key: code2llm:cc:toonic/server/watchers/stream/capture.py:toonic.server.watchers.stream.capture.capture_opencv
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: toonic.server.watchers.stream.events.check_event_and_emit
+    (CC=19)'
+  description: 'code2llm reports `toonic.server.watchers.stream.events.check_event_and_emit`
+    at `toonic/server/watchers/stream/events.py:20` with cyclomatic complexity 19
+    (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - toonic/server/watchers/stream/events.py
+  dedupe_key: code2llm:cc:toonic/server/watchers/stream/events.py:toonic.server.watchers.stream.events.check_event_and_emit
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: client, self, logic, target_fmt'
+  description: 'code2llm reports `Data Clump: client, self, logic, target_fmt` in
+    `toonic/formats/config.py:135`.
+
+
+    Arguments (client, self, logic, target_fmt) are used together in multiple functions:
+    toonic.formats.config.DockerfileHandler.reproduce, toonic.formats.config.EnvHandler.reproduce.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/config.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/config.py:135:Data Clump:
+    client, self, logic, target_fmt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: client, self, logic, target_fmt'
+  description: 'code2llm reports `Data Clump: client, self, logic, target_fmt` in
+    `toonic/formats/config.py:235`.
+
+
+    Arguments (client, self, logic, target_fmt) are used together in multiple functions:
+    toonic.formats.config.DockerfileHandler.reproduce, toonic.formats.config.EnvHandler.reproduce.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/config.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/config.py:235:Data Clump:
+    client, self, logic, target_fmt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: client, self, logic, target_fmt'
+  description: 'code2llm reports `Data Clump: client, self, logic, target_fmt` in
+    `toonic/formats/infra.py:126`.
+
+
+    Arguments (client, self, logic, target_fmt) are used together in multiple functions:
+    toonic.formats.infra.KubernetesHandler.reproduce, toonic.formats.infra.GithubActionsHandler.reproduce.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/infra.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/infra.py:126:Data Clump: client,
+    self, logic, target_fmt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: client, self, logic, target_fmt'
+  description: 'code2llm reports `Data Clump: client, self, logic, target_fmt` in
+    `toonic/formats/infra.py:223`.
+
+
+    Arguments (client, self, logic, target_fmt) are used together in multiple functions:
+    toonic.formats.infra.KubernetesHandler.reproduce, toonic.formats.infra.GithubActionsHandler.reproduce.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/infra.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/infra.py:223:Data Clump: client,
+    self, logic, target_fmt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: client, self, logic, target_fmt'
+  description: 'code2llm reports `Data Clump: client, self, logic, target_fmt` in
+    `toonic/formats/data.py:230`.
+
+
+    Arguments (client, self, logic, target_fmt) are used together in multiple functions:
+    toonic.formats.data.CsvHandler.reproduce, toonic.formats.data.JsonDataHandler.reproduce.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/data.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/data.py:230:Data Clump: client,
+    self, logic, target_fmt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: client, self, logic, target_fmt'
+  description: 'code2llm reports `Data Clump: client, self, logic, target_fmt` in
+    `toonic/formats/data.py:340`.
+
+
+    Arguments (client, self, logic, target_fmt) are used together in multiple functions:
+    toonic.formats.data.CsvHandler.reproduce, toonic.formats.data.JsonDataHandler.reproduce.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/data.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/data.py:340:Data Clump: client,
+    self, logic, target_fmt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: client, self, logic, target_fmt'
+  description: 'code2llm reports `Data Clump: client, self, logic, target_fmt` in
+    `toonic/formats/document.py:238`.
+
+
+    Arguments (client, self, logic, target_fmt) are used together in multiple functions:
+    toonic.formats.document.MarkdownHandler.reproduce, toonic.formats.document.TextHandler.reproduce,
+    toonic.formats.document.RstHandler.reproduce.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/document.py:238:Data Clump:
+    client, self, logic, target_fmt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: client, self, logic, target_fmt'
+  description: 'code2llm reports `Data Clump: client, self, logic, target_fmt` in
+    `toonic/formats/document.py:337`.
+
+
+    Arguments (client, self, logic, target_fmt) are used together in multiple functions:
+    toonic.formats.document.MarkdownHandler.reproduce, toonic.formats.document.TextHandler.reproduce,
+    toonic.formats.document.RstHandler.reproduce.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/document.py:337:Data Clump:
+    client, self, logic, target_fmt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: client, self, logic, target_fmt'
+  description: 'code2llm reports `Data Clump: client, self, logic, target_fmt` in
+    `toonic/formats/document.py:399`.
+
+
+    Arguments (client, self, logic, target_fmt) are used together in multiple functions:
+    toonic.formats.document.MarkdownHandler.reproduce, toonic.formats.document.TextHandler.reproduce,
+    toonic.formats.document.RstHandler.reproduce.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/document.py:399:Data Clump:
+    client, self, logic, target_fmt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: content, self, path'
+  description: 'code2llm reports `Data Clump: content, self, path` in `toonic/formats/config.py:143`.
+
+
+    Arguments (content, self, path) are used together in multiple functions: toonic.formats.config.DockerfileHandler.sniff,
+    toonic.formats.config.EnvHandler.sniff.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/config.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/config.py:143:Data Clump:
+    content, self, path'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: content, self, path'
+  description: 'code2llm reports `Data Clump: content, self, path` in `toonic/formats/config.py:246`.
+
+
+    Arguments (content, self, path) are used together in multiple functions: toonic.formats.config.DockerfileHandler.sniff,
+    toonic.formats.config.EnvHandler.sniff.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/config.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/config.py:246:Data Clump:
+    content, self, path'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: content, self, path'
+  description: 'code2llm reports `Data Clump: content, self, path` in `toonic/formats/infra.py:146`.
+
+
+    Arguments (content, self, path) are used together in multiple functions: toonic.formats.infra.KubernetesHandler.sniff,
+    toonic.formats.infra.GithubActionsHandler.sniff.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/infra.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/infra.py:146:Data Clump: content,
+    self, path'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: content, self, path'
+  description: 'code2llm reports `Data Clump: content, self, path` in `toonic/formats/infra.py:248`.
+
+
+    Arguments (content, self, path) are used together in multiple functions: toonic.formats.infra.KubernetesHandler.sniff,
+    toonic.formats.infra.GithubActionsHandler.sniff.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/infra.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/infra.py:248:Data Clump: content,
+    self, path'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: content, self, path'
+  description: 'code2llm reports `Data Clump: content, self, path` in `toonic/formats/data.py:245`.
+
+
+    Arguments (content, self, path) are used together in multiple functions: toonic.formats.data.CsvHandler.sniff,
+    toonic.formats.data.JsonDataHandler.sniff.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/data.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/data.py:245:Data Clump: content,
+    self, path'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: content, self, path'
+  description: 'code2llm reports `Data Clump: content, self, path` in `toonic/formats/data.py:357`.
+
+
+    Arguments (content, self, path) are used together in multiple functions: toonic.formats.data.CsvHandler.sniff,
+    toonic.formats.data.JsonDataHandler.sniff.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/data.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/data.py:357:Data Clump: content,
+    self, path'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: content, self, path'
+  description: 'code2llm reports `Data Clump: content, self, path` in `toonic/formats/document.py:279`.
+
+
+    Arguments (content, self, path) are used together in multiple functions: toonic.formats.document.MarkdownHandler.sniff,
+    toonic.formats.document.TextHandler.sniff, toonic.formats.document.RstHandler.sniff.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/document.py:279:Data Clump:
+    content, self, path'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: content, self, path'
+  description: 'code2llm reports `Data Clump: content, self, path` in `toonic/formats/document.py:342`.
+
+
+    Arguments (content, self, path) are used together in multiple functions: toonic.formats.document.MarkdownHandler.sniff,
+    toonic.formats.document.TextHandler.sniff, toonic.formats.document.RstHandler.sniff.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/document.py:342:Data Clump:
+    content, self, path'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: content, self, path'
+  description: 'code2llm reports `Data Clump: content, self, path` in `toonic/formats/document.py:411`.
+
+
+    Arguments (content, self, path) are used together in multiple functions: toonic.formats.document.MarkdownHandler.sniff,
+    toonic.formats.document.TextHandler.sniff, toonic.formats.document.RstHandler.sniff.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/document.py:411:Data Clump:
+    content, self, path'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: count, out, delay'
+  description: 'code2llm reports `Data Clump: count, out, delay` in `examples/log-monitoring/generate_logs.py:94`.
+
+
+    Arguments (count, out, delay) are used together in multiple functions: examples.log-monitoring.generate_logs.run_normal,
+    examples.log-monitoring.generate_logs.run_error_spike.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - examples/log-monitoring/generate_logs.py
+  dedupe_key: 'code2llm:smell:data_clump:examples/log-monitoring/generate_logs.py:94:Data
+    Clump: count, out, delay'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: count, out, delay'
+  description: 'code2llm reports `Data Clump: count, out, delay` in `examples/log-monitoring/generate_logs.py:113`.
+
+
+    Arguments (count, out, delay) are used together in multiple functions: examples.log-monitoring.generate_logs.run_normal,
+    examples.log-monitoring.generate_logs.run_error_spike.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - examples/log-monitoring/generate_logs.py
+  dedupe_key: 'code2llm:smell:data_clump:examples/log-monitoring/generate_logs.py:113:Data
+    Clump: count, out, delay'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: d, self, duration_s'
+  description: 'code2llm reports `Data Clump: d, self, duration_s` in `toonic/server/triggers/nlp2yaml.py:211`.
+
+
+    Arguments (d, self, duration_s) are used together in multiple functions: toonic.server.triggers.nlp2yaml.NLP2YAML._parse_object_condition,
+    toonic.server.triggers.nlp2yaml.NLP2YAML._parse_motion_condition.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/triggers/nlp2yaml.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/triggers/nlp2yaml.py:211:Data
+    Clump: d, self, duration_s'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: d, self, duration_s'
+  description: 'code2llm reports `Data Clump: d, self, duration_s` in `toonic/server/triggers/nlp2yaml.py:244`.
+
+
+    Arguments (d, self, duration_s) are used together in multiple functions: toonic.server.triggers.nlp2yaml.NLP2YAML._parse_object_condition,
+    toonic.server.triggers.nlp2yaml.NLP2YAML._parse_motion_condition.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/triggers/nlp2yaml.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/triggers/nlp2yaml.py:244:Data
+    Clump: d, self, duration_s'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: fmt, self, logic'
+  description: 'code2llm reports `Data Clump: fmt, self, logic` in `toonic/formats/config.py:121`.
+
+
+    Arguments (fmt, self, logic) are used together in multiple functions: toonic.formats.config.DockerfileHandler.to_spec,
+    toonic.formats.config.EnvHandler.to_spec.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/config.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/config.py:121:Data Clump:
+    fmt, self, logic'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: fmt, self, logic'
+  description: 'code2llm reports `Data Clump: fmt, self, logic` in `toonic/formats/config.py:220`.
+
+
+    Arguments (fmt, self, logic) are used together in multiple functions: toonic.formats.config.DockerfileHandler.to_spec,
+    toonic.formats.config.EnvHandler.to_spec.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/config.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/config.py:220:Data Clump:
+    fmt, self, logic'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: fmt, self, logic'
+  description: 'code2llm reports `Data Clump: fmt, self, logic` in `toonic/formats/infra.py:114`.
+
+
+    Arguments (fmt, self, logic) are used together in multiple functions: toonic.formats.infra.KubernetesHandler.to_spec,
+    toonic.formats.infra.GithubActionsHandler.to_spec.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/infra.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/infra.py:114:Data Clump: fmt,
+    self, logic'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: fmt, self, logic'
+  description: 'code2llm reports `Data Clump: fmt, self, logic` in `toonic/formats/infra.py:210`.
+
+
+    Arguments (fmt, self, logic) are used together in multiple functions: toonic.formats.infra.KubernetesHandler.to_spec,
+    toonic.formats.infra.GithubActionsHandler.to_spec.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/infra.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/infra.py:210:Data Clump: fmt,
+    self, logic'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: fmt, self, logic'
+  description: 'code2llm reports `Data Clump: fmt, self, logic` in `toonic/formats/data.py:184`.
+
+
+    Arguments (fmt, self, logic) are used together in multiple functions: toonic.formats.data.CsvHandler.to_spec,
+    toonic.formats.data.JsonDataHandler.to_spec.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/data.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/data.py:184:Data Clump: fmt,
+    self, logic'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: fmt, self, logic'
+  description: 'code2llm reports `Data Clump: fmt, self, logic` in `toonic/formats/data.py:326`.
+
+
+    Arguments (fmt, self, logic) are used together in multiple functions: toonic.formats.data.CsvHandler.to_spec,
+    toonic.formats.data.JsonDataHandler.to_spec.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/data.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/data.py:326:Data Clump: fmt,
+    self, logic'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: fmt, self, logic'
+  description: 'code2llm reports `Data Clump: fmt, self, logic` in `toonic/formats/document.py:191`.
+
+
+    Arguments (fmt, self, logic) are used together in multiple functions: toonic.formats.document.MarkdownHandler.to_spec,
+    toonic.formats.document.TextHandler.to_spec, toonic.formats.document.RstHandler.to_spec.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/document.py:191:Data Clump:
+    fmt, self, logic'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: fmt, self, logic'
+  description: 'code2llm reports `Data Clump: fmt, self, logic` in `toonic/formats/document.py:328`.
+
+
+    Arguments (fmt, self, logic) are used together in multiple functions: toonic.formats.document.MarkdownHandler.to_spec,
+    toonic.formats.document.TextHandler.to_spec, toonic.formats.document.RstHandler.to_spec.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/document.py:328:Data Clump:
+    fmt, self, logic'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: fmt, self, logic'
+  description: 'code2llm reports `Data Clump: fmt, self, logic` in `toonic/formats/document.py:390`.
+
+
+    Arguments (fmt, self, logic) are used together in multiple functions: toonic.formats.document.MarkdownHandler.to_spec,
+    toonic.formats.document.TextHandler.to_spec, toonic.formats.document.RstHandler.to_spec.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/formats/document.py:390:Data Clump:
+    fmt, self, logic'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: goal, self, chunks, images'
+  description: 'code2llm reports `Data Clump: goal, self, chunks, images` in `toonic/server/llm/prompts.py:19`.
+
+
+    Arguments (goal, self, chunks, images) are used together in multiple functions:
+    toonic.server.llm.prompts.PromptBuilder.build, toonic.server.llm.prompts.GenericPrompt.build,
+    toonic.server.llm.prompts.CodeAnalysisPrompt.build, toonic.server.llm.prompts.CCTVEventPrompt.build.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/llm/prompts.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/llm/prompts.py:19:Data Clump:
+    goal, self, chunks, images'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: goal, self, chunks, images'
+  description: 'code2llm reports `Data Clump: goal, self, chunks, images` in `toonic/server/llm/prompts.py:33`.
+
+
+    Arguments (goal, self, chunks, images) are used together in multiple functions:
+    toonic.server.llm.prompts.PromptBuilder.build, toonic.server.llm.prompts.GenericPrompt.build,
+    toonic.server.llm.prompts.CodeAnalysisPrompt.build, toonic.server.llm.prompts.CCTVEventPrompt.build.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/llm/prompts.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/llm/prompts.py:33:Data Clump:
+    goal, self, chunks, images'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: goal, self, chunks, images'
+  description: 'code2llm reports `Data Clump: goal, self, chunks, images` in `toonic/server/llm/prompts.py:69`.
+
+
+    Arguments (goal, self, chunks, images) are used together in multiple functions:
+    toonic.server.llm.prompts.PromptBuilder.build, toonic.server.llm.prompts.GenericPrompt.build,
+    toonic.server.llm.prompts.CodeAnalysisPrompt.build, toonic.server.llm.prompts.CCTVEventPrompt.build.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/llm/prompts.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/llm/prompts.py:69:Data Clump:
+    goal, self, chunks, images'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: goal, self, chunks, images'
+  description: 'code2llm reports `Data Clump: goal, self, chunks, images` in `toonic/server/llm/prompts.py:112`.
+
+
+    Arguments (goal, self, chunks, images) are used together in multiple functions:
+    toonic.server.llm.prompts.PromptBuilder.build, toonic.server.llm.prompts.GenericPrompt.build,
+    toonic.server.llm.prompts.CodeAnalysisPrompt.build, toonic.server.llm.prompts.CCTVEventPrompt.build.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/llm/prompts.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/llm/prompts.py:112:Data Clump:
+    goal, self, chunks, images'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: goal, self, system_prompt'
+  description: 'code2llm reports `Data Clump: goal, self, system_prompt` in `toonic/server/core/accumulator.py:96`.
+
+
+    Arguments (goal, self, system_prompt) are used together in multiple functions:
+    toonic.server.core.accumulator.ContextAccumulator.get_context, toonic.server.core.accumulator.ContextAccumulator._build_context.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/core/accumulator.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/core/accumulator.py:96:Data
+    Clump: goal, self, system_prompt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: goal, self, system_prompt'
+  description: 'code2llm reports `Data Clump: goal, self, system_prompt` in `toonic/server/core/accumulator.py:147`.
+
+
+    Arguments (goal, self, system_prompt) are used together in multiple functions:
+    toonic.server.core.accumulator.ContextAccumulator.get_context, toonic.server.core.accumulator.ContextAccumulator._build_context.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/core/accumulator.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/core/accumulator.py:147:Data
+    Clump: goal, self, system_prompt'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: model, self, question'
+  description: 'code2llm reports `Data Clump: model, self, question` in `toonic/server/core/query.py:67`.
+
+
+    Arguments (model, self, question) are used together in multiple functions: toonic.server.core.query.QueryAdapter.nlp_query,
+    toonic.server.core.query.QueryAdapter._generate_sql.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/core/query.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/core/query.py:67:Data Clump:
+    model, self, question'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: model, self, question'
+  description: 'code2llm reports `Data Clump: model, self, question` in `toonic/server/core/query.py:225`.
+
+
+    Arguments (model, self, question) are used together in multiple functions: toonic.server.core.query.QueryAdapter.nlp_query,
+    toonic.server.core.query.QueryAdapter._generate_sql.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/core/query.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/core/query.py:225:Data Clump:
+    model, self, question'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: source, self, goal, description'
+  description: 'code2llm reports `Data Clump: source, self, goal, description` in
+    `toonic/server/triggers/nlp2yaml.py:96`.
+
+
+    Arguments (source, self, goal, description) are used together in multiple functions:
+    toonic.server.triggers.nlp2yaml.NLP2YAML.generate, toonic.server.triggers.nlp2yaml.NLP2YAML.generate_yaml,
+    toonic.server.triggers.nlp2yaml.NLP2YAML._generate_via_llm.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/triggers/nlp2yaml.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/triggers/nlp2yaml.py:96:Data
+    Clump: source, self, goal, description'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: source, self, goal, description'
+  description: 'code2llm reports `Data Clump: source, self, goal, description` in
+    `toonic/server/triggers/nlp2yaml.py:137`.
+
+
+    Arguments (source, self, goal, description) are used together in multiple functions:
+    toonic.server.triggers.nlp2yaml.NLP2YAML.generate, toonic.server.triggers.nlp2yaml.NLP2YAML.generate_yaml,
+    toonic.server.triggers.nlp2yaml.NLP2YAML._generate_via_llm.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/triggers/nlp2yaml.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/triggers/nlp2yaml.py:137:Data
+    Clump: source, self, goal, description'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: source, self, goal, description'
+  description: 'code2llm reports `Data Clump: source, self, goal, description` in
+    `toonic/server/triggers/nlp2yaml.py:358`.
+
+
+    Arguments (source, self, goal, description) are used together in multiple functions:
+    toonic.server.triggers.nlp2yaml.NLP2YAML.generate, toonic.server.triggers.nlp2yaml.NLP2YAML.generate_yaml,
+    toonic.server.triggers.nlp2yaml.NLP2YAML._generate_via_llm.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/triggers/nlp2yaml.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/triggers/nlp2yaml.py:358:Data
+    Clump: source, self, goal, description'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: source_category, data, self'
+  description: 'code2llm reports `Data Clump: source_category, data, self` in `toonic/server/triggers/scheduler.py:65`.
+
+
+    Arguments (source_category, data, self) are used together in multiple functions:
+    toonic.server.triggers.scheduler.RuleState.evaluate, toonic.server.triggers.scheduler.TriggerScheduler.evaluate,
+    toonic.server.triggers.scheduler.TriggerScheduler.evaluate_async.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/triggers/scheduler.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/triggers/scheduler.py:65:Data
+    Clump: source_category, data, self'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: source_category, data, self'
+  description: 'code2llm reports `Data Clump: source_category, data, self` in `toonic/server/triggers/scheduler.py:185`.
+
+
+    Arguments (source_category, data, self) are used together in multiple functions:
+    toonic.server.triggers.scheduler.RuleState.evaluate, toonic.server.triggers.scheduler.TriggerScheduler.evaluate,
+    toonic.server.triggers.scheduler.TriggerScheduler.evaluate_async.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/triggers/scheduler.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/triggers/scheduler.py:185:Data
+    Clump: source_category, data, self'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: source_category, data, self'
+  description: 'code2llm reports `Data Clump: source_category, data, self` in `toonic/server/triggers/scheduler.py:197`.
+
+
+    Arguments (source_category, data, self) are used together in multiple functions:
+    toonic.server.triggers.scheduler.RuleState.evaluate, toonic.server.triggers.scheduler.TriggerScheduler.evaluate,
+    toonic.server.triggers.scheduler.TriggerScheduler.evaluate_async.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - toonic/server/triggers/scheduler.py
+  dedupe_key: 'code2llm:smell:data_clump:toonic/server/triggers/scheduler.py:197:Data
+    Clump: source_category, data, self'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: subject, self, message'
+  description: 'code2llm reports `Data Clump: subject, self, message` in `examples/security-audit/continuous_monitoring.py:418`.
+
+
+    Arguments (subject, self, message) are used together in multiple functions: examples.security-audit.continuous_monitoring.SecurityMonitor.send_email_alert,
+    examples.security-audit.continuous_monitoring.SecurityMonitor.send_webhook_alert.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - examples/security-audit/continuous_monitoring.py
+  dedupe_key: 'code2llm:smell:data_clump:examples/security-audit/continuous_monitoring.py:418:Data
+    Clump: subject, self, message'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: subject, self, message'
+  description: 'code2llm reports `Data Clump: subject, self, message` in `examples/security-audit/continuous_monitoring.py:440`.
+
+
+    Arguments (subject, self, message) are used together in multiple functions: examples.security-audit.continuous_monitoring.SecurityMonitor.send_email_alert,
+    examples.security-audit.continuous_monitoring.SecurityMonitor.send_webhook_alert.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - examples/security-audit/continuous_monitoring.py
+  dedupe_key: 'code2llm:smell:data_clump:examples/security-audit/continuous_monitoring.py:440:Data
+    Clump: subject, self, message'
+- signal: code2llm_smell_feature_envy
+  title: 'Address code smell: Feature Envy: demo_config_builder'
+  description: 'code2llm reports `Feature Envy: demo_config_builder` in `examples/programmatic-api/demo_quick.py:49`.
+
+
+    Function ''demo_config_builder'' mutates multiple variables in other modules:
+    ConfigBuilder().add(''./src/'').add(''log:./app.log''), ConfigBuilder().add(''./src/'').add(''log:./app.log'').add(''docker:*''),
+    ConfigBuilder().add(''./src/'').
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - feature-envy
+  files:
+  - examples/programmatic-api/demo_quick.py
+  dedupe_key: 'code2llm:smell:feature_envy:examples/programmatic-api/demo_quick.py:49:Feature
+    Envy: demo_config_builder'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: __init__'
+  description: 'code2llm reports `God Function: __init__` in `toonic/server/main.py:35`.
+
+
+    Function ''__init__'' is oversized: CC=6, fan-out=13, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/main.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/main.py:35:God Function:
+    __init__'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: __init__'
+  description: 'code2llm reports `God Function: __init__` in `toonic/server/watchers/network_watcher.py:27`.
+
+
+    Function ''__init__'' is oversized: CC=8, fan-out=12, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/network_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/network_watcher.py:27:God
+    Function: __init__'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _build_context'
+  description: 'code2llm reports `God Function: _build_context` in `toonic/server/core/accumulator.py:147`.
+
+
+    Function ''_build_context'' is oversized: CC=9, fan-out=13, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/core/accumulator.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/core/accumulator.py:147:God
+    Function: _build_context'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _build_server_config'
+  description: 'code2llm reports `God Function: _build_server_config` in `toonic/server/__main__.py:231`.
+
+
+    Function ''_build_server_config'' is oversized: CC=9, fan-out=7, mutations=10.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/__main__.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/__main__.py:231:God Function:
+    _build_server_config'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _build_tree_toon'
+  description: 'code2llm reports `God Function: _build_tree_toon` in `toonic/server/watchers/directory_watcher.py:263`.
+
+
+    Function ''_build_tree_toon'' is oversized: CC=7, fan-out=14, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/directory_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/directory_watcher.py:263:God
+    Function: _build_tree_toon'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _build_trigger_config'
+  description: 'code2llm reports `God Function: _build_trigger_config` in `toonic/server/__main__.py:262`.
+
+
+    Function ''_build_trigger_config'' is oversized: CC=8, fan-out=13, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/__main__.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/__main__.py:262:God Function:
+    _build_trigger_config'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _check'
+  description: 'code2llm reports `God Function: _check` in `toonic/server/watchers/network_watcher.py:80`.
+
+
+    Function ''_check'' is oversized: CC=11, fan-out=14, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/network_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/network_watcher.py:80:God
+    Function: _check'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _check'
+  description: 'code2llm reports `God Function: _check` in `toonic/server/watchers/process_watcher.py:87`.
+
+
+    Function ''_check'' is oversized: CC=10, fan-out=14, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/process_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/process_watcher.py:87:God
+    Function: _check'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _check'
+  description: 'code2llm reports `God Function: _check` in `toonic/server/watchers/database_watcher.py:93`.
+
+
+    Function ''_check'' is oversized: CC=7, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/database_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/database_watcher.py:93:God
+    Function: _check'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _check'
+  description: 'code2llm reports `God Function: _check` in `toonic/server/watchers/docker_watcher.py:87`.
+
+
+    Function ''_check'' is oversized: CC=14, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/docker_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/docker_watcher.py:87:God
+    Function: _check'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _check_changes'
+  description: 'code2llm reports `God Function: _check_changes` in `toonic/server/watchers/file_watcher.py:102`.
+
+
+    Function ''_check_changes'' is oversized: CC=9, fan-out=17, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/file_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/file_watcher.py:102:God
+    Function: _check_changes'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _check_new_lines'
+  description: 'code2llm reports `God Function: _check_new_lines` in `toonic/server/watchers/log_watcher.py:108`.
+
+
+    Function ''_check_new_lines'' is oversized: CC=6, fan-out=17, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/log_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/log_watcher.py:108:God
+    Function: _check_new_lines'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _check_sqlite'
+  description: 'code2llm reports `God Function: _check_sqlite` in `toonic/server/watchers/database_watcher.py:140`.
+
+
+    Function ''_check_sqlite'' is oversized: CC=2, fan-out=24, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/database_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/database_watcher.py:140:God
+    Function: _check_sqlite'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _check_ssl_cert'
+  description: 'code2llm reports `God Function: _check_ssl_cert` in `toonic/server/watchers/http_watcher.py:277`.
+
+
+    Function ''_check_ssl_cert'' is oversized: CC=5, fan-out=14, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/http_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/http_watcher.py:277:God
+    Function: _check_ssl_cert'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _check_target'
+  description: 'code2llm reports `God Function: _check_target` in `toonic/server/watchers/network_watcher.py:132`.
+
+
+    Function ''_check_target'' is oversized: CC=12, fan-out=18, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/network_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/network_watcher.py:132:God
+    Function: _check_target'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _consume_watcher'
+  description: 'code2llm reports `God Function: _consume_watcher` in `toonic/server/main.py:171`.
+
+
+    Function ''_consume_watcher'' is oversized: CC=9, fan-out=14, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/main.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/main.py:171:God Function:
+    _consume_watcher'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _detect_sync'
+  description: 'code2llm reports `God Function: _detect_sync` in `toonic/server/watchers/stream/detection.py:51`.
+
+
+    Function ''_detect_sync'' is oversized: CC=8, fan-out=11, mutations=23.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/stream/detection.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/stream/detection.py:51:God
+    Function: _detect_sync'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _execute_delete'
+  description: 'code2llm reports `God Function: _execute_delete` in `toonic/autopilot/executor.py:163`.
+
+
+    Function ''_execute_delete'' is oversized: CC=7, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/autopilot/executor.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/autopilot/executor.py:163:God Function:
+    _execute_delete'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _extract_sections'
+  description: 'code2llm reports `God Function: _extract_sections` in `toonic/formats/document.py:129`.
+
+
+    Function ''_extract_sections'' is oversized: CC=8, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/document.py:129:God Function:
+    _extract_sections'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _fetch'
+  description: 'code2llm reports `God Function: _fetch` in `toonic/server/watchers/http_watcher.py:217`.
+
+
+    Function ''_fetch'' is oversized: CC=4, fan-out=14, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/http_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/http_watcher.py:217:God
+    Function: _fetch'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _fetch_stats'
+  description: 'code2llm reports `God Function: _fetch_stats` in `toonic/server/watchers/docker_watcher.py:186`.
+
+
+    Function ''_fetch_stats'' is oversized: CC=9, fan-out=12, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/docker_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/docker_watcher.py:186:God
+    Function: _fetch_stats'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _find_processes'
+  description: 'code2llm reports `God Function: _find_processes` in `toonic/server/watchers/process_watcher.py:236`.
+
+
+    Function ''_find_processes'' is oversized: CC=14, fan-out=21, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/process_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/process_watcher.py:236:God
+    Function: _find_processes'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _fix_loop'
+  description: 'code2llm reports `God Function: _fix_loop` in `toonic/autopilot/loop.py:228`.
+
+
+    Function ''_fix_loop'' is oversized: CC=7, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/autopilot/loop.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/autopilot/loop.py:228:God Function:
+    _fix_loop'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _full_scan'
+  description: 'code2llm reports `God Function: _full_scan` in `toonic/server/watchers/file_watcher.py:46`.
+
+
+    Function ''_full_scan'' is oversized: CC=9, fan-out=20, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/file_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/file_watcher.py:46:God
+    Function: _full_scan'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _generate_sql'
+  description: 'code2llm reports `God Function: _generate_sql` in `toonic/server/core/query.py:225`.
+
+
+    Function ''_generate_sql'' is oversized: CC=12, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/core/query.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/core/query.py:225:God Function:
+    _generate_sql'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _initial_tail'
+  description: 'code2llm reports `God Function: _initial_tail` in `toonic/server/watchers/log_watcher.py:64`.
+
+
+    Function ''_initial_tail'' is oversized: CC=3, fan-out=16, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/log_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/log_watcher.py:64:God
+    Function: _initial_tail'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _list_containers'
+  description: 'code2llm reports `God Function: _list_containers` in `toonic/server/watchers/docker_watcher.py:148`.
+
+
+    Function ''_list_containers'' is oversized: CC=6, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/docker_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/docker_watcher.py:148:God
+    Function: _list_containers'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _load_dotenv'
+  description: 'code2llm reports `God Function: _load_dotenv` in `toonic/server/config.py:13`.
+
+
+    Function ''_load_dotenv'' is oversized: CC=11, fan-out=14, mutations=13.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/config.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/config.py:13:God Function:
+    _load_dotenv'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _node_project'
+  description: 'code2llm reports `God Function: _node_project` in `toonic/autopilot/scaffold.py:305`.
+
+
+    Function ''_node_project'' is oversized: CC=4, fan-out=4, mutations=9.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/autopilot/scaffold.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/autopilot/scaffold.py:305:God Function:
+    _node_project'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _parse_prefixed_source'
+  description: 'code2llm reports `God Function: _parse_prefixed_source` in `toonic/server/quick/parsing.py:200`.
+
+
+    Function ''_parse_prefixed_source'' is oversized: CC=2, fan-out=4, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/quick/parsing.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/quick/parsing.py:200:God
+    Function: _parse_prefixed_source'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _ping'
+  description: 'code2llm reports `God Function: _ping` in `toonic/server/watchers/network_watcher.py:204`.
+
+
+    Function ''_ping'' is oversized: CC=8, fan-out=15, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/network_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/network_watcher.py:204:God
+    Function: _ping'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _python_project'
+  description: 'code2llm reports `God Function: _python_project` in `toonic/autopilot/scaffold.py:151`.
+
+
+    Function ''_python_project'' is oversized: CC=7, fan-out=8, mutations=20.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/autopilot/scaffold.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/autopilot/scaffold.py:151:God Function:
+    _python_project'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _run_analysis'
+  description: 'code2llm reports `God Function: _run_analysis` in `toonic/server/main.py:232`.
+
+
+    Function ''_run_analysis'' is oversized: CC=11, fan-out=13, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/main.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/main.py:232:God Function:
+    _run_analysis'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _run_web_mode'
+  description: 'code2llm reports `God Function: _run_web_mode` in `toonic/server/__main__.py:318`.
+
+
+    Function ''_run_web_mode'' is oversized: CC=5, fan-out=12, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/__main__.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/__main__.py:318:God Function:
+    _run_web_mode'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _scan_project'
+  description: 'code2llm reports `God Function: _scan_project` in `toonic/autopilot/loop.py:270`.
+
+
+    Function ''_scan_project'' is oversized: CC=14, fan-out=13, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/autopilot/loop.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/autopilot/loop.py:270:God Function:
+    _scan_project'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _take_snapshot'
+  description: 'code2llm reports `God Function: _take_snapshot` in `toonic/server/watchers/directory_watcher.py:206`.
+
+
+    Function ''_take_snapshot'' is oversized: CC=2, fan-out=13, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/directory_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/directory_watcher.py:206:God
+    Function: _take_snapshot'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _to_toon'
+  description: 'code2llm reports `God Function: _to_toon` in `toonic/server/watchers/network_watcher.py:349`.
+
+
+    Function ''_to_toon'' is oversized: CC=14, fan-out=10, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/network_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/network_watcher.py:349:God
+    Function: _to_toon'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _to_toon'
+  description: 'code2llm reports `God Function: _to_toon` in `toonic/server/watchers/database_watcher.py:340`.
+
+
+    Function ''_to_toon'' is oversized: CC=14, fan-out=10, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/database_watcher.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/database_watcher.py:340:God
+    Function: _to_toon'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _to_toon'
+  description: 'code2llm reports `God Function: _to_toon` in `toonic/formats/evidence.py:256`.
+
+
+    Function ''_to_toon'' is oversized: CC=14, fan-out=10, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/evidence.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/evidence.py:256:God Function:
+    _to_toon'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _try_local_parse'
+  description: 'code2llm reports `God Function: _try_local_parse` in `toonic/server/triggers/nlp2yaml.py:146`.
+
+
+    Function ''_try_local_parse'' is oversized: CC=13, fan-out=13, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/triggers/nlp2yaml.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/triggers/nlp2yaml.py:146:God
+    Function: _try_local_parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: batch'
+  description: 'code2llm reports `God Function: batch` in `toonic/pipeline.py:202`.
+
+
+    Function ''batch'' is oversized: CC=10, fan-out=15, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/pipeline.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/pipeline.py:202:God Function: batch'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: call'
+  description: 'code2llm reports `God Function: call` in `toonic/server/llm/caller.py:80`.
+
+
+    Function ''call'' is oversized: CC=12, fan-out=13, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/llm/caller.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/llm/caller.py:80:God Function:
+    call'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: check_ssl_certificate'
+  description: 'code2llm reports `God Function: check_ssl_certificate` in `examples/security-audit/continuous_monitoring.py:91`.
+
+
+    Function ''check_ssl_certificate'' is oversized: CC=5, fan-out=12, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/security-audit/continuous_monitoring.py
+  dedupe_key: 'code2llm:smell:god_function:examples/security-audit/continuous_monitoring.py:91:God
+    Function: check_ssl_certificate'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: create'
+  description: 'code2llm reports `God Function: create` in `toonic/server/watchers/base.py:85`.
+
+
+    Function ''create'' is oversized: CC=10, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/watchers/base.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/watchers/base.py:85:God Function:
+    create'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: create_app'
+  description: 'code2llm reports `God Function: create_app` in `toonic/server/transport/app.py:30`.
+
+
+    Function ''create_app'' is oversized: CC=2, fan-out=17, mutations=9.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/transport/app.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/transport/app.py:30:God Function:
+    create_app'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: create_unified_spec'
+  description: 'code2llm reports `God Function: create_unified_spec` in `unified_toon.py:72`.
+
+
+    Function ''create_unified_spec'' is oversized: CC=4, fan-out=6, mutations=10.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - unified_toon.py
+  dedupe_key: 'code2llm:smell:god_function:unified_toon.py:72:God Function: create_unified_spec'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: create_unified_toon'
+  description: 'code2llm reports `God Function: create_unified_toon` in `unified_toon.py:17`.
+
+
+    Function ''create_unified_toon'' is oversized: CC=7, fan-out=18, mutations=6.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - unified_toon.py
+  dedupe_key: 'code2llm:smell:god_function:unified_toon.py:17:God Function: create_unified_toon'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: demo'
+  description: 'code2llm reports `God Function: demo` in `examples/security-audit/quick_audit.py:91`.
+
+
+    Function ''demo'' is oversized: CC=5, fan-out=7, mutations=8.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/security-audit/quick_audit.py
+  dedupe_key: 'code2llm:smell:god_function:examples/security-audit/quick_audit.py:91:God
+    Function: demo'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: demo_config_builder'
+  description: 'code2llm reports `God Function: demo_config_builder` in `examples/programmatic-api/demo_quick.py:49`.
+
+
+    Function ''demo_config_builder'' is oversized: CC=3, fan-out=18, mutations=6.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/programmatic-api/demo_quick.py
+  dedupe_key: 'code2llm:smell:god_function:examples/programmatic-api/demo_quick.py:49:God
+    Function: demo_config_builder'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: demo_options'
+  description: 'code2llm reports `God Function: demo_options` in `examples/programmatic-api/demo_quick.py:116`.
+
+
+    Function ''demo_options'' is oversized: CC=3, fan-out=11, mutations=4.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/programmatic-api/demo_quick.py
+  dedupe_key: 'code2llm:smell:god_function:examples/programmatic-api/demo_quick.py:116:God
+    Function: demo_options'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: demo_response_parser'
+  description: 'code2llm reports `God Function: demo_response_parser` in `examples/programmatic-api/demo_pipeline.py:75`.
+
+
+    Function ''demo_response_parser'' is oversized: CC=1, fan-out=4, mutations=10.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/programmatic-api/demo_pipeline.py
+  dedupe_key: 'code2llm:smell:god_function:examples/programmatic-api/demo_pipeline.py:75:God
+    Function: demo_response_parser'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: detect_from_file'
+  description: 'code2llm reports `God Function: detect_from_file` in `toonic/formats/video.py:194`.
+
+
+    Function ''detect_from_file'' is oversized: CC=6, fan-out=16, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/video.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/video.py:194:God Function:
+    detect_from_file'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: evaluate'
+  description: 'code2llm reports `God Function: evaluate` in `toonic/server/triggers/detectors.py:257`.
+
+
+    Function ''evaluate'' is oversized: CC=14, fan-out=10, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/triggers/detectors.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/triggers/detectors.py:257:God
+    Function: evaluate'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: generate_markdown_report'
+  description: 'code2llm reports `God Function: generate_markdown_report` in `examples/security-audit/generate_report.py:59`.
+
+
+    Function ''generate_markdown_report'' is oversized: CC=12, fan-out=13, mutations=18.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/security-audit/generate_report.py
+  dedupe_key: 'code2llm:smell:god_function:examples/security-audit/generate_report.py:59:God
+    Function: generate_markdown_report'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: get_chunks'
+  description: 'code2llm reports `God Function: get_chunks` in `toonic/server/core/accumulator.py:101`.
+
+
+    Function ''get_chunks'' is oversized: CC=11, fan-out=14, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/core/accumulator.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/core/accumulator.py:101:God
+    Function: get_chunks'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `examples/programmatic-api/demo_accumulator.py:16`.
+
+
+    Function ''main'' is oversized: CC=5, fan-out=13, mutations=11.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/programmatic-api/demo_accumulator.py
+  dedupe_key: 'code2llm:smell:god_function:examples/programmatic-api/demo_accumulator.py:16:God
+    Function: main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `examples/security-audit/generate_report.py:146`.
+
+
+    Function ''main'' is oversized: CC=4, fan-out=12, mutations=10.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/security-audit/generate_report.py
+  dedupe_key: 'code2llm:smell:god_function:examples/security-audit/generate_report.py:146:God
+    Function: main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `examples/log-monitoring/generate_logs.py:161`.
+
+
+    Function ''main'' is oversized: CC=7, fan-out=11, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/log-monitoring/generate_logs.py
+  dedupe_key: 'code2llm:smell:god_function:examples/log-monitoring/generate_logs.py:161:God
+    Function: main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `examples/security-audit/continuous_monitoring.py:525`.
+
+
+    Function ''main'' is oversized: CC=11, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/security-audit/continuous_monitoring.py
+  dedupe_key: 'code2llm:smell:god_function:examples/security-audit/continuous_monitoring.py:525:God
+    Function: main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `toonic/server/__main__.py:382`.
+
+
+    Function ''main'' is oversized: CC=2, fan-out=11, mutations=4.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/__main__.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/__main__.py:382:God Function:
+    main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `toonic/server/client.py:404`.
+
+
+    Function ''main'' is oversized: CC=5, fan-out=10, mutations=11.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/client.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/client.py:404:God Function:
+    main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/formats/audio.py:225`.
+
+
+    Function ''parse'' is oversized: CC=7, fan-out=23, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/audio.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/audio.py:225:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/formats/api.py:80`.
+
+
+    Function ''parse'' is oversized: CC=7, fan-out=15, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/api.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/api.py:80:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/formats/config.py:76`.
+
+
+    Function ''parse'' is oversized: CC=6, fan-out=12, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/config.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/config.py:76:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/formats/config.py:170`.
+
+
+    Function ''parse'' is oversized: CC=6, fan-out=16, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/config.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/config.py:170:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/formats/infra.py:75`.
+
+
+    Function ''parse'' is oversized: CC=9, fan-out=14, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/infra.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/infra.py:75:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/formats/infra.py:169`.
+
+
+    Function ''parse'' is oversized: CC=8, fan-out=13, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/infra.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/infra.py:169:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/server/llm/parser.py:21`.
+
+
+    Function ''parse'' is oversized: CC=7, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/llm/parser.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/llm/parser.py:21:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/formats/video.py:244`.
+
+
+    Function ''parse'' is oversized: CC=7, fan-out=15, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/video.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/video.py:244:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/formats/data.py:270`.
+
+
+    Function ''parse'' is oversized: CC=6, fan-out=12, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/data.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/data.py:270:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/formats/document.py:88`.
+
+
+    Function ''parse'' is oversized: CC=8, fan-out=14, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/document.py:88:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `toonic/formats/document.py:358`.
+
+
+    Function ''parse'' is oversized: CC=9, fan-out=12, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/formats/document.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/formats/document.py:358:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse_args'
+  description: 'code2llm reports `God Function: parse_args` in `toonic/server/__main__.py:79`.
+
+
+    Function ''parse_args'' is oversized: CC=1, fan-out=3, mutations=12.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/__main__.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/__main__.py:79:God Function:
+    parse_args'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse_source_string'
+  description: 'code2llm reports `God Function: parse_source_string` in `toonic/server/__main__.py:159`.
+
+
+    Function ''parse_source_string'' is oversized: CC=7, fan-out=10, mutations=13.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/__main__.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/__main__.py:159:God Function:
+    parse_source_string'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: register'
+  description: 'code2llm reports `God Function: register` in `toonic/server/transport/routes/websocket.py:14`.
+
+
+    Function ''register'' is oversized: CC=1, fan-out=14, mutations=4.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/transport/routes/websocket.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/transport/routes/websocket.py:14:God
+    Function: register'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: reproduce'
+  description: 'code2llm reports `God Function: reproduce` in `toonic/pipeline.py:101`.
+
+
+    Function ''reproduce'' is oversized: CC=6, fan-out=15, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/pipeline.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/pipeline.py:101:God Function: reproduce'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: run_enterprise_analysis'
+  description: 'code2llm reports `God Function: run_enterprise_analysis` in `examples/security-audit/enterprise_monitor.py:142`.
+
+
+    Function ''run_enterprise_analysis'' is oversized: CC=11, fan-out=23, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/security-audit/enterprise_monitor.py
+  dedupe_key: 'code2llm:smell:god_function:examples/security-audit/enterprise_monitor.py:142:God
+    Function: run_enterprise_analysis'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: run_mixed'
+  description: 'code2llm reports `God Function: run_mixed` in `examples/log-monitoring/generate_logs.py:137`.
+
+
+    Function ''run_mixed'' is oversized: CC=5, fan-out=8, mutations=8.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/log-monitoring/generate_logs.py
+  dedupe_key: 'code2llm:smell:god_function:examples/log-monitoring/generate_logs.py:137:God
+    Function: run_mixed'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: run_shell'
+  description: 'code2llm reports `God Function: run_shell` in `toonic/server/client.py:370`.
+
+
+    Function ''run_shell'' is oversized: CC=7, fan-out=7, mutations=9.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/client.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/client.py:370:God Function:
+    run_shell'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: search'
+  description: 'code2llm reports `God Function: search` in `toonic/server/core/history.py:234`.
+
+
+    Function ''search'' is oversized: CC=7, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/core/history.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/core/history.py:234:God Function:
+    search'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: to_dict'
+  description: 'code2llm reports `God Function: to_dict` in `toonic/server/triggers/dsl.py:78`.
+
+
+    Function ''to_dict'' is oversized: CC=13, fan-out=0, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/triggers/dsl.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/triggers/dsl.py:78:God Function:
+    to_dict'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: unpack_archive'
+  description: 'code2llm reports `God Function: unpack_archive` in `toonic/server/quick/archive.py:52`.
+
+
+    Function ''unpack_archive'' is oversized: CC=7, fan-out=12, mutations=3.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/quick/archive.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/quick/archive.py:52:God Function:
+    unpack_archive'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: verify_all'
+  description: 'code2llm reports `God Function: verify_all` in `examples/run_all.py:290`.
+
+
+    Function ''verify_all'' is oversized: CC=10, fan-out=5, mutations=9.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/run_all.py
+  dedupe_key: 'code2llm:smell:god_function:examples/run_all.py:290:God Function: verify_all'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: watch_archive'
+  description: 'code2llm reports `God Function: watch_archive` in `toonic/server/quick/archive.py:112`.
+
+
+    Function ''watch_archive'' is oversized: CC=5, fan-out=7, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - toonic/server/quick/archive.py
+  dedupe_key: 'code2llm:smell:god_function:toonic/server/quick/archive.py:112:God
+    Function: watch_archive'
+- signal: slow_test_warning
+  title: 'Address slow test: tests.test_server.TestToonicServer.test_add_remove_source'
+  description: 'Test `tests.test_server.TestToonicServer.test_add_remove_source` took
+    110.67s to run.
+
+
+    Optimize its setup, mock slow external dependencies, or refactor its logic to
+    reduce overall test suite execution time.'
+  priority: medium
+  labels:
+  - llm-ready
+  - test-optimization
+  - slow-test
+  files:
+  - tests/test_server.py
+  dedupe_key: test-optimization:tests.test_server.TestToonicServer:test_add_remove_source
+- signal: slow_test_warning
+  title: 'Address slow test: tests.test_server.TestRouter.test_mock_query'
+  description: 'Test `tests.test_server.TestRouter.test_mock_query` took 7.86s to
+    run.
+
+
+    Optimize its setup, mock slow external dependencies, or refactor its logic to
+    reduce overall test suite execution time.'
+  priority: medium
+  labels:
+  - llm-ready
+  - test-optimization
+  - slow-test
+  files:
+  - tests/test_server.py
+  dedupe_key: test-optimization:tests.test_server.TestRouter:test_mock_query
+- signal: slow_test_warning
+  title: 'Address slow test: tests.test_server.TestRouter.test_router_with_history'
+  description: 'Test `tests.test_server.TestRouter.test_router_with_history` took
+    3.68s to run.
+
+
+    Optimize its setup, mock slow external dependencies, or refactor its logic to
+    reduce overall test suite execution time.'
+  priority: medium
+  labels:
+  - llm-ready
+  - test-optimization
+  - slow-test
+  files:
+  - tests/test_server.py
+  dedupe_key: test-optimization:tests.test_server.TestRouter:test_router_with_history
+- signal: slow_test_warning
+  title: 'Address slow test: tests.test_server.TestToonicServer.test_server_lifecycle'
+  description: 'Test `tests.test_server.TestToonicServer.test_server_lifecycle` took
+    2.01s to run.
+
+
+    Optimize its setup, mock slow external dependencies, or refactor its logic to
+    reduce overall test suite execution time.'
+  priority: medium
+  labels:
+  - llm-ready
+  - test-optimization
+  - slow-test
+  files:
+  - tests/test_server.py
+  dedupe_key: test-optimization:tests.test_server.TestToonicServer:test_server_lifecycle
+applied: []
+skipped: []

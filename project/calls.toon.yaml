@@ -1,0 +1,288 @@
+# code2llm call graph | /home/tom/github/autogrammar/toonic
+# generated in 0.09s
+# nodes: 145 | edges: 132 | modules: 44
+# CC̄=4.1
+
+HUBS[20]:
+  toonic.server.watchers.stream.events.check_event_and_emit
+    CC=19  in:1  out:39  total:40
+  toonic.server.watchers.stream.watcher.StreamWatcher.__init__
+    CC=1  in:0  out:40  total:40
+  examples.security-audit.quick_audit.demo
+    CC=5  in:0  out:37  total:37
+  examples.programmatic-api.demo_quick.demo_config_builder
+    CC=3  in:1  out:34  total:35
+  toonic.cli._build_argument_parser
+    CC=1  in:1  out:32  total:33
+  toonic.server.watchers.stream.capture.capture_opencv
+    CC=16  in:1  out:31  total:32
+  unified_toon.create_unified_toon
+    CC=7  in:1  out:31  total:32
+  toonic.server.__main__._run_web_mode
+    CC=5  in:1  out:30  total:31
+  examples.run_all.verify_all
+    CC=10  in:2  out:23  total:25
+  examples.log-monitoring.generate_logs._fill
+    CC=1  in:1  out:23  total:24
+  toonic.server.transport.app.create_app
+    CC=2  in:2  out:22  total:24
+  toonic.server.transport.routes.api.get_events_file
+    CC=19  in:0  out:23  total:23
+  examples.security-audit.generate_report.generate_markdown_report
+    CC=12  in:1  out:20  total:21
+  toonic.server.quick.runtime.watch
+    CC=2  in:18  out:2  total:20
+  toonic.server.transport.routes.api.get_exchanges
+    CC=15  in:0  out:20  total:20
+  examples.run_all.list_examples
+    CC=4  in:2  out:17  total:19
+  examples.security-audit.generate_report.main
+    CC=4  in:0  out:19  total:19
+  toonic.server.__main__._build_trigger_config
+    CC=8  in:1  out:18  total:19
+  toonic.server.client.main
+    CC=5  in:0  out:19  total:19
+  toonic.server.watchers.log_watcher.LogWatcher._initial_tail
+    CC=3  in:0  out:17  total:17
+
+MODULES:
+  examples._helpers  [2 funcs]
+    print_config_summary  CC=3  out:5
+    print_to_run_hint  CC=2  out:3
+  examples.archive-monitoring.run  [1 funcs]
+    main  CC=2  out:11
+  examples.log-monitoring.generate_logs  [4 funcs]
+    _fill  CC=1  out:23
+    generate_line  CC=1  out:5
+    main  CC=7  out:14
+    run_normal  CC=2  out:10
+  examples.programmatic-api.demo_pipeline  [5 funcs]
+    demo_pipeline  CC=1  out:16
+    demo_prompt_building  CC=2  out:14
+    demo_prompt_selection  CC=3  out:7
+    demo_response_parser  CC=1  out:15
+    main  CC=1  out:8
+  examples.programmatic-api.demo_quick  [5 funcs]
+    demo_config_builder  CC=3  out:34
+    demo_options  CC=3  out:16
+    demo_parse_source  CC=2  out:5
+    demo_watch  CC=2  out:13
+    main  CC=1  out:10
+  examples.protocol-recipes.run  [1 funcs]
+    main  CC=3  out:9
+  examples.run_all  [10 funcs]
+    _example_env  CC=1  out:4
+    _repo_root  CC=1  out:0
+    _run_py  CC=1  out:5
+    list_examples  CC=4  out:17
+    show_example  CC=5  out:14
+    verify_all  CC=10  out:23
+    verify_config_builds  CC=5  out:7
+    verify_demos  CC=5  out:4
+    verify_imports  CC=3  out:2
+    verify_presets  CC=5  out:3
+  examples.security-audit.generate_report  [4 funcs]
+    generate_markdown_report  CC=12  out:20
+    load_exchanges  CC=5  out:5
+    load_history  CC=4  out:8
+    main  CC=4  out:19
+  examples.security-audit.quick_audit  [5 funcs]
+    audit_code  CC=1  out:1
+    audit_website  CC=1  out:5
+    continuous_monitoring  CC=1  out:5
+    demo  CC=5  out:37
+    full_stack_audit  CC=1  out:5
+  toonic.cli  [9 funcs]
+    _build_argument_parser  CC=1  out:32
+    _cmd_examples  CC=6  out:6
+    _cmd_examples_list  CC=1  out:1
+    _cmd_examples_preset  CC=5  out:16
+    _cmd_examples_run_demo  CC=3  out:7
+    _cmd_examples_show  CC=1  out:1
+    _cmd_examples_verify  CC=2  out:1
+    _get_command_handler  CC=1  out:1
+    cli_main  CC=4  out:7
+  toonic.formats  [1 funcs]
+    initialize_all_handlers  CC=3  out:10
+  toonic.formats.api  [1 funcs]
+    register_api_handlers  CC=2  out:2
+  toonic.formats.audio  [1 funcs]
+    register_audio_handlers  CC=1  out:2
+  toonic.formats.config  [1 funcs]
+    register_config_handlers  CC=2  out:3
+  toonic.formats.data  [1 funcs]
+    register_data_handlers  CC=2  out:3
+  toonic.formats.database  [1 funcs]
+    register_database_handlers  CC=2  out:2
+  toonic.formats.document  [1 funcs]
+    register_document_handlers  CC=2  out:4
+  toonic.formats.evidence  [1 funcs]
+    register_evidence_handlers  CC=1  out:2
+  toonic.formats.infra  [1 funcs]
+    register_infra_handlers  CC=2  out:3
+  toonic.formats.video  [1 funcs]
+    register_video_handlers  CC=1  out:2
+  toonic.pipeline  [1 funcs]
+    _ensure_initialized  CC=2  out:1
+  toonic.server.__main__  [11 funcs]
+    _build_server_config  CC=9  out:8
+    _build_trigger_config  CC=8  out:18
+    _run_no_web_mode  CC=3  out:8
+    _run_web_mode  CC=5  out:30
+    check_port_occupied  CC=2  out:3
+    ensure_port_available  CC=4  out:8
+    main  CC=2  out:11
+    parse_args  CC=1  out:13
+    parse_source_string  CC=7  out:13
+    run_server  CC=2  out:5
+  toonic.server.client  [6 funcs]
+    _cmd_model  CC=3  out:3
+    _execute_command  CC=11  out:11
+    _get_command_handler  CC=1  out:1
+    _should_exit  CC=1  out:0
+    main  CC=5  out:19
+    run_shell  CC=7  out:11
+  toonic.server.llm.pipeline  [1 funcs]
+    execute  CC=5  out:11
+  toonic.server.llm.prompts  [1 funcs]
+    select_prompt_builder  CC=10  out:8
+  toonic.server.quick.archive  [6 funcs]
+    _collect_files_from_directory  CC=4  out:5
+    _is_tar_file  CC=2  out:3
+    _is_zip_file  CC=1  out:2
+    _should_include_file  CC=5  out:3
+    unpack_archive  CC=7  out:15
+    watch_archive  CC=5  out:7
+  toonic.server.quick.builder  [3 funcs]
+    add  CC=3  out:5
+    build  CC=3  out:7
+    run  CC=1  out:2
+  toonic.server.quick.parsing  [5 funcs]
+    _detect_category_from_path  CC=8  out:7
+    _is_archive_suffix  CC=2  out:2
+    _parse_prefixed_source  CC=2  out:4
+    _parse_protocol_url  CC=3  out:5
+    parse_source  CC=7  out:11
+  toonic.server.quick.presets  [8 funcs]
+    _apply_overrides  CC=3  out:3
+    cctv_monitor  CC=2  out:7
+    code_review  CC=2  out:7
+    full_stack  CC=2  out:7
+    infra_health  CC=2  out:7
+    log_monitor  CC=2  out:7
+    security_audit  CC=2  out:7
+    web_monitor  CC=2  out:7
+  toonic.server.quick.runtime  [6 funcs]
+    _serve_headless  CC=3  out:6
+    _serve_web  CC=2  out:9
+    monitor  CC=3  out:8
+    run  CC=1  out:2
+    serve  CC=4  out:5
+    watch  CC=2  out:2
+  toonic.server.transport.app  [1 funcs]
+    create_app  CC=2  out:22
+  toonic.server.transport.routes.api  [9 funcs]
+    _get_server  CC=2  out:1
+    analyze_now  CC=1  out:6
+    get_actions  CC=1  out:3
+    get_data_dir  CC=3  out:12
+    get_events  CC=1  out:3
+    get_events_file  CC=19  out:23
+    get_exchanges  CC=15  out:20
+    get_status  CC=1  out:3
+    get_triggers  CC=2  out:4
+  toonic.server.transport.routes.history  [5 funcs]
+    _get_server  CC=2  out:1
+    get_history  CC=1  out:3
+    get_history_stats  CC=1  out:3
+    nlp_query  CC=2  out:6
+    sql_query  CC=2  out:5
+  toonic.server.transport.routes.sources  [4 funcs]
+    _get_server  CC=2  out:1
+    add_source  CC=1  out:6
+    list_sources  CC=1  out:4
+    remove_source  CC=1  out:3
+  toonic.server.triggers.detectors  [2 funcs]
+    create_detector  CC=2  out:4
+    create_detectors  CC=2  out:1
+  toonic.server.triggers.dsl  [2 funcs]
+    dump_triggers  CC=2  out:3
+    load_triggers  CC=3  out:4
+  toonic.server.triggers.nlp2yaml  [2 funcs]
+    generate  CC=8  out:10
+    generate_yaml  CC=3  out:2
+  toonic.server.triggers.scheduler  [2 funcs]
+    __init__  CC=1  out:1
+    from_yaml  CC=1  out:2
+  toonic.server.watchers.log_watcher  [2 funcs]
+    _initial_tail  CC=3  out:17
+    _detect_max_severity  CC=5  out:3
+  toonic.server.watchers.stream.capture  [2 funcs]
+    capture_mock  CC=2  out:4
+    capture_opencv  CC=16  out:31
+  toonic.server.watchers.stream.detection  [1 funcs]
+    init_yolo  CC=6  out:8
+  toonic.server.watchers.stream.events  [3 funcs]
+    _extract_roi_crops  CC=6  out:15
+    _select_event_frames  CC=3  out:3
+    check_event_and_emit  CC=19  out:39
+  toonic.server.watchers.stream.watcher  [3 funcs]
+    __init__  CC=1  out:40
+    _capture_loop  CC=3  out:5
+    _bool  CC=3  out:4
+  unified_toon  [3 funcs]
+    create_unified_spec  CC=4  out:12
+    create_unified_toon  CC=7  out:31
+    main  CC=1  out:6
+
+EDGES:
+  examples.run_all._example_env → examples.run_all._repo_root
+  examples.run_all._run_py → examples.run_all._example_env
+  examples.run_all._run_py → examples.run_all._repo_root
+  examples.run_all.verify_config_builds → toonic.server.quick.runtime.watch
+  examples.run_all.verify_demos → examples.run_all._run_py
+  examples.run_all.verify_all → examples.run_all.verify_imports
+  examples.run_all.verify_all → examples.run_all.verify_presets
+  examples.run_all.verify_all → examples.run_all.verify_config_builds
+  examples.archive-monitoring.run.main → examples._helpers.print_config_summary
+  examples.archive-monitoring.run.main → examples._helpers.print_to_run_hint
+  examples.security-audit.quick_audit.audit_code → toonic.server.quick.presets.security_audit
+  examples.security-audit.quick_audit.audit_website → toonic.server.quick.presets.security_audit
+  examples.security-audit.quick_audit.continuous_monitoring → toonic.server.quick.presets.security_audit
+  examples.security-audit.quick_audit.full_stack_audit → toonic.server.quick.presets.security_audit
+  examples.security-audit.quick_audit.demo → examples.security-audit.quick_audit.audit_code
+  examples.security-audit.quick_audit.demo → examples.security-audit.quick_audit.audit_website
+  examples.security-audit.generate_report.main → examples.security-audit.generate_report.load_exchanges
+  examples.security-audit.generate_report.main → examples.security-audit.generate_report.load_history
+  examples.security-audit.generate_report.main → examples.security-audit.generate_report.generate_markdown_report
+  examples.log-monitoring.generate_logs.generate_line → examples.log-monitoring.generate_logs._fill
+  examples.log-monitoring.generate_logs.run_normal → examples.log-monitoring.generate_logs.generate_line
+  examples.log-monitoring.generate_logs.main → examples.log-monitoring.generate_logs.run_normal
+  toonic.cli._cmd_examples_list → examples.run_all.list_examples
+  toonic.cli._cmd_examples_verify → examples.run_all.verify_all
+  toonic.cli._cmd_examples_show → examples.run_all.show_example
+  toonic.cli._cmd_examples → toonic.cli._cmd_examples_list
+  toonic.cli._cmd_examples → toonic.cli._cmd_examples_verify
+  toonic.cli._cmd_examples → toonic.cli._cmd_examples_show
+  toonic.cli._cmd_examples → toonic.cli._cmd_examples_preset
+  toonic.cli._cmd_examples → toonic.cli._cmd_examples_run_demo
+  toonic.cli.cli_main → toonic.cli._build_argument_parser
+  toonic.cli.cli_main → toonic.cli._get_command_handler
+  examples.programmatic-api.demo_quick.demo_parse_source → toonic.server.quick.parsing.parse_source
+  examples.programmatic-api.demo_quick.main → examples.programmatic-api.demo_quick.demo_parse_source
+  examples.programmatic-api.demo_quick.main → examples.programmatic-api.demo_quick.demo_config_builder
+  examples.programmatic-api.demo_quick.main → examples.programmatic-api.demo_quick.demo_watch
+  examples.programmatic-api.demo_quick.main → examples.programmatic-api.demo_quick.demo_options
+  examples.programmatic-api.demo_pipeline.demo_prompt_selection → toonic.server.llm.prompts.select_prompt_builder
+  examples.programmatic-api.demo_pipeline.main → examples.programmatic-api.demo_pipeline.demo_prompt_selection
+  examples.programmatic-api.demo_pipeline.main → examples.programmatic-api.demo_pipeline.demo_prompt_building
+  examples.programmatic-api.demo_pipeline.main → examples.programmatic-api.demo_pipeline.demo_response_parser
+  examples.programmatic-api.demo_pipeline.main → examples.programmatic-api.demo_pipeline.demo_pipeline
+  toonic.formats.initialize_all_handlers → toonic.formats.document.register_document_handlers
+  toonic.formats.initialize_all_handlers → toonic.formats.data.register_data_handlers
+  toonic.formats.initialize_all_handlers → toonic.formats.config.register_config_handlers
+  toonic.formats.initialize_all_handlers → toonic.formats.database.register_database_handlers
+  toonic.formats.initialize_all_handlers → toonic.formats.api.register_api_handlers
+  toonic.formats.initialize_all_handlers → toonic.formats.infra.register_infra_handlers
+  toonic.formats.initialize_all_handlers → toonic.formats.evidence.register_evidence_handlers
+  toonic.formats.initialize_all_handlers → toonic.formats.video.register_video_handlers

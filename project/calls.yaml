@@ -1,0 +1,2194 @@
+project: /home/tom/github/autogrammar/toonic
+generated_from: code2llm call graph analysis
+stats:
+  total_nodes: 145
+  total_edges: 132
+  modules_count: 44
+nodes:
+  toonic.server.client._cmd_model:
+    name: _cmd_model
+    module: toonic.server.client
+    line: 218
+    cyclomatic_complexity: 3
+    calls_out: 3
+    calls_in: 1
+  unified_toon.create_unified_spec:
+    name: create_unified_spec
+    module: unified_toon
+    line: 72
+    cyclomatic_complexity: 4
+    calls_out: 12
+    calls_in: 1
+  examples._helpers.print_config_summary:
+    name: print_config_summary
+    module: examples._helpers
+    line: 9
+    cyclomatic_complexity: 3
+    calls_out: 5
+    calls_in: 1
+  toonic.server.transport.routes.sources.remove_source:
+    name: remove_source
+    module: toonic.server.transport.routes.sources
+    line: 47
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 0
+  toonic.formats.document.register_document_handlers:
+    name: register_document_handlers
+    module: toonic.formats.document
+    line: 427
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 1
+  toonic.server.transport.routes.sources.list_sources:
+    name: list_sources
+    module: toonic.server.transport.routes.sources
+    line: 28
+    cyclomatic_complexity: 1
+    calls_out: 4
+    calls_in: 0
+  toonic.server.watchers.log_watcher._detect_max_severity:
+    name: _detect_max_severity
+    module: toonic.server.watchers.log_watcher
+    line: 25
+    cyclomatic_complexity: 5
+    calls_out: 3
+    calls_in: 2
+  examples.log-monitoring.generate_logs._fill:
+    name: _fill
+    module: examples.log-monitoring.generate_logs
+    line: 70
+    cyclomatic_complexity: 1
+    calls_out: 23
+    calls_in: 1
+  toonic.server.client.run_shell:
+    name: run_shell
+    module: toonic.server.client
+    line: 370
+    cyclomatic_complexity: 7
+    calls_out: 11
+    calls_in: 1
+  examples.run_all.list_examples:
+    name: list_examples
+    module: examples.run_all
+    line: 445
+    cyclomatic_complexity: 4
+    calls_out: 17
+    calls_in: 2
+  examples.security-audit.generate_report.generate_markdown_report:
+    name: generate_markdown_report
+    module: examples.security-audit.generate_report
+    line: 59
+    cyclomatic_complexity: 12
+    calls_out: 20
+    calls_in: 1
+  examples.log-monitoring.generate_logs.run_normal:
+    name: run_normal
+    module: examples.log-monitoring.generate_logs
+    line: 94
+    cyclomatic_complexity: 2
+    calls_out: 10
+    calls_in: 1
+  toonic.server.client._should_exit:
+    name: _should_exit
+    module: toonic.server.client
+    line: 326
+    cyclomatic_complexity: 1
+    calls_out: 0
+    calls_in: 1
+  toonic.server.quick.presets.code_review:
+    name: code_review
+    module: toonic.server.quick.presets
+    line: 73
+    cyclomatic_complexity: 2
+    calls_out: 7
+    calls_in: 0
+  examples.protocol-recipes.run.main:
+    name: main
+    module: examples.protocol-recipes.run
+    line: 33
+    cyclomatic_complexity: 3
+    calls_out: 9
+    calls_in: 0
+  toonic.server.quick.runtime._serve_headless:
+    name: _serve_headless
+    module: toonic.server.quick.runtime
+    line: 76
+    cyclomatic_complexity: 3
+    calls_out: 6
+    calls_in: 1
+  toonic.server.transport.routes.api.get_status:
+    name: get_status
+    module: toonic.server.transport.routes.api
+    line: 33
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 0
+  examples.security-audit.generate_report.load_history:
+    name: load_history
+    module: examples.security-audit.generate_report
+    line: 35
+    cyclomatic_complexity: 4
+    calls_out: 8
+    calls_in: 1
+  toonic.server.quick.runtime.serve:
+    name: serve
+    module: toonic.server.quick.runtime
+    line: 88
+    cyclomatic_complexity: 4
+    calls_out: 5
+    calls_in: 2
+  toonic.formats.config.register_config_handlers:
+    name: register_config_handlers
+    module: toonic.formats.config
+    line: 263
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 1
+  toonic.server.watchers.stream.watcher._bool:
+    name: _bool
+    module: toonic.server.watchers.stream.watcher
+    line: 35
+    cyclomatic_complexity: 3
+    calls_out: 4
+    calls_in: 1
+  toonic.server.transport.routes.api.get_events:
+    name: get_events
+    module: toonic.server.transport.routes.api
+    line: 52
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 0
+  toonic.server.quick.builder.ConfigBuilder.add:
+    name: add
+    module: toonic.server.quick.builder
+    line: 49
+    cyclomatic_complexity: 3
+    calls_out: 5
+    calls_in: 0
+  toonic.server.quick.runtime.watch:
+    name: watch
+    module: toonic.server.quick.runtime
+    line: 17
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 18
+  toonic.server.transport.routes.sources.add_source:
+    name: add_source
+    module: toonic.server.transport.routes.sources
+    line: 35
+    cyclomatic_complexity: 1
+    calls_out: 6
+    calls_in: 0
+  toonic.server.watchers.stream.events.check_event_and_emit:
+    name: check_event_and_emit
+    module: toonic.server.watchers.stream.events
+    line: 20
+    cyclomatic_complexity: 19
+    calls_out: 39
+    calls_in: 1
+  toonic.cli._cmd_examples_list:
+    name: _cmd_examples_list
+    module: toonic.cli
+    line: 79
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 2
+  toonic.server.watchers.stream.watcher.StreamWatcher.__init__:
+    name: __init__
+    module: toonic.server.watchers.stream.watcher
+    line: 67
+    cyclomatic_complexity: 1
+    calls_out: 40
+    calls_in: 0
+  toonic.server.watchers.stream.events._extract_roi_crops:
+    name: _extract_roi_crops
+    module: toonic.server.watchers.stream.events
+    line: 157
+    cyclomatic_complexity: 6
+    calls_out: 15
+    calls_in: 1
+  toonic.server.quick.runtime.run:
+    name: run
+    module: toonic.server.quick.runtime
+    line: 114
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 0
+  toonic.server.watchers.stream.capture.capture_opencv:
+    name: capture_opencv
+    module: toonic.server.watchers.stream.capture
+    line: 18
+    cyclomatic_complexity: 16
+    calls_out: 31
+    calls_in: 1
+  toonic.server.quick.presets.full_stack:
+    name: full_stack
+    module: toonic.server.quick.presets
+    line: 155
+    cyclomatic_complexity: 2
+    calls_out: 7
+    calls_in: 0
+  examples.run_all.verify_demos:
+    name: verify_demos
+    module: examples.run_all
+    line: 273
+    cyclomatic_complexity: 5
+    calls_out: 4
+    calls_in: 1
+  toonic.server.quick.presets.infra_health:
+    name: infra_health
+    module: toonic.server.quick.presets
+    line: 105
+    cyclomatic_complexity: 2
+    calls_out: 7
+    calls_in: 0
+  examples.run_all.show_example:
+    name: show_example
+    module: examples.run_all
+    line: 469
+    cyclomatic_complexity: 5
+    calls_out: 14
+    calls_in: 2
+  toonic.server.quick.parsing._detect_category_from_path:
+    name: _detect_category_from_path
+    module: toonic.server.quick.parsing
+    line: 168
+    cyclomatic_complexity: 8
+    calls_out: 7
+    calls_in: 1
+  toonic.server.quick.archive._is_zip_file:
+    name: _is_zip_file
+    module: toonic.server.quick.archive
+    line: 26
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 1
+  examples.security-audit.generate_report.main:
+    name: main
+    module: examples.security-audit.generate_report
+    line: 146
+    cyclomatic_complexity: 4
+    calls_out: 19
+    calls_in: 0
+  examples.programmatic-api.demo_pipeline.demo_prompt_selection:
+    name: demo_prompt_selection
+    module: examples.programmatic-api.demo_pipeline
+    line: 24
+    cyclomatic_complexity: 3
+    calls_out: 7
+    calls_in: 1
+  examples.archive-monitoring.run.main:
+    name: main
+    module: examples.archive-monitoring.run
+    line: 11
+    cyclomatic_complexity: 2
+    calls_out: 11
+    calls_in: 0
+  toonic.server.__main__._run_no_web_mode:
+    name: _run_no_web_mode
+    module: toonic.server.__main__
+    line: 304
+    cyclomatic_complexity: 3
+    calls_out: 8
+    calls_in: 1
+  toonic.cli._cmd_examples:
+    name: _cmd_examples
+    module: toonic.cli
+    line: 140
+    cyclomatic_complexity: 6
+    calls_out: 6
+    calls_in: 0
+  toonic.formats.infra.register_infra_handlers:
+    name: register_infra_handlers
+    module: toonic.formats.infra
+    line: 268
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 1
+  toonic.server.__main__.check_port_occupied:
+    name: check_port_occupied
+    module: toonic.server.__main__
+    line: 21
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 2
+  toonic.server.quick.runtime.monitor:
+    name: monitor
+    module: toonic.server.quick.runtime
+    line: 29
+    cyclomatic_complexity: 3
+    calls_out: 8
+    calls_in: 1
+  toonic.server.triggers.scheduler.RuleState.__init__:
+    name: __init__
+    module: toonic.server.triggers.scheduler
+    line: 56
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 0
+  examples.run_all._example_env:
+    name: _example_env
+    module: examples.run_all
+    line: 35
+    cyclomatic_complexity: 1
+    calls_out: 4
+    calls_in: 1
+  toonic.cli._get_command_handler:
+    name: _get_command_handler
+    module: toonic.cli
+    line: 207
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  examples.run_all.verify_all:
+    name: verify_all
+    module: examples.run_all
+    line: 290
+    cyclomatic_complexity: 10
+    calls_out: 23
+    calls_in: 2
+  toonic.server.quick.presets.cctv_monitor:
+    name: cctv_monitor
+    module: toonic.server.quick.presets
+    line: 121
+    cyclomatic_complexity: 2
+    calls_out: 7
+    calls_in: 0
+  examples.security-audit.generate_report.load_exchanges:
+    name: load_exchanges
+    module: examples.security-audit.generate_report
+    line: 17
+    cyclomatic_complexity: 5
+    calls_out: 5
+    calls_in: 1
+  examples.security-audit.quick_audit.demo:
+    name: demo
+    module: examples.security-audit.quick_audit
+    line: 91
+    cyclomatic_complexity: 5
+    calls_out: 37
+    calls_in: 0
+  toonic.cli._cmd_examples_run_demo:
+    name: _cmd_examples_run_demo
+    module: toonic.cli
+    line: 123
+    cyclomatic_complexity: 3
+    calls_out: 7
+    calls_in: 1
+  toonic.server.__main__.main:
+    name: main
+    module: toonic.server.__main__
+    line: 382
+    cyclomatic_complexity: 2
+    calls_out: 11
+    calls_in: 0
+  unified_toon.main:
+    name: main
+    module: unified_toon
+    line: 105
+    cyclomatic_complexity: 1
+    calls_out: 6
+    calls_in: 0
+  toonic.server.client._get_command_handler:
+    name: _get_command_handler
+    module: toonic.server.client
+    line: 307
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  toonic.server.__main__.ensure_port_available:
+    name: ensure_port_available
+    module: toonic.server.__main__
+    line: 62
+    cyclomatic_complexity: 4
+    calls_out: 8
+    calls_in: 1
+  toonic.server.triggers.scheduler.TriggerScheduler.from_yaml:
+    name: from_yaml
+    module: toonic.server.triggers.scheduler
+    line: 228
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 0
+  toonic.server.triggers.dsl.load_triggers:
+    name: load_triggers
+    module: toonic.server.triggers.dsl
+    line: 249
+    cyclomatic_complexity: 3
+    calls_out: 4
+    calls_in: 4
+  examples.security-audit.quick_audit.audit_code:
+    name: audit_code
+    module: examples.security-audit.quick_audit
+    line: 15
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  examples.programmatic-api.demo_quick.main:
+    name: main
+    module: examples.programmatic-api.demo_quick
+    line: 141
+    cyclomatic_complexity: 1
+    calls_out: 10
+    calls_in: 0
+  toonic.formats.evidence.register_evidence_handlers:
+    name: register_evidence_handlers
+    module: toonic.formats.evidence
+    line: 314
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 1
+  examples.run_all.verify_config_builds:
+    name: verify_config_builds
+    module: examples.run_all
+    line: 254
+    cyclomatic_complexity: 5
+    calls_out: 7
+    calls_in: 1
+  toonic.formats.video.register_video_handlers:
+    name: register_video_handlers
+    module: toonic.formats.video
+    line: 343
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 1
+  toonic.server.watchers.stream.events._select_event_frames:
+    name: _select_event_frames
+    module: toonic.server.watchers.stream.events
+    line: 146
+    cyclomatic_complexity: 3
+    calls_out: 3
+    calls_in: 1
+  examples.programmatic-api.demo_pipeline.main:
+    name: main
+    module: examples.programmatic-api.demo_pipeline
+    line: 179
+    cyclomatic_complexity: 1
+    calls_out: 8
+    calls_in: 0
+  toonic.server.watchers.log_watcher.LogWatcher._initial_tail:
+    name: _initial_tail
+    module: toonic.server.watchers.log_watcher
+    line: 64
+    cyclomatic_complexity: 3
+    calls_out: 17
+    calls_in: 0
+  toonic.server.transport.routes.api.get_triggers:
+    name: get_triggers
+    module: toonic.server.transport.routes.api
+    line: 58
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 0
+  examples.log-monitoring.generate_logs.main:
+    name: main
+    module: examples.log-monitoring.generate_logs
+    line: 161
+    cyclomatic_complexity: 7
+    calls_out: 14
+    calls_in: 0
+  toonic.server.watchers.stream.detection.init_yolo:
+    name: init_yolo
+    module: toonic.server.watchers.stream.detection
+    line: 17
+    cyclomatic_complexity: 6
+    calls_out: 8
+    calls_in: 1
+  toonic.server.triggers.nlp2yaml.NLP2YAML.generate:
+    name: generate
+    module: toonic.server.triggers.nlp2yaml
+    line: 96
+    cyclomatic_complexity: 8
+    calls_out: 10
+    calls_in: 0
+  toonic.server.transport.routes.sources._get_server:
+    name: _get_server
+    module: toonic.server.transport.routes.sources
+    line: 21
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 3
+  examples.programmatic-api.demo_quick.demo_parse_source:
+    name: demo_parse_source
+    module: examples.programmatic-api.demo_quick
+    line: 15
+    cyclomatic_complexity: 2
+    calls_out: 5
+    calls_in: 1
+  toonic.cli._cmd_examples_show:
+    name: _cmd_examples_show
+    module: toonic.cli
+    line: 94
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  examples.programmatic-api.demo_pipeline.demo_prompt_building:
+    name: demo_prompt_building
+    module: examples.programmatic-api.demo_pipeline
+    line: 47
+    cyclomatic_complexity: 2
+    calls_out: 14
+    calls_in: 1
+  toonic.server.quick.parsing._parse_protocol_url:
+    name: _parse_protocol_url
+    module: toonic.server.quick.parsing
+    line: 190
+    cyclomatic_complexity: 3
+    calls_out: 5
+    calls_in: 1
+  toonic.server.__main__.parse_source_string:
+    name: parse_source_string
+    module: toonic.server.__main__
+    line: 159
+    cyclomatic_complexity: 7
+    calls_out: 13
+    calls_in: 1
+  toonic.server.transport.routes.history.get_history:
+    name: get_history
+    module: toonic.server.transport.routes.history
+    line: 29
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 0
+  toonic.server.triggers.dsl.dump_triggers:
+    name: dump_triggers
+    module: toonic.server.triggers.dsl
+    line: 263
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 2
+  toonic.server.quick.presets.web_monitor:
+    name: web_monitor
+    module: toonic.server.quick.presets
+    line: 137
+    cyclomatic_complexity: 2
+    calls_out: 7
+    calls_in: 0
+  examples.run_all.verify_imports:
+    name: verify_imports
+    module: examples.run_all
+    line: 212
+    cyclomatic_complexity: 3
+    calls_out: 2
+    calls_in: 1
+  toonic.server.__main__._build_trigger_config:
+    name: _build_trigger_config
+    module: toonic.server.__main__
+    line: 262
+    cyclomatic_complexity: 8
+    calls_out: 18
+    calls_in: 1
+  toonic.formats.audio.register_audio_handlers:
+    name: register_audio_handlers
+    module: toonic.formats.audio
+    line: 355
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 1
+  toonic.formats.initialize_all_handlers:
+    name: initialize_all_handlers
+    module: toonic.formats
+    line: 77
+    cyclomatic_complexity: 3
+    calls_out: 10
+    calls_in: 1
+  toonic.pipeline.Pipeline._ensure_initialized:
+    name: _ensure_initialized
+    module: toonic.pipeline
+    line: 53
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 0
+  toonic.cli._build_argument_parser:
+    name: _build_argument_parser
+    module: toonic.cli
+    line: 220
+    cyclomatic_complexity: 1
+    calls_out: 32
+    calls_in: 1
+  toonic.server.transport.routes.history.get_history_stats:
+    name: get_history_stats
+    module: toonic.server.transport.routes.history
+    line: 41
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 0
+  toonic.server.quick.archive._collect_files_from_directory:
+    name: _collect_files_from_directory
+    module: toonic.server.quick.archive
+    line: 101
+    cyclomatic_complexity: 4
+    calls_out: 5
+    calls_in: 1
+  toonic.server.transport.routes.history._get_server:
+    name: _get_server
+    module: toonic.server.transport.routes.history
+    line: 22
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 4
+  examples.log-monitoring.generate_logs.generate_line:
+    name: generate_line
+    module: examples.log-monitoring.generate_logs
+    line: 86
+    cyclomatic_complexity: 1
+    calls_out: 5
+    calls_in: 5
+  toonic.formats.database.register_database_handlers:
+    name: register_database_handlers
+    module: toonic.formats.database
+    line: 280
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 1
+  toonic.server.transport.app.create_app:
+    name: create_app
+    module: toonic.server.transport.app
+    line: 30
+    cyclomatic_complexity: 2
+    calls_out: 22
+    calls_in: 2
+  toonic.server.quick.runtime._serve_web:
+    name: _serve_web
+    module: toonic.server.quick.runtime
+    line: 53
+    cyclomatic_complexity: 2
+    calls_out: 9
+    calls_in: 1
+  toonic.server.quick.parsing._parse_prefixed_source:
+    name: _parse_prefixed_source
+    module: toonic.server.quick.parsing
+    line: 200
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 1
+  examples.run_all._run_py:
+    name: _run_py
+    module: examples.run_all
+    line: 42
+    cyclomatic_complexity: 1
+    calls_out: 5
+    calls_in: 2
+  examples.run_all._repo_root:
+    name: _repo_root
+    module: examples.run_all
+    line: 31
+    cyclomatic_complexity: 1
+    calls_out: 0
+    calls_in: 2
+  examples.programmatic-api.demo_quick.demo_config_builder:
+    name: demo_config_builder
+    module: examples.programmatic-api.demo_quick
+    line: 49
+    cyclomatic_complexity: 3
+    calls_out: 34
+    calls_in: 1
+  toonic.server.client._execute_command:
+    name: _execute_command
+    module: toonic.server.client
+    line: 331
+    cyclomatic_complexity: 11
+    calls_out: 11
+    calls_in: 1
+  examples.programmatic-api.demo_pipeline.demo_response_parser:
+    name: demo_response_parser
+    module: examples.programmatic-api.demo_pipeline
+    line: 75
+    cyclomatic_complexity: 1
+    calls_out: 15
+    calls_in: 1
+  toonic.server.llm.prompts.select_prompt_builder:
+    name: select_prompt_builder
+    module: toonic.server.llm.prompts
+    line: 176
+    cyclomatic_complexity: 10
+    calls_out: 8
+    calls_in: 2
+  toonic.server.transport.routes.api.get_data_dir:
+    name: get_data_dir
+    module: toonic.server.transport.routes.api
+    line: 69
+    cyclomatic_complexity: 3
+    calls_out: 12
+    calls_in: 0
+  toonic.server.transport.routes.api.get_actions:
+    name: get_actions
+    module: toonic.server.transport.routes.api
+    line: 38
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 0
+  toonic.server.quick.presets.log_monitor:
+    name: log_monitor
+    module: toonic.server.quick.presets
+    line: 89
+    cyclomatic_complexity: 2
+    calls_out: 7
+    calls_in: 0
+  toonic.server.watchers.stream.capture.capture_mock:
+    name: capture_mock
+    module: toonic.server.watchers.stream.capture
+    line: 185
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 2
+  examples.security-audit.quick_audit.continuous_monitoring:
+    name: continuous_monitoring
+    module: examples.security-audit.quick_audit
+    line: 45
+    cyclomatic_complexity: 1
+    calls_out: 5
+    calls_in: 1
+  toonic.server.__main__._build_server_config:
+    name: _build_server_config
+    module: toonic.server.__main__
+    line: 231
+    cyclomatic_complexity: 9
+    calls_out: 8
+    calls_in: 1
+  toonic.server.triggers.detectors.create_detector:
+    name: create_detector
+    module: toonic.server.triggers.detectors
+    line: 347
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 1
+  unified_toon.create_unified_toon:
+    name: create_unified_toon
+    module: unified_toon
+    line: 17
+    cyclomatic_complexity: 7
+    calls_out: 31
+    calls_in: 1
+  toonic.server.quick.archive.watch_archive:
+    name: watch_archive
+    module: toonic.server.quick.archive
+    line: 112
+    cyclomatic_complexity: 5
+    calls_out: 7
+    calls_in: 1
+  toonic.server.watchers.stream.watcher.StreamWatcher._capture_loop:
+    name: _capture_loop
+    module: toonic.server.watchers.stream.watcher
+    line: 121
+    cyclomatic_complexity: 3
+    calls_out: 5
+    calls_in: 0
+  examples.security-audit.quick_audit.full_stack_audit:
+    name: full_stack_audit
+    module: examples.security-audit.quick_audit
+    line: 65
+    cyclomatic_complexity: 1
+    calls_out: 5
+    calls_in: 1
+  examples.programmatic-api.demo_quick.demo_options:
+    name: demo_options
+    module: examples.programmatic-api.demo_quick
+    line: 116
+    cyclomatic_complexity: 3
+    calls_out: 16
+    calls_in: 1
+  examples.programmatic-api.demo_pipeline.demo_pipeline:
+    name: demo_pipeline
+    module: examples.programmatic-api.demo_pipeline
+    line: 126
+    cyclomatic_complexity: 1
+    calls_out: 16
+    calls_in: 1
+  examples.run_all.verify_presets:
+    name: verify_presets
+    module: examples.run_all
+    line: 238
+    cyclomatic_complexity: 5
+    calls_out: 3
+    calls_in: 1
+  toonic.cli._cmd_examples_preset:
+    name: _cmd_examples_preset
+    module: toonic.cli
+    line: 101
+    cyclomatic_complexity: 5
+    calls_out: 16
+    calls_in: 1
+  toonic.server.__main__.run_server:
+    name: run_server
+    module: toonic.server.__main__
+    line: 368
+    cyclomatic_complexity: 2
+    calls_out: 5
+    calls_in: 1
+  toonic.server.__main__.stop_process_using_port:
+    name: stop_process_using_port
+    module: toonic.server.__main__
+    line: 32
+    cyclomatic_complexity: 8
+    calls_out: 11
+    calls_in: 1
+  toonic.server.quick.parsing._is_archive_suffix:
+    name: _is_archive_suffix
+    module: toonic.server.quick.parsing
+    line: 163
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 1
+  toonic.server.quick.presets._apply_overrides:
+    name: _apply_overrides
+    module: toonic.server.quick.presets
+    line: 49
+    cyclomatic_complexity: 3
+    calls_out: 3
+    calls_in: 7
+  toonic.server.transport.routes.history.nlp_query:
+    name: nlp_query
+    module: toonic.server.transport.routes.history
+    line: 46
+    cyclomatic_complexity: 2
+    calls_out: 6
+    calls_in: 0
+  toonic.server.triggers.nlp2yaml.NLP2YAML.generate_yaml:
+    name: generate_yaml
+    module: toonic.server.triggers.nlp2yaml
+    line: 137
+    cyclomatic_complexity: 3
+    calls_out: 2
+    calls_in: 0
+  toonic.cli._cmd_examples_verify:
+    name: _cmd_examples_verify
+    module: toonic.cli
+    line: 86
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 1
+  toonic.server.llm.pipeline.LLMPipeline.execute:
+    name: execute
+    module: toonic.server.llm.pipeline
+    line: 27
+    cyclomatic_complexity: 5
+    calls_out: 11
+    calls_in: 0
+  toonic.server.transport.routes.history.sql_query:
+    name: sql_query
+    module: toonic.server.transport.routes.history
+    line: 55
+    cyclomatic_complexity: 2
+    calls_out: 5
+    calls_in: 0
+  toonic.server.quick.archive.unpack_archive:
+    name: unpack_archive
+    module: toonic.server.quick.archive
+    line: 52
+    cyclomatic_complexity: 7
+    calls_out: 15
+    calls_in: 1
+  toonic.server.transport.routes.api._get_server:
+    name: _get_server
+    module: toonic.server.transport.routes.api
+    line: 26
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 8
+  examples.programmatic-api.demo_quick.demo_watch:
+    name: demo_watch
+    module: examples.programmatic-api.demo_quick
+    line: 95
+    cyclomatic_complexity: 2
+    calls_out: 13
+    calls_in: 1
+  examples.security-audit.quick_audit.audit_website:
+    name: audit_website
+    module: examples.security-audit.quick_audit
+    line: 27
+    cyclomatic_complexity: 1
+    calls_out: 5
+    calls_in: 1
+  toonic.formats.api.register_api_handlers:
+    name: register_api_handlers
+    module: toonic.formats.api
+    line: 179
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 1
+  toonic.server.__main__.parse_args:
+    name: parse_args
+    module: toonic.server.__main__
+    line: 79
+    cyclomatic_complexity: 1
+    calls_out: 13
+    calls_in: 1
+  toonic.server.transport.routes.api.get_exchanges:
+    name: get_exchanges
+    module: toonic.server.transport.routes.api
+    line: 181
+    cyclomatic_complexity: 15
+    calls_out: 20
+    calls_in: 0
+  toonic.server.quick.archive._is_tar_file:
+    name: _is_tar_file
+    module: toonic.server.quick.archive
+    line: 31
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 1
+  toonic.server.__main__._run_web_mode:
+    name: _run_web_mode
+    module: toonic.server.__main__
+    line: 318
+    cyclomatic_complexity: 5
+    calls_out: 30
+    calls_in: 1
+  toonic.server.quick.archive._should_include_file:
+    name: _should_include_file
+    module: toonic.server.quick.archive
+    line: 84
+    cyclomatic_complexity: 5
+    calls_out: 3
+    calls_in: 1
+  toonic.server.quick.presets.security_audit:
+    name: security_audit
+    module: toonic.server.quick.presets
+    line: 56
+    cyclomatic_complexity: 2
+    calls_out: 7
+    calls_in: 4
+  examples._helpers.print_to_run_hint:
+    name: print_to_run_hint
+    module: examples._helpers
+    line: 19
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 1
+  toonic.server.transport.routes.api.analyze_now:
+    name: analyze_now
+    module: toonic.server.transport.routes.api
+    line: 43
+    cyclomatic_complexity: 1
+    calls_out: 6
+    calls_in: 0
+  toonic.server.quick.parsing.parse_source:
+    name: parse_source
+    module: toonic.server.quick.parsing
+    line: 210
+    cyclomatic_complexity: 7
+    calls_out: 11
+    calls_in: 2
+  toonic.formats.data.register_data_handlers:
+    name: register_data_handlers
+    module: toonic.formats.data
+    line: 382
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 1
+  toonic.server.client.main:
+    name: main
+    module: toonic.server.client
+    line: 404
+    cyclomatic_complexity: 5
+    calls_out: 19
+    calls_in: 0
+  toonic.server.triggers.detectors.create_detectors:
+    name: create_detectors
+    module: toonic.server.triggers.detectors
+    line: 356
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 1
+  toonic.server.transport.routes.api.get_events_file:
+    name: get_events_file
+    module: toonic.server.transport.routes.api
+    line: 112
+    cyclomatic_complexity: 19
+    calls_out: 23
+    calls_in: 0
+  toonic.server.quick.builder.ConfigBuilder.run:
+    name: run
+    module: toonic.server.quick.builder
+    line: 242
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 0
+  toonic.cli.cli_main:
+    name: cli_main
+    module: toonic.cli
+    line: 300
+    cyclomatic_complexity: 4
+    calls_out: 7
+    calls_in: 0
+  toonic.server.quick.builder.ConfigBuilder.build:
+    name: build
+    module: toonic.server.quick.builder
+    line: 228
+    cyclomatic_complexity: 3
+    calls_out: 7
+    calls_in: 0
+edges:
+- caller: examples.run_all._example_env
+  callee: examples.run_all._repo_root
+  call_type: resolved
+- caller: examples.run_all._run_py
+  callee: examples.run_all._example_env
+  call_type: resolved
+- caller: examples.run_all._run_py
+  callee: examples.run_all._repo_root
+  call_type: resolved
+- caller: examples.run_all.verify_config_builds
+  callee: toonic.server.quick.runtime.watch
+  call_type: resolved
+- caller: examples.run_all.verify_demos
+  callee: examples.run_all._run_py
+  call_type: resolved
+- caller: examples.run_all.verify_all
+  callee: examples.run_all.verify_imports
+  call_type: resolved
+- caller: examples.run_all.verify_all
+  callee: examples.run_all.verify_presets
+  call_type: resolved
+- caller: examples.run_all.verify_all
+  callee: examples.run_all.verify_config_builds
+  call_type: resolved
+- caller: examples.archive-monitoring.run.main
+  callee: examples._helpers.print_config_summary
+  call_type: resolved
+- caller: examples.archive-monitoring.run.main
+  callee: examples._helpers.print_to_run_hint
+  call_type: resolved
+- caller: examples.security-audit.quick_audit.audit_code
+  callee: toonic.server.quick.presets.security_audit
+  call_type: resolved
+- caller: examples.security-audit.quick_audit.audit_website
+  callee: toonic.server.quick.presets.security_audit
+  call_type: resolved
+- caller: examples.security-audit.quick_audit.continuous_monitoring
+  callee: toonic.server.quick.presets.security_audit
+  call_type: resolved
+- caller: examples.security-audit.quick_audit.full_stack_audit
+  callee: toonic.server.quick.presets.security_audit
+  call_type: resolved
+- caller: examples.security-audit.quick_audit.demo
+  callee: examples.security-audit.quick_audit.audit_code
+  call_type: resolved
+- caller: examples.security-audit.quick_audit.demo
+  callee: examples.security-audit.quick_audit.audit_website
+  call_type: resolved
+- caller: examples.security-audit.generate_report.main
+  callee: examples.security-audit.generate_report.load_exchanges
+  call_type: resolved
+- caller: examples.security-audit.generate_report.main
+  callee: examples.security-audit.generate_report.load_history
+  call_type: resolved
+- caller: examples.security-audit.generate_report.main
+  callee: examples.security-audit.generate_report.generate_markdown_report
+  call_type: resolved
+- caller: examples.log-monitoring.generate_logs.generate_line
+  callee: examples.log-monitoring.generate_logs._fill
+  call_type: resolved
+- caller: examples.log-monitoring.generate_logs.run_normal
+  callee: examples.log-monitoring.generate_logs.generate_line
+  call_type: resolved
+- caller: examples.log-monitoring.generate_logs.main
+  callee: examples.log-monitoring.generate_logs.run_normal
+  call_type: resolved
+- caller: toonic.cli._cmd_examples_list
+  callee: examples.run_all.list_examples
+  call_type: resolved
+- caller: toonic.cli._cmd_examples_verify
+  callee: examples.run_all.verify_all
+  call_type: resolved
+- caller: toonic.cli._cmd_examples_show
+  callee: examples.run_all.show_example
+  call_type: resolved
+- caller: toonic.cli._cmd_examples
+  callee: toonic.cli._cmd_examples_list
+  call_type: resolved
+- caller: toonic.cli._cmd_examples
+  callee: toonic.cli._cmd_examples_verify
+  call_type: resolved
+- caller: toonic.cli._cmd_examples
+  callee: toonic.cli._cmd_examples_show
+  call_type: resolved
+- caller: toonic.cli._cmd_examples
+  callee: toonic.cli._cmd_examples_preset
+  call_type: resolved
+- caller: toonic.cli._cmd_examples
+  callee: toonic.cli._cmd_examples_run_demo
+  call_type: resolved
+- caller: toonic.cli.cli_main
+  callee: toonic.cli._build_argument_parser
+  call_type: resolved
+- caller: toonic.cli.cli_main
+  callee: toonic.cli._get_command_handler
+  call_type: resolved
+- caller: examples.programmatic-api.demo_quick.demo_parse_source
+  callee: toonic.server.quick.parsing.parse_source
+  call_type: resolved
+- caller: examples.programmatic-api.demo_quick.main
+  callee: examples.programmatic-api.demo_quick.demo_parse_source
+  call_type: resolved
+- caller: examples.programmatic-api.demo_quick.main
+  callee: examples.programmatic-api.demo_quick.demo_config_builder
+  call_type: resolved
+- caller: examples.programmatic-api.demo_quick.main
+  callee: examples.programmatic-api.demo_quick.demo_watch
+  call_type: resolved
+- caller: examples.programmatic-api.demo_quick.main
+  callee: examples.programmatic-api.demo_quick.demo_options
+  call_type: resolved
+- caller: examples.programmatic-api.demo_pipeline.demo_prompt_selection
+  callee: toonic.server.llm.prompts.select_prompt_builder
+  call_type: resolved
+- caller: examples.programmatic-api.demo_pipeline.main
+  callee: examples.programmatic-api.demo_pipeline.demo_prompt_selection
+  call_type: resolved
+- caller: examples.programmatic-api.demo_pipeline.main
+  callee: examples.programmatic-api.demo_pipeline.demo_prompt_building
+  call_type: resolved
+- caller: examples.programmatic-api.demo_pipeline.main
+  callee: examples.programmatic-api.demo_pipeline.demo_response_parser
+  call_type: resolved
+- caller: examples.programmatic-api.demo_pipeline.main
+  callee: examples.programmatic-api.demo_pipeline.demo_pipeline
+  call_type: resolved
+- caller: toonic.formats.initialize_all_handlers
+  callee: toonic.formats.document.register_document_handlers
+  call_type: resolved
+- caller: toonic.formats.initialize_all_handlers
+  callee: toonic.formats.data.register_data_handlers
+  call_type: resolved
+- caller: toonic.formats.initialize_all_handlers
+  callee: toonic.formats.config.register_config_handlers
+  call_type: resolved
+- caller: toonic.formats.initialize_all_handlers
+  callee: toonic.formats.database.register_database_handlers
+  call_type: resolved
+- caller: toonic.formats.initialize_all_handlers
+  callee: toonic.formats.api.register_api_handlers
+  call_type: resolved
+- caller: toonic.formats.initialize_all_handlers
+  callee: toonic.formats.infra.register_infra_handlers
+  call_type: resolved
+- caller: toonic.formats.initialize_all_handlers
+  callee: toonic.formats.evidence.register_evidence_handlers
+  call_type: resolved
+- caller: toonic.formats.initialize_all_handlers
+  callee: toonic.formats.video.register_video_handlers
+  call_type: resolved
+- caller: toonic.formats.initialize_all_handlers
+  callee: toonic.formats.audio.register_audio_handlers
+  call_type: resolved
+- caller: examples.protocol-recipes.run.main
+  callee: toonic.server.quick.runtime.watch
+  call_type: resolved
+- caller: unified_toon.create_unified_toon
+  callee: unified_toon.create_unified_spec
+  call_type: resolved
+- caller: unified_toon.main
+  callee: unified_toon.create_unified_toon
+  call_type: resolved
+- caller: toonic.server.__main__.ensure_port_available
+  callee: toonic.server.__main__.check_port_occupied
+  call_type: resolved
+- caller: toonic.server.__main__.ensure_port_available
+  callee: toonic.server.__main__.stop_process_using_port
+  call_type: resolved
+- caller: toonic.server.__main__._build_server_config
+  callee: toonic.server.__main__.parse_source_string
+  call_type: resolved
+- caller: toonic.server.__main__._build_trigger_config
+  callee: toonic.server.triggers.dsl.load_triggers
+  call_type: resolved
+- caller: toonic.server.__main__._build_trigger_config
+  callee: toonic.server.triggers.dsl.dump_triggers
+  call_type: resolved
+- caller: toonic.server.__main__._run_web_mode
+  callee: toonic.server.__main__.ensure_port_available
+  call_type: resolved
+- caller: toonic.server.__main__._run_web_mode
+  callee: toonic.server.transport.app.create_app
+  call_type: resolved
+- caller: toonic.server.__main__.run_server
+  callee: toonic.server.__main__._build_server_config
+  call_type: resolved
+- caller: toonic.server.__main__.run_server
+  callee: toonic.server.__main__._build_trigger_config
+  call_type: resolved
+- caller: toonic.server.__main__.run_server
+  callee: toonic.server.__main__._run_no_web_mode
+  call_type: resolved
+- caller: toonic.server.__main__.run_server
+  callee: toonic.server.__main__._run_web_mode
+  call_type: resolved
+- caller: toonic.server.__main__.main
+  callee: toonic.server.__main__.parse_args
+  call_type: resolved
+- caller: toonic.server.client._execute_command
+  callee: toonic.server.client._should_exit
+  call_type: resolved
+- caller: toonic.server.client._execute_command
+  callee: toonic.server.client._get_command_handler
+  call_type: resolved
+- caller: toonic.server.client._execute_command
+  callee: toonic.server.client._cmd_model
+  call_type: resolved
+- caller: toonic.server.client.run_shell
+  callee: toonic.server.client._execute_command
+  call_type: resolved
+- caller: toonic.server.client.main
+  callee: toonic.server.client.run_shell
+  call_type: resolved
+- caller: toonic.pipeline.Pipeline._ensure_initialized
+  callee: toonic.formats.initialize_all_handlers
+  call_type: resolved
+- caller: toonic.server.transport.routes.sources.list_sources
+  callee: toonic.server.transport.routes.sources._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.sources.add_source
+  callee: toonic.server.transport.routes.sources._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.sources.remove_source
+  callee: toonic.server.transport.routes.sources._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.history.get_history
+  callee: toonic.server.transport.routes.history._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.history.get_history_stats
+  callee: toonic.server.transport.routes.history._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.history.nlp_query
+  callee: toonic.server.transport.routes.history._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.history.sql_query
+  callee: toonic.server.transport.routes.history._get_server
+  call_type: resolved
+- caller: toonic.server.watchers.log_watcher.LogWatcher._initial_tail
+  callee: toonic.server.watchers.log_watcher._detect_max_severity
+  call_type: resolved
+- caller: toonic.server.watchers.stream.events.check_event_and_emit
+  callee: toonic.server.watchers.stream.events._select_event_frames
+  call_type: resolved
+- caller: toonic.server.watchers.stream.events.check_event_and_emit
+  callee: toonic.server.watchers.stream.events._extract_roi_crops
+  call_type: resolved
+- caller: toonic.server.transport.routes.api.get_status
+  callee: toonic.server.transport.routes.api._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.api.get_actions
+  callee: toonic.server.transport.routes.api._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.api.analyze_now
+  callee: toonic.server.transport.routes.api._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.api.get_events
+  callee: toonic.server.transport.routes.api._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.api.get_triggers
+  callee: toonic.server.transport.routes.api._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.api.get_data_dir
+  callee: toonic.server.transport.routes.api._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.api.get_events_file
+  callee: toonic.server.transport.routes.api._get_server
+  call_type: resolved
+- caller: toonic.server.transport.routes.api.get_exchanges
+  callee: toonic.server.transport.routes.api._get_server
+  call_type: resolved
+- caller: toonic.server.quick.runtime.monitor
+  callee: toonic.server.quick.runtime.serve
+  call_type: resolved
+- caller: toonic.server.quick.runtime.monitor
+  callee: toonic.server.quick.runtime.watch
+  call_type: resolved
+- caller: toonic.server.quick.runtime.serve
+  callee: toonic.server.transport.app.create_app
+  call_type: resolved
+- caller: toonic.server.quick.runtime.serve
+  callee: toonic.server.quick.runtime._serve_web
+  call_type: resolved
+- caller: toonic.server.quick.runtime.serve
+  callee: toonic.server.quick.runtime._serve_headless
+  call_type: resolved
+- caller: toonic.server.quick.runtime.run
+  callee: toonic.server.quick.runtime.monitor
+  call_type: resolved
+- caller: toonic.server.quick.presets.security_audit
+  callee: toonic.server.quick.presets._apply_overrides
+  call_type: resolved
+- caller: toonic.server.quick.presets.security_audit
+  callee: toonic.server.quick.runtime.watch
+  call_type: resolved
+- caller: toonic.server.quick.presets.code_review
+  callee: toonic.server.quick.presets._apply_overrides
+  call_type: resolved
+- caller: toonic.server.quick.presets.code_review
+  callee: toonic.server.quick.runtime.watch
+  call_type: resolved
+- caller: toonic.server.quick.presets.log_monitor
+  callee: toonic.server.quick.presets._apply_overrides
+  call_type: resolved
+- caller: toonic.server.quick.presets.log_monitor
+  callee: toonic.server.quick.runtime.watch
+  call_type: resolved
+- caller: toonic.server.quick.presets.infra_health
+  callee: toonic.server.quick.presets._apply_overrides
+  call_type: resolved
+- caller: toonic.server.quick.presets.infra_health
+  callee: toonic.server.quick.runtime.watch
+  call_type: resolved
+- caller: toonic.server.quick.presets.cctv_monitor
+  callee: toonic.server.quick.presets._apply_overrides
+  call_type: resolved
+- caller: toonic.server.quick.presets.cctv_monitor
+  callee: toonic.server.quick.runtime.watch
+  call_type: resolved
+- caller: toonic.server.quick.presets.web_monitor
+  callee: toonic.server.quick.presets._apply_overrides
+  call_type: resolved
+- caller: toonic.server.quick.presets.full_stack
+  callee: toonic.server.quick.presets._apply_overrides
+  call_type: resolved
+- caller: toonic.server.quick.presets.full_stack
+  callee: toonic.server.quick.runtime.watch
+  call_type: resolved
+- caller: toonic.server.watchers.stream.watcher.StreamWatcher.__init__
+  callee: toonic.server.watchers.stream.watcher._bool
+  call_type: resolved
+- caller: toonic.server.watchers.stream.watcher.StreamWatcher._capture_loop
+  callee: toonic.server.watchers.stream.capture.capture_opencv
+  call_type: resolved
+- caller: toonic.server.watchers.stream.watcher.StreamWatcher._capture_loop
+  callee: toonic.server.watchers.stream.capture.capture_mock
+  call_type: resolved
+- caller: toonic.server.watchers.stream.capture.capture_opencv
+  callee: toonic.server.watchers.stream.detection.init_yolo
+  call_type: resolved
+- caller: toonic.server.quick.parsing._detect_category_from_path
+  callee: toonic.server.quick.parsing._is_archive_suffix
+  call_type: resolved
+- caller: toonic.server.quick.parsing.parse_source
+  callee: toonic.server.quick.parsing._detect_category_from_path
+  call_type: resolved
+- caller: toonic.server.quick.parsing.parse_source
+  callee: toonic.server.quick.parsing._parse_protocol_url
+  call_type: resolved
+- caller: toonic.server.quick.parsing.parse_source
+  callee: toonic.server.quick.parsing._parse_prefixed_source
+  call_type: resolved
+- caller: toonic.server.quick.builder.ConfigBuilder.add
+  callee: toonic.server.quick.parsing.parse_source
+  call_type: resolved
+- caller: toonic.server.quick.builder.ConfigBuilder.build
+  callee: toonic.server.triggers.dsl.load_triggers
+  call_type: resolved
+- caller: toonic.server.quick.builder.ConfigBuilder.run
+  callee: toonic.server.quick.runtime.serve
+  call_type: resolved
+- caller: toonic.server.quick.archive.unpack_archive
+  callee: toonic.server.quick.archive._is_zip_file
+  call_type: resolved
+- caller: toonic.server.quick.archive.unpack_archive
+  callee: toonic.server.quick.archive._is_tar_file
+  call_type: resolved
+- caller: toonic.server.quick.archive._collect_files_from_directory
+  callee: toonic.server.quick.archive._should_include_file
+  call_type: resolved
+- caller: toonic.server.quick.archive.watch_archive
+  callee: toonic.server.quick.archive.unpack_archive
+  call_type: resolved
+- caller: toonic.server.quick.archive.watch_archive
+  callee: toonic.server.quick.archive._collect_files_from_directory
+  call_type: resolved
+- caller: toonic.server.quick.archive.watch_archive
+  callee: toonic.server.quick.runtime.watch
+  call_type: resolved
+- caller: toonic.server.triggers.nlp2yaml.NLP2YAML.generate
+  callee: toonic.server.triggers.dsl.load_triggers
+  call_type: resolved
+- caller: toonic.server.triggers.nlp2yaml.NLP2YAML.generate_yaml
+  callee: toonic.server.triggers.dsl.dump_triggers
+  call_type: resolved
+- caller: toonic.server.llm.pipeline.LLMPipeline.execute
+  callee: toonic.server.llm.prompts.select_prompt_builder
+  call_type: resolved
+- caller: toonic.server.triggers.scheduler.RuleState.__init__
+  callee: toonic.server.triggers.detectors.create_detectors
+  call_type: resolved
+- caller: toonic.server.triggers.scheduler.TriggerScheduler.from_yaml
+  callee: toonic.server.triggers.dsl.load_triggers
+  call_type: resolved
+- caller: toonic.server.triggers.detectors.create_detectors
+  callee: toonic.server.triggers.detectors.create_detector
+  call_type: resolved
+modules:
+  examples._helpers:
+  - examples._helpers.print_config_summary
+  - examples._helpers.print_to_run_hint
+  examples.archive-monitoring.run:
+  - examples.archive-monitoring.run.main
+  examples.log-monitoring.generate_logs:
+  - examples.log-monitoring.generate_logs._fill
+  - examples.log-monitoring.generate_logs.generate_line
+  - examples.log-monitoring.generate_logs.main
+  - examples.log-monitoring.generate_logs.run_normal
+  examples.programmatic-api.demo_pipeline:
+  - examples.programmatic-api.demo_pipeline.demo_pipeline
+  - examples.programmatic-api.demo_pipeline.demo_prompt_building
+  - examples.programmatic-api.demo_pipeline.demo_prompt_selection
+  - examples.programmatic-api.demo_pipeline.demo_response_parser
+  - examples.programmatic-api.demo_pipeline.main
+  examples.programmatic-api.demo_quick:
+  - examples.programmatic-api.demo_quick.demo_config_builder
+  - examples.programmatic-api.demo_quick.demo_options
+  - examples.programmatic-api.demo_quick.demo_parse_source
+  - examples.programmatic-api.demo_quick.demo_watch
+  - examples.programmatic-api.demo_quick.main
+  examples.protocol-recipes.run:
+  - examples.protocol-recipes.run.main
+  examples.run_all:
+  - examples.run_all._example_env
+  - examples.run_all._repo_root
+  - examples.run_all._run_py
+  - examples.run_all.list_examples
+  - examples.run_all.show_example
+  - examples.run_all.verify_all
+  - examples.run_all.verify_config_builds
+  - examples.run_all.verify_demos
+  - examples.run_all.verify_imports
+  - examples.run_all.verify_presets
+  examples.security-audit.generate_report:
+  - examples.security-audit.generate_report.generate_markdown_report
+  - examples.security-audit.generate_report.load_exchanges
+  - examples.security-audit.generate_report.load_history
+  - examples.security-audit.generate_report.main
+  examples.security-audit.quick_audit:
+  - examples.security-audit.quick_audit.audit_code
+  - examples.security-audit.quick_audit.audit_website
+  - examples.security-audit.quick_audit.continuous_monitoring
+  - examples.security-audit.quick_audit.demo
+  - examples.security-audit.quick_audit.full_stack_audit
+  toonic.cli:
+  - toonic.cli._build_argument_parser
+  - toonic.cli._cmd_examples
+  - toonic.cli._cmd_examples_list
+  - toonic.cli._cmd_examples_preset
+  - toonic.cli._cmd_examples_run_demo
+  - toonic.cli._cmd_examples_show
+  - toonic.cli._cmd_examples_verify
+  - toonic.cli._get_command_handler
+  - toonic.cli.cli_main
+  toonic.formats:
+  - toonic.formats.initialize_all_handlers
+  toonic.formats.api:
+  - toonic.formats.api.register_api_handlers
+  toonic.formats.audio:
+  - toonic.formats.audio.register_audio_handlers
+  toonic.formats.config:
+  - toonic.formats.config.register_config_handlers
+  toonic.formats.data:
+  - toonic.formats.data.register_data_handlers
+  toonic.formats.database:
+  - toonic.formats.database.register_database_handlers
+  toonic.formats.document:
+  - toonic.formats.document.register_document_handlers
+  toonic.formats.evidence:
+  - toonic.formats.evidence.register_evidence_handlers
+  toonic.formats.infra:
+  - toonic.formats.infra.register_infra_handlers
+  toonic.formats.video:
+  - toonic.formats.video.register_video_handlers
+  toonic.pipeline:
+  - toonic.pipeline.Pipeline._ensure_initialized
+  toonic.server.__main__:
+  - toonic.server.__main__._build_server_config
+  - toonic.server.__main__._build_trigger_config
+  - toonic.server.__main__._run_no_web_mode
+  - toonic.server.__main__._run_web_mode
+  - toonic.server.__main__.check_port_occupied
+  - toonic.server.__main__.ensure_port_available
+  - toonic.server.__main__.main
+  - toonic.server.__main__.parse_args
+  - toonic.server.__main__.parse_source_string
+  - toonic.server.__main__.run_server
+  - toonic.server.__main__.stop_process_using_port
+  toonic.server.client:
+  - toonic.server.client._cmd_model
+  - toonic.server.client._execute_command
+  - toonic.server.client._get_command_handler
+  - toonic.server.client._should_exit
+  - toonic.server.client.main
+  - toonic.server.client.run_shell
+  toonic.server.llm.pipeline:
+  - toonic.server.llm.pipeline.LLMPipeline.execute
+  toonic.server.llm.prompts:
+  - toonic.server.llm.prompts.select_prompt_builder
+  toonic.server.quick.archive:
+  - toonic.server.quick.archive._collect_files_from_directory
+  - toonic.server.quick.archive._is_tar_file
+  - toonic.server.quick.archive._is_zip_file
+  - toonic.server.quick.archive._should_include_file
+  - toonic.server.quick.archive.unpack_archive
+  - toonic.server.quick.archive.watch_archive
+  toonic.server.quick.builder:
+  - toonic.server.quick.builder.ConfigBuilder.add
+  - toonic.server.quick.builder.ConfigBuilder.build
+  - toonic.server.quick.builder.ConfigBuilder.run
+  toonic.server.quick.parsing:
+  - toonic.server.quick.parsing._detect_category_from_path
+  - toonic.server.quick.parsing._is_archive_suffix
+  - toonic.server.quick.parsing._parse_prefixed_source
+  - toonic.server.quick.parsing._parse_protocol_url
+  - toonic.server.quick.parsing.parse_source
+  toonic.server.quick.presets:
+  - toonic.server.quick.presets._apply_overrides
+  - toonic.server.quick.presets.cctv_monitor
+  - toonic.server.quick.presets.code_review
+  - toonic.server.quick.presets.full_stack
+  - toonic.server.quick.presets.infra_health
+  - toonic.server.quick.presets.log_monitor
+  - toonic.server.quick.presets.security_audit
+  - toonic.server.quick.presets.web_monitor
+  toonic.server.quick.runtime:
+  - toonic.server.quick.runtime._serve_headless
+  - toonic.server.quick.runtime._serve_web
+  - toonic.server.quick.runtime.monitor
+  - toonic.server.quick.runtime.run
+  - toonic.server.quick.runtime.serve
+  - toonic.server.quick.runtime.watch
+  toonic.server.transport.app:
+  - toonic.server.transport.app.create_app
+  toonic.server.transport.routes.api:
+  - toonic.server.transport.routes.api._get_server
+  - toonic.server.transport.routes.api.analyze_now
+  - toonic.server.transport.routes.api.get_actions
+  - toonic.server.transport.routes.api.get_data_dir
+  - toonic.server.transport.routes.api.get_events
+  - toonic.server.transport.routes.api.get_events_file
+  - toonic.server.transport.routes.api.get_exchanges
+  - toonic.server.transport.routes.api.get_status
+  - toonic.server.transport.routes.api.get_triggers
+  toonic.server.transport.routes.history:
+  - toonic.server.transport.routes.history._get_server
+  - toonic.server.transport.routes.history.get_history
+  - toonic.server.transport.routes.history.get_history_stats
+  - toonic.server.transport.routes.history.nlp_query
+  - toonic.server.transport.routes.history.sql_query
+  toonic.server.transport.routes.sources:
+  - toonic.server.transport.routes.sources._get_server
+  - toonic.server.transport.routes.sources.add_source
+  - toonic.server.transport.routes.sources.list_sources
+  - toonic.server.transport.routes.sources.remove_source
+  toonic.server.triggers.detectors:
+  - toonic.server.triggers.detectors.create_detector
+  - toonic.server.triggers.detectors.create_detectors
+  toonic.server.triggers.dsl:
+  - toonic.server.triggers.dsl.dump_triggers
+  - toonic.server.triggers.dsl.load_triggers
+  toonic.server.triggers.nlp2yaml:
+  - toonic.server.triggers.nlp2yaml.NLP2YAML.generate
+  - toonic.server.triggers.nlp2yaml.NLP2YAML.generate_yaml
+  toonic.server.triggers.scheduler:
+  - toonic.server.triggers.scheduler.RuleState.__init__
+  - toonic.server.triggers.scheduler.TriggerScheduler.from_yaml
+  toonic.server.watchers.log_watcher:
+  - toonic.server.watchers.log_watcher.LogWatcher._initial_tail
+  - toonic.server.watchers.log_watcher._detect_max_severity
+  toonic.server.watchers.stream.capture:
+  - toonic.server.watchers.stream.capture.capture_mock
+  - toonic.server.watchers.stream.capture.capture_opencv
+  toonic.server.watchers.stream.detection:
+  - toonic.server.watchers.stream.detection.init_yolo
+  toonic.server.watchers.stream.events:
+  - toonic.server.watchers.stream.events._extract_roi_crops
+  - toonic.server.watchers.stream.events._select_event_frames
+  - toonic.server.watchers.stream.events.check_event_and_emit
+  toonic.server.watchers.stream.watcher:
+  - toonic.server.watchers.stream.watcher.StreamWatcher.__init__
+  - toonic.server.watchers.stream.watcher.StreamWatcher._capture_loop
+  - toonic.server.watchers.stream.watcher._bool
+  unified_toon:
+  - unified_toon.create_unified_spec
+  - unified_toon.create_unified_toon
+  - unified_toon.main
+entry_points:
+- examples.archive-monitoring.run.main
+- examples.code-analysis.sample-project.main.OrderService.__init__
+- examples.code-analysis.sample-project.main.OrderService.create_order
+- examples.code-analysis.sample-project.main.OrderService.get_orders
+- examples.code-analysis.sample-project.main.OrderService.process_payment
+- examples.code-analysis.sample-project.main.UserService.__init__
+- examples.code-analysis.sample-project.main.UserService.create_user
+- examples.code-analysis.sample-project.main.UserService.deactivate_user
+- examples.code-analysis.sample-project.main.UserService.get_user
+- examples.code-analysis.sample-project.main.UserService.list_users
+- examples.code-analysis.sample-project.main.main
+- examples.log-monitoring.generate_logs.main
+- examples.programmatic-api.demo_accumulator.main
+- examples.programmatic-api.demo_pipeline.main
+- examples.programmatic-api.demo_quick.main
+- examples.protocol-recipes.run.main
+- examples.run_all.main
+- examples.security-audit.QUICK_DEPLOYMENT.check_requirements
+- examples.security-audit.QUICK_DEPLOYMENT.configure_monitoring
+- examples.security-audit.QUICK_DEPLOYMENT.create_directories
+- examples.security-audit.QUICK_DEPLOYMENT.create_management_scripts
+- examples.security-audit.QUICK_DEPLOYMENT.install_tools
+- examples.security-audit.QUICK_DEPLOYMENT.main
+- examples.security-audit.QUICK_DEPLOYMENT.print_error
+- examples.security-audit.QUICK_DEPLOYMENT.print_header
+- examples.security-audit.QUICK_DEPLOYMENT.print_info
+- examples.security-audit.QUICK_DEPLOYMENT.print_step
+- examples.security-audit.QUICK_DEPLOYMENT.print_summary
+- examples.security-audit.QUICK_DEPLOYMENT.print_warning
+- examples.security-audit.QUICK_DEPLOYMENT.run_initial_tests
+- examples.security-audit.QUICK_DEPLOYMENT.setup_cron_jobs
+- examples.security-audit.QUICK_DEPLOYMENT.setup_logrotate
+- examples.security-audit.QUICK_DEPLOYMENT.setup_nginx
+- examples.security-audit.QUICK_DEPLOYMENT.setup_service_user
+- examples.security-audit.QUICK_DEPLOYMENT.start_services
+- examples.security-audit.continuous_monitoring.SecurityMonitor.__init__
+- examples.security-audit.continuous_monitoring.SecurityMonitor.calculate_security_score
+- examples.security-audit.continuous_monitoring.SecurityMonitor.check_content_changes
+- examples.security-audit.continuous_monitoring.SecurityMonitor.check_dependencies
+- examples.security-audit.continuous_monitoring.SecurityMonitor.check_response_time
+- examples.security-audit.continuous_monitoring.SecurityMonitor.check_security_headers
+- examples.security-audit.continuous_monitoring.SecurityMonitor.check_ssl_certificate
+- examples.security-audit.continuous_monitoring.SecurityMonitor.load_config
+- examples.security-audit.continuous_monitoring.SecurityMonitor.run_all_checks
+- examples.security-audit.continuous_monitoring.SecurityMonitor.run_monitoring_cycle
+- examples.security-audit.continuous_monitoring.SecurityMonitor.save_monitoring_data
+- examples.security-audit.continuous_monitoring.SecurityMonitor.send_alert
+- examples.security-audit.continuous_monitoring.SecurityMonitor.send_email_alert
+- examples.security-audit.continuous_monitoring.SecurityMonitor.send_webhook_alert
+- examples.security-audit.continuous_monitoring.SecurityMonitor.start_daemon
+- examples.security-audit.continuous_monitoring.main
+- examples.security-audit.enterprise_anomaly.AnomalyDetector.__init__
+- examples.security-audit.enterprise_anomaly.AnomalyDetector.collect_baseline
+- examples.security-audit.enterprise_anomaly.AnomalyDetector.detect_anomalies
+- examples.security-audit.enterprise_compliance.ComplianceManager.__init__
+- examples.security-audit.enterprise_compliance.ComplianceManager.check_gdpr_compliance
+- examples.security-audit.enterprise_compliance.ComplianceManager.check_iso27001_compliance
+- examples.security-audit.enterprise_compliance.ComplianceManager.generate_compliance_report
+- examples.security-audit.enterprise_features.main
+- examples.security-audit.enterprise_monitor.EnterpriseSecurityMonitor.__init__
+- examples.security-audit.enterprise_monitor.EnterpriseSecurityMonitor._calculate_compliance_score
+- examples.security-audit.enterprise_monitor.EnterpriseSecurityMonitor._calculate_security_score
+- examples.security-audit.enterprise_monitor.EnterpriseSecurityMonitor._generate_markdown_report
+- examples.security-audit.enterprise_monitor.EnterpriseSecurityMonitor._save_results
+- examples.security-audit.enterprise_monitor.EnterpriseSecurityMonitor.analyze_security_headers
+- examples.security-audit.enterprise_monitor.EnterpriseSecurityMonitor.analyze_ssl_configuration
+- examples.security-audit.enterprise_monitor.EnterpriseSecurityMonitor.collect_metrics
+- examples.security-audit.enterprise_monitor.EnterpriseSecurityMonitor.load_config
+- examples.security-audit.enterprise_monitor.EnterpriseSecurityMonitor.run_enterprise_analysis
+- examples.security-audit.enterprise_threat_intel.ThreatIntelligenceManager.__init__
+- examples.security-audit.enterprise_threat_intel.ThreatIntelligenceManager._fetch_feed
+- examples.security-audit.enterprise_threat_intel.ThreatIntelligenceManager.check_indicators
+- examples.security-audit.enterprise_threat_intel.ThreatIntelligenceManager.fetch_threat_intelligence
+- examples.security-audit.generate_report.main
+- examples.security-audit.quick_audit.demo
+- examples.security-audit.remediation_script.log_message
+- examples.security-audit.remediation_script.print_error
+- examples.security-audit.remediation_script.print_status
+- examples.security-audit.remediation_script.print_warning
+- toonic.autopilot.executor.ActionExecutor.__init__
+- toonic.autopilot.executor.ActionExecutor._execute_code_change
+- toonic.autopilot.executor.ActionExecutor._execute_delete
+- toonic.autopilot.executor.ActionExecutor._execute_tests
+- toonic.autopilot.executor.ActionExecutor._extract_code
+- toonic.autopilot.executor.ActionExecutor._extract_file_blocks
+- toonic.autopilot.executor.ActionExecutor._resolve_path
+- toonic.autopilot.executor.ActionExecutor._write_file
+- toonic.autopilot.executor.ActionExecutor.execute
+- toonic.autopilot.executor.ActionExecutor.get_history
+- toonic.autopilot.loop.AutopilotLoop.__init__
+- toonic.autopilot.loop.AutopilotLoop._emit
+- toonic.autopilot.loop.AutopilotLoop._fix_loop
+- toonic.autopilot.loop.AutopilotLoop._format_previous_actions
+- toonic.autopilot.loop.AutopilotLoop._is_roadmap_complete
+- toonic.autopilot.loop.AutopilotLoop._read_roadmap
+- toonic.autopilot.loop.AutopilotLoop._scan_project
+- toonic.autopilot.loop.AutopilotLoop._update_roadmap
+- toonic.autopilot.loop.AutopilotLoop.run
+- toonic.autopilot.loop.AutopilotLoop.stop
+- toonic.autopilot.prompts.AutopilotPrompt.build
+- toonic.autopilot.prompts.FixPrompt.build
+- toonic.autopilot.prompts.ScaffoldPrompt.build
+- toonic.autopilot.scaffold.ProjectScaffold.detect_spec
+- toonic.autopilot.scaffold.ProjectScaffold.generate
+- toonic.autopilot.scaffold.ProjectScaffold.init
+- toonic.autopilot.scaffold._node_project
+- toonic.autopilot.scaffold._python_project
+- toonic.cli._cmd_autopilot
+- toonic.cli._cmd_examples
+- toonic.cli._cmd_formats
+- toonic.cli._cmd_init
+- toonic.cli._cmd_reproduce
+- toonic.cli._cmd_spec
+- toonic.cli._event_printer
+- toonic.cli.cli_main
+- toonic.core.base.BaseHandlerMixin._compute_hash
+- toonic.core.base.BaseHandlerMixin._format_toon_header
+- toonic.core.base.BaseHandlerMixin._read_content
+- toonic.core.detector.SpecDetector.detect
+- toonic.core.detector.SpecDetector.detect_spec_format
+- toonic.core.models.CodeLogicBase.complexity
+- toonic.core.models.CodeLogicBase.to_dict
+- toonic.core.protocols.FileHandler.parse
+- toonic.core.protocols.FileHandler.reproduce
+- toonic.core.protocols.FileHandler.sniff
+- toonic.core.protocols.FileHandler.to_spec
+- toonic.core.protocols.FileLogic.complexity
+- toonic.core.protocols.FileLogic.to_dict
+- toonic.core.registry.FormatRegistry._check_deps
+- toonic.core.registry.FormatRegistry.available
+- toonic.core.registry.FormatRegistry.get_by_category
+- toonic.core.registry.FormatRegistry.list_categories
+- toonic.core.registry.FormatRegistry.register
+- toonic.core.registry.FormatRegistry.reset
+- toonic.core.registry.FormatRegistry.resolve
+- toonic.formats.api.ApiLogic.complexity
+- toonic.formats.api.ApiLogic.to_dict
+- toonic.formats.api.OpenApiHandler.parse
+- toonic.formats.api.OpenApiHandler.reproduce
+- toonic.formats.api.OpenApiHandler.sniff
+- toonic.formats.api.OpenApiHandler.to_spec
+- toonic.formats.audio.AudioFileHandler._to_toon
+- toonic.formats.audio.AudioFileHandler.parse
+- toonic.formats.audio.AudioFileHandler.reproduce
+- toonic.formats.audio.AudioFileHandler.sniff
+- toonic.formats.audio.AudioFileHandler.to_spec
+- toonic.formats.audio.AudioLogic.complexity
+- toonic.formats.audio.AudioLogic.to_dict
+- toonic.formats.audio.MuLawCodec.compress
+- toonic.formats.audio.MuLawCodec.decompress
+- toonic.formats.audio.SpeechDetector.__init__
+- toonic.formats.audio.SpeechDetector._get_vad
+- toonic.formats.audio.SpeechDetector.detect_speech_segments
+- toonic.formats.audio.TelephonyFilter.lowpass_3khz
+- toonic.formats.config.ConfigLogic.complexity
+- toonic.formats.config.ConfigLogic.to_dict
+- toonic.formats.config.DockerfileHandler.parse
+- toonic.formats.config.DockerfileHandler.reproduce
+- toonic.formats.config.DockerfileHandler.sniff
+- toonic.formats.config.DockerfileHandler.to_spec
+- toonic.formats.config.EnvHandler._categorize
+- toonic.formats.config.EnvHandler._infer_type
+- toonic.formats.config.EnvHandler.parse
+- toonic.formats.config.EnvHandler.reproduce
+- toonic.formats.config.EnvHandler.sniff
+- toonic.formats.config.EnvHandler.to_spec
+- toonic.formats.data.CsvHandler._infer_dtype
+- toonic.formats.data.CsvHandler._to_toon
+- toonic.formats.data.CsvHandler._to_yaml
+- toonic.formats.data.CsvHandler.parse
+- toonic.formats.data.CsvHandler.reproduce
+- toonic.formats.data.CsvHandler.sniff
+- toonic.formats.data.CsvHandler.to_spec
+- toonic.formats.data.JsonDataHandler._compute_depth
+- toonic.formats.data.JsonDataHandler._count_keys
+- toonic.formats.data.JsonDataHandler.parse
+- toonic.formats.data.JsonDataHandler.reproduce
+- toonic.formats.data.JsonDataHandler.sniff
+- toonic.formats.data.JsonDataHandler.to_spec
+- toonic.formats.data.JsonSchemaLogic.complexity
+- toonic.formats.data.JsonSchemaLogic.to_dict
+- toonic.formats.data.TableLogic.complexity
+- toonic.formats.data.TableLogic.to_dict
+- toonic.formats.database.SqlHandler._extract_columns
+- toonic.formats.database.SqlHandler._extract_tables
+- toonic.formats.database.SqlHandler._to_toon
+- toonic.formats.database.SqlHandler.parse
+- toonic.formats.database.SqlHandler.reproduce
+- toonic.formats.database.SqlHandler.sniff
+- toonic.formats.database.SqlHandler.to_spec
+- toonic.formats.database.SqlSchemaLogic.complexity
+- toonic.formats.database.SqlSchemaLogic.to_dict
+- toonic.formats.document.DocumentLogic.complexity
+- toonic.formats.document.DocumentLogic.to_dict
+- toonic.formats.document.MarkdownHandler._chunk_by_sections
+- toonic.formats.document.MarkdownHandler._extract_sections
+- toonic.formats.document.MarkdownHandler._get_chunk_prompt
+- toonic.formats.document.MarkdownHandler._reproduce_template
+- toonic.formats.document.MarkdownHandler._summarize
+- toonic.formats.document.MarkdownHandler._to_toon
+- toonic.formats.document.MarkdownHandler._to_yaml
+- toonic.formats.document.MarkdownHandler.parse
+- toonic.formats.document.MarkdownHandler.reproduce
+- toonic.formats.document.MarkdownHandler.sniff
+- toonic.formats.document.MarkdownHandler.to_spec
+- toonic.formats.document.RstHandler.parse
+- toonic.formats.document.RstHandler.reproduce
+- toonic.formats.document.RstHandler.sniff
+- toonic.formats.document.RstHandler.to_spec
+- toonic.formats.document.TextHandler.parse
+- toonic.formats.document.TextHandler.reproduce
+- toonic.formats.document.TextHandler.sniff
+- toonic.formats.document.TextHandler.to_spec
+- toonic.formats.evidence.EvidenceGraph.complexity
+- toonic.formats.evidence.EvidenceGraph.to_dict
+- toonic.formats.evidence.EvidenceGraphBuilder.__init__
+- toonic.formats.evidence.EvidenceGraphBuilder._auto_link_relations
+- toonic.formats.evidence.EvidenceGraphBuilder.add_audio_evidence
+- toonic.formats.evidence.EvidenceGraphBuilder.add_code_evidence
+- toonic.formats.evidence.EvidenceGraphBuilder.add_database_evidence
+- toonic.formats.evidence.EvidenceGraphBuilder.add_document_evidence
+- toonic.formats.evidence.EvidenceGraphBuilder.add_test_evidence
+- toonic.formats.evidence.EvidenceGraphBuilder.add_video_evidence
+- toonic.formats.evidence.EvidenceGraphBuilder.build
+- toonic.formats.evidence.EvidenceGraphHandler._to_toon
+- toonic.formats.evidence.EvidenceGraphHandler.parse
+- toonic.formats.evidence.EvidenceGraphHandler.reproduce
+- toonic.formats.evidence.EvidenceGraphHandler.sniff
+- toonic.formats.evidence.EvidenceGraphHandler.to_spec
+- toonic.formats.infra.GithubActionsHandler.parse
+- toonic.formats.infra.GithubActionsHandler.reproduce
+- toonic.formats.infra.GithubActionsHandler.sniff
+- toonic.formats.infra.GithubActionsHandler.to_spec
+- toonic.formats.infra.InfraLogic.complexity
+- toonic.formats.infra.InfraLogic.to_dict
+- toonic.formats.infra.KubernetesHandler.parse
+- toonic.formats.infra.KubernetesHandler.reproduce
+- toonic.formats.infra.KubernetesHandler.sniff
+- toonic.formats.infra.KubernetesHandler.to_spec
+- toonic.formats.video.LowQRTSPExtractor.__init__
+- toonic.formats.video.LowQRTSPExtractor._capture_thread
+- toonic.formats.video.LowQRTSPExtractor.get_all_recent
+- toonic.formats.video.LowQRTSPExtractor.get_sync_frame
+- toonic.formats.video.LowQRTSPExtractor.start
+- toonic.formats.video.LowQRTSPExtractor.stop
+- toonic.formats.video.SceneDetector.__init__
+- toonic.formats.video.SceneDetector.detect_from_file
+- toonic.formats.video.SceneDetector.is_scene_change
+- toonic.formats.video.VideoFileHandler._to_toon
+- toonic.formats.video.VideoFileHandler.parse
+- toonic.formats.video.VideoFileHandler.reproduce
+- toonic.formats.video.VideoFileHandler.sniff
+- toonic.formats.video.VideoFileHandler.to_spec
+- toonic.formats.video.VideoLogic.complexity
+- toonic.formats.video.VideoLogic.to_dict
+- toonic.pipeline.Pipeline._ensure_initialized
+- toonic.pipeline.Pipeline.batch
+- toonic.pipeline.Pipeline.formats
+- toonic.pipeline.Pipeline.reproduce
+- toonic.pipeline.Pipeline.roundtrip
+- toonic.pipeline.Pipeline.to_spec
+- toonic.server.__main__.main
+- toonic.server.client.ToonicClient.__init__
+- toonic.server.client.ToonicClient._get
+- toonic.server.client.ToonicClient._post
+- toonic.server.client.ToonicClient.add_source
+- toonic.server.client.ToonicClient.analyze
+- toonic.server.client.ToonicClient.convert
+- toonic.server.client.ToonicClient.get_actions
+- toonic.server.client.ToonicClient.get_formats
+- toonic.server.client.ToonicClient.get_history
+- toonic.server.client.ToonicClient.get_history_stats
+- toonic.server.client.ToonicClient.get_status
+- toonic.server.client.ToonicClient.nlp_query
+- toonic.server.client.ToonicClient.sql_query
+- toonic.server.client._cmd_add
+- toonic.server.client._cmd_analyze
+- toonic.server.client._cmd_convert
+- toonic.server.client._cmd_query
+- toonic.server.client._cmd_sql
+- toonic.server.client._print_actions
+- toonic.server.client._print_formats
+- toonic.server.client._print_help
+- toonic.server.client._print_history
+- toonic.server.client._print_history_stats
+- toonic.server.client._print_status
+- toonic.server.client.main
+- toonic.server.config.ServerConfig.from_dict
+- toonic.server.config.ServerConfig.from_env
+- toonic.server.config.ServerConfig.from_yaml_file
+- toonic.server.config.ServerConfig.to_dict
+- toonic.server.config._load_dotenv
+- toonic.server.core.accumulator.ContextAccumulator.__init__
+- toonic.server.core.accumulator.ContextAccumulator._build_context
+- toonic.server.core.accumulator.ContextAccumulator._enforce_budget
+- toonic.server.core.accumulator.ContextAccumulator.clear
+- toonic.server.core.accumulator.ContextAccumulator.get_chunks
+- toonic.server.core.accumulator.ContextAccumulator.get_context
+- toonic.server.core.accumulator.ContextAccumulator.get_stats
+- toonic.server.core.accumulator.ContextAccumulator.update
+- toonic.server.core.history.ConversationHistory.__init__
+- toonic.server.core.history.ConversationHistory._conn
+- toonic.server.core.history.ConversationHistory._init_db
+- toonic.server.core.history.ConversationHistory._parse_duration
+- toonic.server.core.history.ConversationHistory._row_to_record
+- toonic.server.core.history.ConversationHistory.clear
+- toonic.server.core.history.ConversationHistory.execute_sql
+- toonic.server.core.history.ConversationHistory.get
+- toonic.server.core.history.ConversationHistory.recent
+- toonic.server.core.history.ConversationHistory.record
+- toonic.server.core.history.ConversationHistory.search
+- toonic.server.core.history.ConversationHistory.stats
+- toonic.server.core.history.ExchangeRecord.__post_init__
+- toonic.server.core.history.ExchangeRecord.to_dict
+- toonic.server.core.query.QueryAdapter.__init__
+- toonic.server.core.query.QueryAdapter._execute_query
+- toonic.server.core.query.QueryAdapter._generate_sql
+- toonic.server.core.query.QueryAdapter._try_local_parse
+- toonic.server.core.query.QueryAdapter.nlp_query
+- toonic.server.core.query.QueryAdapter.sql_query
+- toonic.server.core.router.LLMRequest.__post_init__
+- toonic.server.core.router.LLMRouter.__init__
+- toonic.server.core.router.LLMRouter._get_model_for_category
+- toonic.server.core.router.LLMRouter._record_exchange
+- toonic.server.core.router.LLMRouter.get_stats
+- toonic.server.core.router.LLMRouter.query
+- toonic.server.llm.caller.LLMCaller.__post_init__
+- toonic.server.llm.caller.LLMCaller._litellm_model_id
+- toonic.server.llm.caller.LLMCaller._mock_response
+- toonic.server.llm.caller.LLMCaller.call
+- toonic.server.llm.caller.LLMCaller.select_model
+- toonic.server.llm.parser.ResponseParser.parse
+- toonic.server.llm.parser.ResponseParser.parse_raw_to_dict
+- toonic.server.llm.pipeline.LLMPipeline.execute
+- toonic.server.llm.prompts.CCTVEventPrompt.build
+- toonic.server.llm.prompts.CodeAnalysisPrompt.build
+- toonic.server.llm.prompts.GenericPrompt.build
+- toonic.server.llm.prompts.PromptBuilder.build
+- toonic.server.main.ToonicServer.__init__
+- toonic.server.main.ToonicServer._analysis_loop
+- toonic.server.main.ToonicServer._consume_watcher
+- toonic.server.main.ToonicServer._emit_event
+- toonic.server.main.ToonicServer._on_trigger_fired
+- toonic.server.main.ToonicServer._one_shot
+- toonic.server.main.ToonicServer._run_analysis
+- toonic.server.main.ToonicServer.add_source
+- toonic.server.main.ToonicServer.analyze_now
+- toonic.server.main.ToonicServer.get_actions
+- toonic.server.main.ToonicServer.get_event_log
+- toonic.server.main.ToonicServer.get_history
+- toonic.server.main.ToonicServer.get_history_stats
+- toonic.server.main.ToonicServer.get_status
+- toonic.server.main.ToonicServer.nlp_query
+- toonic.server.main.ToonicServer.on_event
+- toonic.server.main.ToonicServer.remove_listener
+- toonic.server.main.ToonicServer.remove_source
+- toonic.server.main.ToonicServer.sql_query
+- toonic.server.main.ToonicServer.start
+- toonic.server.main.ToonicServer.stop
+- toonic.server.models.ActionResponse.to_dict
+- toonic.server.models.ContextChunk.__post_init__
+- toonic.server.models.ContextChunk.to_dict
+- toonic.server.models.ServerEvent.__post_init__
+- toonic.server.models.ServerEvent.to_dict
+- toonic.server.quick.builder.ConfigBuilder.__init__
+- toonic.server.quick.builder.ConfigBuilder.add
+- toonic.server.quick.builder.ConfigBuilder.build
+- toonic.server.quick.builder.ConfigBuilder.build_config
+- toonic.server.quick.builder.ConfigBuilder.code
+- toonic.server.quick.builder.ConfigBuilder.database
+- toonic.server.quick.builder.ConfigBuilder.directory
+- toonic.server.quick.builder.ConfigBuilder.docker
+- toonic.server.quick.builder.ConfigBuilder.goal
+- toonic.server.quick.builder.ConfigBuilder.host
+- toonic.server.quick.builder.ConfigBuilder.http
+- toonic.server.quick.builder.ConfigBuilder.interval
+- toonic.server.quick.builder.ConfigBuilder.log_level
+- toonic.server.quick.builder.ConfigBuilder.logs
+- toonic.server.quick.builder.ConfigBuilder.model
+- toonic.server.quick.builder.ConfigBuilder.network
+- toonic.server.quick.builder.ConfigBuilder.no_history
+- toonic.server.quick.builder.ConfigBuilder.no_web
+- toonic.server.quick.builder.ConfigBuilder.port
+- toonic.server.quick.builder.ConfigBuilder.process
+- toonic.server.quick.builder.ConfigBuilder.run
+- toonic.server.quick.builder.ConfigBuilder.tokens
+- toonic.server.quick.builder.ConfigBuilder.triggers
+- toonic.server.quick.builder.ConfigBuilder.video
+- toonic.server.quick.builder.ConfigBuilder.when
+- toonic.server.quick.presets.cctv_monitor
+- toonic.server.quick.presets.code_review
+- toonic.server.quick.presets.full_stack
+- toonic.server.quick.presets.infra_health
+- toonic.server.quick.presets.log_monitor
+- toonic.server.quick.presets.web_monitor
+- toonic.server.quick.runtime.run
+- toonic.server.transport.routes.api.analyze_now
+- toonic.server.transport.routes.api.convert_file
+- toonic.server.transport.routes.api.get_actions
+- toonic.server.transport.routes.api.get_data_dir
+- toonic.server.transport.routes.api.get_events
+- toonic.server.transport.routes.api.get_events_file
+- toonic.server.transport.routes.api.get_exchanges
+- toonic.server.transport.routes.api.get_status
+- toonic.server.transport.routes.api.get_triggers
+- toonic.server.transport.routes.api.list_formats
+- toonic.server.transport.routes.api.set_server
+- toonic.server.transport.routes.history.get_history
+- toonic.server.transport.routes.history.get_history_stats
+- toonic.server.transport.routes.history.nlp_query
+- toonic.server.transport.routes.history.set_server
+- toonic.server.transport.routes.history.sql_query
+- toonic.server.transport.routes.sources.add_source
+- toonic.server.transport.routes.sources.list_sources
+- toonic.server.transport.routes.sources.remove_source
+- toonic.server.transport.routes.sources.set_server
+- toonic.server.transport.routes.websocket.register
+- toonic.server.triggers.detectors.AnomalyDetector.__init__
+- toonic.server.triggers.detectors.AnomalyDetector.evaluate
+- toonic.server.triggers.detectors.AudioLevelDetector.evaluate
+- toonic.server.triggers.detectors.BaseDetector.__init__
+- toonic.server.triggers.detectors.BaseDetector._check_count_window
+- toonic.server.triggers.detectors.BaseDetector._check_duration
+- toonic.server.triggers.detectors.BaseDetector.evaluate
+- toonic.server.triggers.detectors.DetectionResult.__post_init__
+- toonic.server.triggers.detectors.DetectionResult.to_dict
+- toonic.server.triggers.detectors.MotionDetector.evaluate
+- toonic.server.triggers.detectors.ObjectDetector.evaluate
+- toonic.server.triggers.detectors.PatternDetector.__init__
+- toonic.server.triggers.detectors.PatternDetector.evaluate
+- toonic.server.triggers.detectors.SceneChangeDetector.evaluate
+- toonic.server.triggers.detectors.SpeechDetector.evaluate
+- toonic.server.triggers.dsl.EventCondition.from_dict
+- toonic.server.triggers.dsl.EventCondition.to_dict
+- toonic.server.triggers.dsl.FallbackConfig.from_dict
+- toonic.server.triggers.dsl.FallbackConfig.to_dict
+- toonic.server.triggers.dsl.TriggerConfig.from_dict
+- toonic.server.triggers.dsl.TriggerConfig.get_rules_for_source
+- toonic.server.triggers.dsl.TriggerConfig.to_dict
+- toonic.server.triggers.dsl.TriggerRule.from_dict
+- toonic.server.triggers.dsl.TriggerRule.to_dict
+- toonic.server.triggers.nlp2yaml.NLP2YAML.__init__
+- toonic.server.triggers.nlp2yaml.NLP2YAML._build_trigger_rule
+- toonic.server.triggers.nlp2yaml.NLP2YAML._extract_float
+- toonic.server.triggers.nlp2yaml.NLP2YAML._extract_time
+- toonic.server.triggers.nlp2yaml.NLP2YAML._generate_via_llm
+- toonic.server.triggers.nlp2yaml.NLP2YAML._parse_audio_conditions
+- toonic.server.triggers.nlp2yaml.NLP2YAML._parse_motion_condition
+- toonic.server.triggers.nlp2yaml.NLP2YAML._parse_object_condition
+- toonic.server.triggers.nlp2yaml.NLP2YAML._parse_pattern_condition
+- toonic.server.triggers.nlp2yaml.NLP2YAML._parse_scene_change_condition
+- toonic.server.triggers.nlp2yaml.NLP2YAML._try_local_parse
+- toonic.server.triggers.nlp2yaml.NLP2YAML.generate
+- toonic.server.triggers.nlp2yaml.NLP2YAML.generate_yaml
+- toonic.server.triggers.scheduler.RuleState.__init__
+- toonic.server.triggers.scheduler.RuleState.evaluate
+- toonic.server.triggers.scheduler.RuleState.get_stats
+- toonic.server.triggers.scheduler.TriggerEvent.__post_init__
+- toonic.server.triggers.scheduler.TriggerEvent.to_dict
+- toonic.server.triggers.scheduler.TriggerScheduler.__init__
+- toonic.server.triggers.scheduler.TriggerScheduler.add_rule
+- toonic.server.triggers.scheduler.TriggerScheduler.default_periodic
+- toonic.server.triggers.scheduler.TriggerScheduler.evaluate
+- toonic.server.triggers.scheduler.TriggerScheduler.evaluate_async
+- toonic.server.triggers.scheduler.TriggerScheduler.from_yaml
+- toonic.server.triggers.scheduler.TriggerScheduler.get_stats
+- toonic.server.triggers.scheduler.TriggerScheduler.on_trigger
+- toonic.server.triggers.scheduler.TriggerScheduler.remove_rule
+- toonic.server.watchers.base.BaseWatcher.__init__
+- toonic.server.watchers.base.BaseWatcher.emit
+- toonic.server.watchers.base.BaseWatcher.get_chunks
+- toonic.server.watchers.base.BaseWatcher.start
+- toonic.server.watchers.base.BaseWatcher.stop
+- toonic.server.watchers.base.BaseWatcher.supports
+- toonic.server.watchers.base.WatcherRegistry.create
+- toonic.server.watchers.base.WatcherRegistry.list_all
+- toonic.server.watchers.base.WatcherRegistry.register
+- toonic.server.watchers.base.WatcherRegistry.resolve
+- toonic.server.watchers.database_watcher.DatabaseWatcher.__init__
+- toonic.server.watchers.database_watcher.DatabaseWatcher._check
+- toonic.server.watchers.database_watcher.DatabaseWatcher._check_postgresql
+- toonic.server.watchers.database_watcher.DatabaseWatcher._check_sqlite
+- toonic.server.watchers.database_watcher.DatabaseWatcher._detect_changes
+- toonic.server.watchers.database_watcher.DatabaseWatcher._detect_db_type
+- toonic.server.watchers.database_watcher.DatabaseWatcher._poll_loop
+- toonic.server.watchers.database_watcher.DatabaseWatcher._to_toon
+- toonic.server.watchers.database_watcher.DatabaseWatcher.start
+- toonic.server.watchers.database_watcher.DatabaseWatcher.stop
+- toonic.server.watchers.database_watcher.DatabaseWatcher.supports
+- toonic.server.watchers.directory_watcher.DirectoryWatcher.__init__
+- toonic.server.watchers.directory_watcher.DirectoryWatcher._build_diff_toon
+- toonic.server.watchers.directory_watcher.DirectoryWatcher._build_tree_toon
+- toonic.server.watchers.directory_watcher.DirectoryWatcher._check_changes
+- toonic.server.watchers.directory_watcher.DirectoryWatcher._human_size
+- toonic.server.watchers.directory_watcher.DirectoryWatcher._initial_scan
+- toonic.server.watchers.directory_watcher.DirectoryWatcher._poll_loop
+- toonic.server.watchers.directory_watcher.DirectoryWatcher._take_snapshot
+- toonic.server.watchers.directory_watcher.DirectoryWatcher._walk
+- toonic.server.watchers.directory_watcher.DirectoryWatcher.start
+- toonic.server.watchers.directory_watcher.DirectoryWatcher.stop
+- toonic.server.watchers.directory_watcher.DirectoryWatcher.supports
+- toonic.server.watchers.docker_watcher.DockerWatcher.__init__
+- toonic.server.watchers.docker_watcher.DockerWatcher._check
+- toonic.server.watchers.docker_watcher.DockerWatcher._check_docker
+- toonic.server.watchers.docker_watcher.DockerWatcher._detect_changes
+- toonic.server.watchers.docker_watcher.DockerWatcher._fetch_logs
+- toonic.server.watchers.docker_watcher.DockerWatcher._fetch_stats
+- toonic.server.watchers.docker_watcher.DockerWatcher._list_containers
+- toonic.server.watchers.docker_watcher.DockerWatcher._poll_loop
+- toonic.server.watchers.docker_watcher.DockerWatcher._to_toon
+- toonic.server.watchers.docker_watcher.DockerWatcher.start
+- toonic.server.watchers.docker_watcher.DockerWatcher.stop
+- toonic.server.watchers.docker_watcher.DockerWatcher.supports
+- toonic.server.watchers.file_watcher.FileWatcher.__init__
+- toonic.server.watchers.file_watcher.FileWatcher._check_changes
+- toonic.server.watchers.file_watcher.FileWatcher._convert_file
+- toonic.server.watchers.file_watcher.FileWatcher._detect_category
+- toonic.server.watchers.file_watcher.FileWatcher._full_scan
+- toonic.server.watchers.file_watcher.FileWatcher._poll_loop
+- toonic.server.watchers.file_watcher.FileWatcher._should_skip
+- toonic.server.watchers.file_watcher.FileWatcher.start
+- toonic.server.watchers.file_watcher.FileWatcher.stop
+- toonic.server.watchers.file_watcher.FileWatcher.supports
+- toonic.server.watchers.http_watcher.HttpWatcher.__init__
+- toonic.server.watchers.http_watcher.HttpWatcher._check_endpoint
+- toonic.server.watchers.http_watcher.HttpWatcher._check_keywords
+- toonic.server.watchers.http_watcher.HttpWatcher._check_ssl_and_update
+- toonic.server.watchers.http_watcher.HttpWatcher._check_ssl_cert
+- toonic.server.watchers.http_watcher.HttpWatcher._detect_changes
+- toonic.server.watchers.http_watcher.HttpWatcher._emit_if_needed
+- toonic.server.watchers.http_watcher.HttpWatcher._fetch
+- toonic.server.watchers.http_watcher.HttpWatcher._handle_check_error
+- toonic.server.watchers.http_watcher.HttpWatcher._poll_loop
+- toonic.server.watchers.http_watcher.HttpWatcher._to_toon
+- toonic.server.watchers.http_watcher.HttpWatcher._update_history
+- toonic.server.watchers.http_watcher.HttpWatcher._update_result_with_fetch
+- toonic.server.watchers.http_watcher.HttpWatcher._update_state
+- toonic.server.watchers.http_watcher.HttpWatcher.start
+- toonic.server.watchers.http_watcher.HttpWatcher.stop
+- toonic.server.watchers.http_watcher.HttpWatcher.supports
+- toonic.server.watchers.log_watcher.LogWatcher.__init__
+- toonic.server.watchers.log_watcher.LogWatcher._check_new_lines
+- toonic.server.watchers.log_watcher.LogWatcher._initial_tail
+- toonic.server.watchers.log_watcher.LogWatcher._tail_loop
+- toonic.server.watchers.log_watcher.LogWatcher._to_toon
+- toonic.server.watchers.log_watcher.LogWatcher.start
+- toonic.server.watchers.log_watcher.LogWatcher.stop
+- toonic.server.watchers.log_watcher.LogWatcher.supports
+- toonic.server.watchers.network_watcher.NetworkWatcher.__init__
+- toonic.server.watchers.network_watcher.NetworkWatcher._check
+- toonic.server.watchers.network_watcher.NetworkWatcher._check_ports
+- toonic.server.watchers.network_watcher.NetworkWatcher._check_target
+- toonic.server.watchers.network_watcher.NetworkWatcher._detect_changes
+- toonic.server.watchers.network_watcher.NetworkWatcher._ping
+- toonic.server.watchers.network_watcher.NetworkWatcher._poll_loop
+- toonic.server.watchers.network_watcher.NetworkWatcher._resolve_dns
+- toonic.server.watchers.network_watcher.NetworkWatcher._tcp_ping
+- toonic.server.watchers.network_watcher.NetworkWatcher._to_toon
+- toonic.server.watchers.network_watcher.NetworkWatcher.start
+- toonic.server.watchers.network_watcher.NetworkWatcher.stop
+- toonic.server.watchers.network_watcher.NetworkWatcher.supports
+- toonic.server.watchers.process_watcher.ProcessWatcher.__init__
+- toonic.server.watchers.process_watcher.ProcessWatcher._check
+- toonic.server.watchers.process_watcher.ProcessWatcher._check_health
+- toonic.server.watchers.process_watcher.ProcessWatcher._check_pid
+- toonic.server.watchers.process_watcher.ProcessWatcher._check_port
+- toonic.server.watchers.process_watcher.ProcessWatcher._check_process_name
+- toonic.server.watchers.process_watcher.ProcessWatcher._check_service
+- toonic.server.watchers.process_watcher.ProcessWatcher._detect_changes
+- toonic.server.watchers.process_watcher.ProcessWatcher._find_processes
+- toonic.server.watchers.process_watcher.ProcessWatcher._parse_target
+- toonic.server.watchers.process_watcher.ProcessWatcher._poll_loop
+- toonic.server.watchers.process_watcher.ProcessWatcher._read_proc_info
+- toonic.server.watchers.process_watcher.ProcessWatcher._to_toon
+- toonic.server.watchers.process_watcher.ProcessWatcher.start
+- toonic.server.watchers.process_watcher.ProcessWatcher.stop
+- toonic.server.watchers.process_watcher.ProcessWatcher.supports
+- toonic.server.watchers.stream.detection._detect_sync
+- toonic.server.watchers.stream.watcher.StreamWatcher.__init__
+- toonic.server.watchers.stream.watcher.StreamWatcher._capture_loop
+- toonic.server.watchers.stream.watcher.StreamWatcher.start
+- toonic.server.watchers.stream.watcher.StreamWatcher.stop
+- toonic.server.watchers.stream.watcher.StreamWatcher.supports
+- unified_toon.main

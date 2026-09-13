@@ -1,5 +1,25 @@
 ## [Unreleased]
 
+## [1.0.19] - 2026-09-13
+
+### Docs
+- Update README.md
+- Update project/README.md
+- Update project/context.md
+
+### Other
+- Update .env.example
+- Update .gitignore
+- Update .planfile/.store.lock
+- Update .planfile/config.yaml
+- Update .planfile/config.yaml.fast.json
+- Update .planfile/events/.logs.dsl.date
+- Update .planfile/events/.logs.dsl.v1
+- Update .planfile/events/history/logs-2026-09-08.dsl.txt
+- Update .planfile/events/logs.dsl.txt
+- Update .planfile/events/operations.jsonl
+- ... and 20 more files
+
 ## [1.0.18] - 2026-06-29
 
 ### Docs

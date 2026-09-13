@@ -1,0 +1,479 @@
+flowchart TD
+%% generated in 0.01s
+    subgraph examples___helpers
+        examples___helpers__print_config_summary["print_config_summary"]
+        examples___helpers__print_to_run_hint["print_to_run_hint"]
+    end
+    subgraph examples__archive_monitoring
+        examples__archive_monitoring__run__main["main"]
+    end
+    subgraph examples__code_analysis
+        examples__code_analysis__sample_project__main__UserService____init__["__init__"]
+        examples__code_analysis__sample_project__main__UserService__create_user["create_user"]
+        examples__code_analysis__sample_project__main__UserService__get_user["get_user"]
+        examples__code_analysis__sample_project__main__UserService__list_users["list_users"]
+        examples__code_analysis__sample_project__main__UserService__deactivate_user["deactivate_user"]
+        examples__code_analysis__sample_project__main__OrderService____init__["__init__"]
+        examples__code_analysis__sample_project__main__OrderService__create_order["create_order"]
+        examples__code_analysis__sample_project__main__OrderService__get_orders["get_orders"]
+        examples__code_analysis__sample_project__main__OrderService__process_payment["process_payment"]
+        examples__code_analysis__sample_project__main__main["main"]
+    end
+    subgraph examples__log_monitoring
+        examples__log_monitoring__generate_logs___fill["_fill"]
+        examples__log_monitoring__generate_logs__generate_line["generate_line"]
+        examples__log_monitoring__generate_logs__run_normal["run_normal"]
+        examples__log_monitoring__generate_logs__run_error_spike["run_error_spike"]
+        examples__log_monitoring__generate_logs__run_mixed["run_mixed"]
+        examples__log_monitoring__generate_logs__main["main"]
+    end
+    subgraph examples__programmatic_api
+        examples__programmatic_api__demo_accumulator__main["main"]
+        examples__programmatic_api__demo_quick__demo_parse_source["demo_parse_source"]
+        examples__programmatic_api__demo_quick__demo_config_builder["demo_config_builder"]
+        examples__programmatic_api__demo_quick__demo_watch["demo_watch"]
+        examples__programmatic_api__demo_quick__demo_options["demo_options"]
+        examples__programmatic_api__demo_quick__main["main"]
+        examples__programmatic_api__demo_pipeline__demo_prompt_selection["demo_prompt_selection"]
+        examples__programmatic_api__demo_pipeline__demo_prompt_building["demo_prompt_building"]
+        examples__programmatic_api__demo_pipeline__demo_response_parser["demo_response_parser"]
+        examples__programmatic_api__demo_pipeline__demo_pipeline["demo_pipeline"]
+        examples__programmatic_api__demo_pipeline__main["main"]
+    end
+    subgraph examples__protocol_recipes
+        examples__protocol_recipes__run__main["main"]
+    end
+    subgraph examples__run_all
+        examples__run_all___repo_root["_repo_root"]
+        examples__run_all___example_env["_example_env"]
+        examples__run_all___run_py["_run_py"]
+        examples__run_all__verify_imports["verify_imports"]
+        examples__run_all__verify_presets["verify_presets"]
+        examples__run_all__verify_config_builds["verify_config_builds"]
+        examples__run_all__verify_demos["verify_demos"]
+        examples__run_all__verify_all("verify_all CC=10")
+        examples__run_all__execute_all{{execute_all CC=17}}
+        examples__run_all__list_examples["list_examples"]
+        examples__run_all__show_example["show_example"]
+        examples__run_all__main("main CC=13")
+    end
+    subgraph examples__security_audit
+        examples__security_audit__remediation_script__print_status["print_status"]
+        examples__security_audit__remediation_script__print_warning["print_warning"]
+        examples__security_audit__remediation_script__print_error["print_error"]
+        examples__security_audit__remediation_script__log_message["log_message"]
+        examples__security_audit__enterprise_features__main["main"]
+        examples__security_audit__QUICK_DEPLOYMENT__print_header["print_header"]
+        examples__security_audit__QUICK_DEPLOYMENT__print_step["print_step"]
+        examples__security_audit__QUICK_DEPLOYMENT__print_info["print_info"]
+        examples__security_audit__QUICK_DEPLOYMENT__print_warning["print_warning"]
+        examples__security_audit__QUICK_DEPLOYMENT__print_error["print_error"]
+        examples__security_audit__QUICK_DEPLOYMENT__check_requirements["check_requirements"]
+        examples__security_audit__QUICK_DEPLOYMENT__create_directories["create_directories"]
+        examples__security_audit__QUICK_DEPLOYMENT__install_tools["install_tools"]
+        examples__security_audit__QUICK_DEPLOYMENT__setup_service_user["setup_service_user"]
+        examples__security_audit__QUICK_DEPLOYMENT__configure_monitoring["configure_monitoring"]
+        examples__security_audit__QUICK_DEPLOYMENT__setup_nginx["setup_nginx"]
+        examples__security_audit__QUICK_DEPLOYMENT__setup_cron_jobs["setup_cron_jobs"]
+        examples__security_audit__QUICK_DEPLOYMENT__setup_logrotate["setup_logrotate"]
+        examples__security_audit__QUICK_DEPLOYMENT__create_management_scripts["create_management_scripts"]
+        examples__security_audit__QUICK_DEPLOYMENT__run_initial_tests["run_initial_tests"]
+        examples__security_audit__QUICK_DEPLOYMENT__start_services["start_services"]
+        examples__security_audit__QUICK_DEPLOYMENT__print_summary["print_summary"]
+        examples__security_audit__QUICK_DEPLOYMENT__main["main"]
+        examples__security_audit__enterprise_threat_intel__ThreatIntelligenceManager____init__["__init__"]
+        examples__security_audit__enterprise_threat_intel__ThreatIntelligenceManager__fetch_threat_intelligence["fetch_threat_intelligence"]
+        examples__security_audit__enterprise_threat_intel__ThreatIntelligenceManager___fetch_feed["_fetch_feed"]
+        examples__security_audit__enterprise_threat_intel__ThreatIntelligenceManager__check_indicators["check_indicators"]
+        examples__security_audit__enterprise_anomaly__AnomalyDetector____init__["__init__"]
+        examples__security_audit__enterprise_anomaly__AnomalyDetector__collect_baseline["collect_baseline"]
+        examples__security_audit__enterprise_anomaly__AnomalyDetector__detect_anomalies("detect_anomalies CC=11")
+        examples__security_audit__enterprise_compliance__ComplianceManager____init__["__init__"]
+        examples__security_audit__enterprise_compliance__ComplianceManager__check_gdpr_compliance["check_gdpr_compliance"]
+        examples__security_audit__enterprise_compliance__ComplianceManager__check_iso27001_compliance["check_iso27001_compliance"]
+        examples__security_audit__enterprise_compliance__ComplianceManager__generate_compliance_report("generate_compliance_report CC=10")
+        examples__security_audit__quick_audit__audit_code["audit_code"]
+        examples__security_audit__quick_audit__audit_website["audit_website"]
+        examples__security_audit__quick_audit__continuous_monitoring["continuous_monitoring"]
+        examples__security_audit__quick_audit__full_stack_audit["full_stack_audit"]
+        examples__security_audit__quick_audit__demo["demo"]
+        examples__security_audit__generate_report__load_exchanges["load_exchanges"]
+        examples__security_audit__generate_report__load_history["load_history"]
+        examples__security_audit__generate_report__generate_markdown_report("generate_markdown_report CC=12")
+        examples__security_audit__generate_report__main["main"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor____init__["__init__"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__load_config["load_config"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__check_ssl_certificate["check_ssl_certificate"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__check_security_headers["check_security_headers"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__check_response_time["check_response_time"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__check_content_changes["check_content_changes"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__check_dependencies["check_dependencies"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__run_all_checks["run_all_checks"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__calculate_security_score["calculate_security_score"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__send_alert("send_alert CC=9")
+        examples__security_audit__continuous_monitoring__SecurityMonitor__send_email_alert["send_email_alert"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__send_webhook_alert["send_webhook_alert"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__save_monitoring_data["save_monitoring_data"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__run_monitoring_cycle["run_monitoring_cycle"]
+        examples__security_audit__continuous_monitoring__SecurityMonitor__start_daemon["start_daemon"]
+        examples__security_audit__continuous_monitoring__main("main CC=11")
+        examples__security_audit__enterprise_monitor__EnterpriseSecurityMonitor____init__["__init__"]
+    end
+    subgraph toonic__autopilot
+        toonic__autopilot__prompts__AutopilotPrompt__build{{build CC=15}}
+        toonic__autopilot__prompts__ScaffoldPrompt__build["build"]
+        toonic__autopilot__prompts__FixPrompt__build["build"]
+        toonic__autopilot__loop__AutopilotLoop____init__["__init__"]
+        toonic__autopilot__loop__AutopilotLoop__run{{run CC=18}}
+        toonic__autopilot__loop__AutopilotLoop__stop["stop"]
+        toonic__autopilot__loop__AutopilotLoop___fix_loop["_fix_loop"]
+        toonic__autopilot__loop__AutopilotLoop___scan_project("_scan_project CC=14")
+        toonic__autopilot__loop__AutopilotLoop___read_roadmap["_read_roadmap"]
+        toonic__autopilot__loop__AutopilotLoop___update_roadmap["_update_roadmap"]
+        toonic__autopilot__loop__AutopilotLoop___is_roadmap_complete["_is_roadmap_complete"]
+        toonic__autopilot__loop__AutopilotLoop___format_previous_actions["_format_previous_actions"]
+        toonic__autopilot__loop__AutopilotLoop___emit["_emit"]
+        toonic__autopilot__executor__ActionExecutor____init__["__init__"]
+        toonic__autopilot__executor__ActionExecutor__execute("execute CC=11")
+        toonic__autopilot__executor__ActionExecutor___execute_code_change{{_execute_code_change CC=27}}
+        toonic__autopilot__executor__ActionExecutor___execute_delete["_execute_delete"]
+        toonic__autopilot__executor__ActionExecutor___execute_tests["_execute_tests"]
+        toonic__autopilot__executor__ActionExecutor___resolve_path["_resolve_path"]
+        toonic__autopilot__executor__ActionExecutor___write_file["_write_file"]
+        toonic__autopilot__executor__ActionExecutor___extract_code["_extract_code"]
+        toonic__autopilot__executor__ActionExecutor___extract_file_blocks["_extract_file_blocks"]
+        toonic__autopilot__executor__ActionExecutor__get_history["get_history"]
+        toonic__autopilot__scaffold___python_project["_python_project"]
+        toonic__autopilot__scaffold___node_project["_node_project"]
+        toonic__autopilot__scaffold__ProjectScaffold__detect_spec{{detect_spec CC=23}}
+        toonic__autopilot__scaffold__ProjectScaffold__generate{{generate CC=20}}
+        toonic__autopilot__scaffold__ProjectScaffold__init["init"]
+    end
+    subgraph toonic__cli
+        toonic__cli___cmd_spec["_cmd_spec"]
+        toonic__cli___cmd_reproduce["_cmd_reproduce"]
+        toonic__cli___cmd_formats["_cmd_formats"]
+        toonic__cli___cmd_init["_cmd_init"]
+        toonic__cli___cmd_examples_list["_cmd_examples_list"]
+        toonic__cli___cmd_examples_verify["_cmd_examples_verify"]
+        toonic__cli___cmd_examples_show["_cmd_examples_show"]
+        toonic__cli___cmd_examples_preset["_cmd_examples_preset"]
+        toonic__cli___cmd_examples_run_demo["_cmd_examples_run_demo"]
+        toonic__cli___cmd_examples["_cmd_examples"]
+        toonic__cli___event_printer("_event_printer CC=9")
+        toonic__cli___cmd_autopilot["_cmd_autopilot"]
+        toonic__cli___get_command_handler["_get_command_handler"]
+        toonic__cli___build_argument_parser["_build_argument_parser"]
+        toonic__cli__cli_main["cli_main"]
+    end
+    subgraph toonic__core
+        toonic__core__base__BaseHandlerMixin___compute_hash["_compute_hash"]
+        toonic__core__base__BaseHandlerMixin___read_content["_read_content"]
+        toonic__core__base__BaseHandlerMixin___format_toon_header["_format_toon_header"]
+        toonic__core__detector__SpecDetector__detect{{detect CC=23}}
+        toonic__core__detector__SpecDetector__detect_spec_format["detect_spec_format"]
+        toonic__core__registry__FormatRegistry__register["register"]
+        toonic__core__registry__FormatRegistry__resolve["resolve"]
+        toonic__core__registry__FormatRegistry__get_by_category["get_by_category"]
+        toonic__core__registry__FormatRegistry__available["available"]
+        toonic__core__registry__FormatRegistry__list_categories["list_categories"]
+        toonic__core__registry__FormatRegistry___check_deps["_check_deps"]
+        toonic__core__registry__FormatRegistry__reset["reset"]
+        toonic__core__protocols__FileLogic__to_dict["to_dict"]
+        toonic__core__protocols__FileLogic__complexity["complexity"]
+        toonic__core__protocols__FileHandler__parse["parse"]
+        toonic__core__protocols__FileHandler__to_spec["to_spec"]
+        toonic__core__protocols__FileHandler__reproduce["reproduce"]
+        toonic__core__protocols__FileHandler__sniff["sniff"]
+        toonic__core__models__CodeLogicBase__to_dict["to_dict"]
+        toonic__core__models__CodeLogicBase__complexity["complexity"]
+    end
+    subgraph toonic__formats
+        toonic__formats__initialize_all_handlers["initialize_all_handlers"]
+        toonic__formats__audio__AudioLogic__to_dict["to_dict"]
+        toonic__formats__audio__AudioLogic__complexity["complexity"]
+        toonic__formats__audio__MuLawCodec__compress["compress"]
+        toonic__formats__audio__MuLawCodec__decompress["decompress"]
+        toonic__formats__audio__TelephonyFilter__lowpass_3khz["lowpass_3khz"]
+        toonic__formats__audio__SpeechDetector____init__["__init__"]
+        toonic__formats__audio__SpeechDetector___get_vad["_get_vad"]
+        toonic__formats__audio__SpeechDetector__detect_speech_segments("detect_speech_segments CC=11")
+        toonic__formats__audio__AudioFileHandler__parse["parse"]
+        toonic__formats__audio__AudioFileHandler__to_spec["to_spec"]
+        toonic__formats__audio__AudioFileHandler___to_toon["_to_toon"]
+        toonic__formats__audio__AudioFileHandler__reproduce["reproduce"]
+        toonic__formats__audio__AudioFileHandler__sniff["sniff"]
+        toonic__formats__audio__register_audio_handlers["register_audio_handlers"]
+        toonic__formats__api__ApiLogic__to_dict["to_dict"]
+        toonic__formats__api__ApiLogic__complexity["complexity"]
+        toonic__formats__api__OpenApiHandler__parse["parse"]
+        toonic__formats__api__OpenApiHandler__to_spec["to_spec"]
+        toonic__formats__api__OpenApiHandler__reproduce["reproduce"]
+        toonic__formats__api__OpenApiHandler__sniff("sniff CC=9")
+        toonic__formats__api__register_api_handlers["register_api_handlers"]
+        toonic__formats__config__ConfigLogic__to_dict["to_dict"]
+        toonic__formats__config__ConfigLogic__complexity["complexity"]
+        toonic__formats__config__DockerfileHandler__parse["parse"]
+        toonic__formats__config__DockerfileHandler__to_spec["to_spec"]
+        toonic__formats__config__DockerfileHandler__reproduce["reproduce"]
+        toonic__formats__config__DockerfileHandler__sniff["sniff"]
+        toonic__formats__config__EnvHandler__parse["parse"]
+        toonic__formats__config__EnvHandler___infer_type["_infer_type"]
+        toonic__formats__config__EnvHandler___categorize("_categorize CC=9")
+        toonic__formats__config__EnvHandler__to_spec["to_spec"]
+        toonic__formats__config__EnvHandler__reproduce["reproduce"]
+        toonic__formats__config__EnvHandler__sniff("sniff CC=8")
+        toonic__formats__config__register_config_handlers["register_config_handlers"]
+        toonic__formats__infra__InfraLogic__to_dict["to_dict"]
+        toonic__formats__infra__InfraLogic__complexity["complexity"]
+        toonic__formats__infra__KubernetesHandler__parse("parse CC=9")
+        toonic__formats__infra__KubernetesHandler__to_spec["to_spec"]
+        toonic__formats__infra__KubernetesHandler__reproduce["reproduce"]
+        toonic__formats__infra__KubernetesHandler__sniff["sniff"]
+        toonic__formats__infra__GithubActionsHandler__parse("parse CC=8")
+        toonic__formats__infra__GithubActionsHandler__to_spec["to_spec"]
+        toonic__formats__infra__GithubActionsHandler__reproduce["reproduce"]
+        toonic__formats__infra__GithubActionsHandler__sniff["sniff"]
+        toonic__formats__infra__register_infra_handlers["register_infra_handlers"]
+        toonic__formats__database__SqlSchemaLogic__to_dict["to_dict"]
+        toonic__formats__database__SqlSchemaLogic__complexity["complexity"]
+        toonic__formats__database__SqlHandler__parse["parse"]
+        toonic__formats__database__SqlHandler___extract_tables["_extract_tables"]
+        toonic__formats__database__SqlHandler___extract_columns{{_extract_columns CC=15}}
+        toonic__formats__database__SqlHandler__to_spec["to_spec"]
+        toonic__formats__database__SqlHandler___to_toon("_to_toon CC=8")
+        toonic__formats__database__SqlHandler__reproduce("reproduce CC=8")
+        toonic__formats__database__SqlHandler__sniff["sniff"]
+        toonic__formats__database__register_database_handlers["register_database_handlers"]
+        toonic__formats__video__VideoLogic__to_dict["to_dict"]
+        toonic__formats__video__VideoLogic__complexity["complexity"]
+        toonic__formats__video__LowQRTSPExtractor____init__["__init__"]
+        toonic__formats__video__LowQRTSPExtractor__start["start"]
+    end
+    subgraph toonic__pipeline
+        toonic__pipeline__Pipeline___ensure_initialized["_ensure_initialized"]
+        toonic__pipeline__Pipeline__to_spec["to_spec"]
+        toonic__pipeline__Pipeline__reproduce["reproduce"]
+        toonic__pipeline__Pipeline__roundtrip["roundtrip"]
+        toonic__pipeline__Pipeline__batch("batch CC=10")
+        toonic__pipeline__Pipeline__formats["formats"]
+    end
+    subgraph toonic__server
+        toonic__server____main____check_port_occupied["check_port_occupied"]
+        toonic__server____main____stop_process_using_port("stop_process_using_port CC=8")
+        toonic__server____main____ensure_port_available["ensure_port_available"]
+        toonic__server____main____parse_args["parse_args"]
+        toonic__server____main____parse_source_string["parse_source_string"]
+        toonic__server____main_____build_server_config("_build_server_config CC=9")
+        toonic__server____main_____build_trigger_config("_build_trigger_config CC=8")
+        toonic__server____main_____run_no_web_mode["_run_no_web_mode"]
+        toonic__server____main_____run_web_mode["_run_web_mode"]
+        toonic__server____main____run_server["run_server"]
+        toonic__server____main____main["main"]
+        toonic__server__client__ToonicClient____init__["__init__"]
+        toonic__server__client__ToonicClient__get_status["get_status"]
+        toonic__server__client__ToonicClient__get_actions["get_actions"]
+        toonic__server__client__ToonicClient__get_formats["get_formats"]
+        toonic__server__client__ToonicClient__analyze["analyze"]
+        toonic__server__client__ToonicClient__add_source["add_source"]
+        toonic__server__client__ToonicClient__convert["convert"]
+        toonic__server__client__ToonicClient__get_history["get_history"]
+        toonic__server__client__ToonicClient__get_history_stats["get_history_stats"]
+        toonic__server__client__ToonicClient__nlp_query["nlp_query"]
+        toonic__server__client__ToonicClient__sql_query["sql_query"]
+        toonic__server__client__ToonicClient___get["_get"]
+        toonic__server__client__ToonicClient___post["_post"]
+        toonic__server__client___print_help["_print_help"]
+        toonic__server__client___print_status["_print_status"]
+        toonic__server__client___print_actions["_print_actions"]
+        toonic__server__client___print_formats["_print_formats"]
+        toonic__server__client___cmd_analyze["_cmd_analyze"]
+        toonic__server__client___cmd_add["_cmd_add"]
+        toonic__server__client___cmd_convert["_cmd_convert"]
+        toonic__server__client___cmd_model["_cmd_model"]
+        toonic__server__client___print_history["_print_history"]
+        toonic__server__client___print_history_stats["_print_history_stats"]
+        toonic__server__client___cmd_query["_cmd_query"]
+        toonic__server__client___cmd_sql["_cmd_sql"]
+        toonic__server__client___get_command_handler["_get_command_handler"]
+        toonic__server__client___should_exit["_should_exit"]
+        toonic__server__client___execute_command("_execute_command CC=11")
+        toonic__server__client__run_shell["run_shell"]
+        toonic__server__client__main["main"]
+        toonic__server__transport__broxeen_bridge__register_broxeen_routes["register_broxeen_routes"]
+        toonic__server__transport__app___load_template["_load_template"]
+        toonic__server__transport__app__create_app["create_app"]
+        toonic__server__main__ToonicServer____init__["__init__"]
+        toonic__server__main__ToonicServer__start["start"]
+        toonic__server__main__ToonicServer__stop["stop"]
+        toonic__server__main__ToonicServer__add_source["add_source"]
+        toonic__server__main__ToonicServer__remove_source["remove_source"]
+        toonic__server__main__ToonicServer___consume_watcher("_consume_watcher CC=9")
+        toonic__server__main__ToonicServer___on_trigger_fired["_on_trigger_fired"]
+        toonic__server__main__ToonicServer___analysis_loop["_analysis_loop"]
+        toonic__server__main__ToonicServer___one_shot["_one_shot"]
+        toonic__server__main__ToonicServer___run_analysis("_run_analysis CC=11")
+        toonic__server__main__ToonicServer__analyze_now["analyze_now"]
+        toonic__server__main__ToonicServer__on_event["on_event"]
+        toonic__server__main__ToonicServer__remove_listener["remove_listener"]
+        toonic__server__main__ToonicServer___emit_event["_emit_event"]
+        toonic__server__main__ToonicServer__get_status["get_status"]
+        toonic__server__main__ToonicServer__get_event_log["get_event_log"]
+    end
+    subgraph unified_toon
+        unified_toon__create_unified_toon["create_unified_toon"]
+        unified_toon__create_unified_spec["create_unified_spec"]
+        unified_toon__main["main"]
+    end
+    examples__run_all___example_env --> examples__run_all___repo_root
+    examples__run_all___run_py --> examples__run_all___example_env
+    examples__run_all___run_py --> examples__run_all___repo_root
+    examples__run_all__verify_config_builds --> toonic__server__quick__runtime__watch
+    examples__run_all__verify_demos --> examples__run_all___run_py
+    examples__run_all__verify_all --> examples__run_all__verify_imports
+    examples__run_all__verify_all --> examples__run_all__verify_presets
+    examples__run_all__verify_all --> examples__run_all__verify_config_builds
+    examples__run_all__verify_all --> examples__run_all__verify_demos
+    examples__run_all__main --> examples__run_all__list_examples
+    examples__run_all__main --> examples__run_all__show_example
+    examples__run_all__main --> examples__run_all__execute_all
+    examples__archive_monitoring__run__main --> examples___helpers__print_config_summary
+    examples__archive_monitoring__run__main --> examples___helpers__print_to_run_hint
+    examples__archive_monitoring__run__main --> toonic__server__quick__archive__watch_archive
+    examples__security_audit__quick_audit__audit_code --> toonic__server__quick__presets__security_audit
+    examples__security_audit__quick_audit__audit_website --> toonic__server__quick__presets__security_audit
+    examples__security_audit__quick_audit__continuous_monitoring --> toonic__server__quick__presets__security_audit
+    examples__security_audit__quick_audit__full_stack_audit --> toonic__server__quick__presets__security_audit
+    examples__security_audit__quick_audit__demo --> examples__security_audit__quick_audit__audit_code
+    examples__security_audit__quick_audit__demo --> examples__security_audit__quick_audit__audit_website
+    examples__security_audit__quick_audit__demo --> examples__security_audit__quick_audit__continuous_monitoring
+    examples__security_audit__generate_report__main --> examples__security_audit__generate_report__load_exchanges
+    examples__security_audit__generate_report__main --> examples__security_audit__generate_report__load_history
+    examples__security_audit__generate_report__main --> examples__security_audit__generate_report__generate_markdown_report
+    examples__log_monitoring__generate_logs__generate_line --> examples__log_monitoring__generate_logs___fill
+    examples__log_monitoring__generate_logs__run_normal --> examples__log_monitoring__generate_logs__generate_line
+    examples__log_monitoring__generate_logs__run_error_spike --> examples__log_monitoring__generate_logs__generate_line
+    examples__log_monitoring__generate_logs__run_mixed --> examples__log_monitoring__generate_logs__generate_line
+    examples__log_monitoring__generate_logs__main --> examples__log_monitoring__generate_logs__run_normal
+    examples__log_monitoring__generate_logs__main --> examples__log_monitoring__generate_logs__run_error_spike
+    examples__log_monitoring__generate_logs__main --> examples__log_monitoring__generate_logs__run_mixed
+    toonic__cli___cmd_examples_list --> examples__run_all__list_examples
+    toonic__cli___cmd_examples_verify --> examples__run_all__verify_all
+    toonic__cli___cmd_examples_show --> examples__run_all__show_example
+    toonic__cli___cmd_examples --> toonic__cli___cmd_examples_list
+    toonic__cli___cmd_examples --> toonic__cli___cmd_examples_verify
+    toonic__cli___cmd_examples --> toonic__cli___cmd_examples_show
+    toonic__cli___cmd_examples --> toonic__cli___cmd_examples_preset
+    toonic__cli___cmd_examples --> toonic__cli___cmd_examples_run_demo
+    toonic__cli__cli_main --> toonic__cli___build_argument_parser
+    toonic__cli__cli_main --> toonic__cli___get_command_handler
+    examples__programmatic_api__demo_quick__demo_parse_source --> toonic__server__quick__parsing__parse_source
+    examples__programmatic_api__demo_quick__demo_watch --> toonic__server__quick__runtime__watch
+    examples__programmatic_api__demo_quick__main --> examples__programmatic_api__demo_quick__demo_parse_source
+    examples__programmatic_api__demo_quick__main --> examples__programmatic_api__demo_quick__demo_config_builder
+    examples__programmatic_api__demo_quick__main --> examples__programmatic_api__demo_quick__demo_watch
+    examples__programmatic_api__demo_quick__main --> examples__programmatic_api__demo_quick__demo_options
+    examples__programmatic_api__demo_pipeline__demo_prompt_selection --> toonic__server__llm__prompts__select_prompt_builder
+    examples__programmatic_api__demo_pipeline__main --> examples__programmatic_api__demo_pipeline__demo_prompt_selection
+    examples__programmatic_api__demo_pipeline__main --> examples__programmatic_api__demo_pipeline__demo_prompt_building
+    examples__programmatic_api__demo_pipeline__main --> examples__programmatic_api__demo_pipeline__demo_response_parser
+    examples__programmatic_api__demo_pipeline__main --> examples__programmatic_api__demo_pipeline__demo_pipeline
+    toonic__formats__initialize_all_handlers --> toonic__formats__document__register_document_handlers
+    toonic__formats__initialize_all_handlers --> toonic__formats__data__register_data_handlers
+    toonic__formats__initialize_all_handlers --> toonic__formats__config__register_config_handlers
+    toonic__formats__initialize_all_handlers --> toonic__formats__database__register_database_handlers
+    toonic__formats__initialize_all_handlers --> toonic__formats__api__register_api_handlers
+    toonic__formats__initialize_all_handlers --> toonic__formats__infra__register_infra_handlers
+    toonic__formats__initialize_all_handlers --> toonic__formats__evidence__register_evidence_handlers
+    toonic__formats__initialize_all_handlers --> toonic__formats__video__register_video_handlers
+    toonic__formats__initialize_all_handlers --> toonic__formats__audio__register_audio_handlers
+    examples__protocol_recipes__run__main --> toonic__server__quick__runtime__watch
+    unified_toon__create_unified_toon --> unified_toon__create_unified_spec
+    unified_toon__main --> unified_toon__create_unified_toon
+    toonic__server____main____ensure_port_available --> toonic__server____main____check_port_occupied
+    toonic__server____main____ensure_port_available --> toonic__server____main____stop_process_using_port
+    toonic__server____main_____build_server_config --> toonic__server____main____parse_source_string
+    toonic__server____main_____build_trigger_config --> toonic__server__triggers__dsl__load_triggers
+    toonic__server____main_____build_trigger_config --> toonic__server__triggers__dsl__dump_triggers
+    toonic__server____main_____run_web_mode --> toonic__server____main____ensure_port_available
+    toonic__server____main_____run_web_mode --> toonic__server__transport__app__create_app
+    toonic__server____main____run_server --> toonic__server____main_____build_server_config
+    toonic__server____main____run_server --> toonic__server____main_____build_trigger_config
+    toonic__server____main____run_server --> toonic__server____main_____run_no_web_mode
+    toonic__server____main____run_server --> toonic__server____main_____run_web_mode
+    toonic__server____main____main --> toonic__server____main____parse_args
+    toonic__server____main____main --> toonic__server____main____run_server
+    toonic__server__client___execute_command --> toonic__server__client___should_exit
+    toonic__server__client___execute_command --> toonic__server__client___get_command_handler
+    toonic__server__client___execute_command --> toonic__server__client___cmd_model
+    toonic__server__client__run_shell --> toonic__server__client___execute_command
+    toonic__server__client__main --> toonic__server__client__run_shell
+    toonic__pipeline__Pipeline___ensure_initialized --> toonic__formats__initialize_all_handlers
+    toonic__server__transport__routes__sources__list_sources --> toonic__server__transport__routes__sources___get_server
+    toonic__server__transport__routes__sources__add_source --> toonic__server__transport__routes__sources___get_server
+    toonic__server__transport__routes__sources__remove_source --> toonic__server__transport__routes__sources___get_server
+    toonic__server__transport__routes__history__get_history --> toonic__server__transport__routes__history___get_server
+    toonic__server__transport__routes__history__get_history_stats --> toonic__server__transport__routes__history___get_server
+    toonic__server__transport__routes__history__nlp_query --> toonic__server__transport__routes__history___get_server
+    toonic__server__transport__routes__history__sql_query --> toonic__server__transport__routes__history___get_server
+    toonic__server__watchers__log_watcher__LogWatcher___initial_tail --> toonic__server__watchers__log_watcher___detect_max_severity
+    toonic__server__watchers__log_watcher__LogWatcher___check_new_lines --> toonic__server__watchers__log_watcher___detect_max_severity
+    toonic__server__watchers__stream__events__check_event_and_emit --> toonic__server__watchers__stream__events___select_event_frames
+    toonic__server__watchers__stream__events__check_event_and_emit --> toonic__server__watchers__stream__events___extract_roi_crops
+    toonic__server__transport__routes__api__get_status --> toonic__server__transport__routes__api___get_server
+    toonic__server__transport__routes__api__get_actions --> toonic__server__transport__routes__api___get_server
+    toonic__server__transport__routes__api__analyze_now --> toonic__server__transport__routes__api___get_server
+    toonic__server__transport__routes__api__get_events --> toonic__server__transport__routes__api___get_server
+    toonic__server__transport__routes__api__get_triggers --> toonic__server__transport__routes__api___get_server
+    toonic__server__transport__routes__api__get_data_dir --> toonic__server__transport__routes__api___get_server
+    toonic__server__transport__routes__api__get_events_file --> toonic__server__transport__routes__api___get_server
+    toonic__server__transport__routes__api__get_exchanges --> toonic__server__transport__routes__api___get_server
+    toonic__server__quick__runtime__monitor --> toonic__server__quick__runtime__serve
+    toonic__server__quick__runtime__monitor --> toonic__server__quick__runtime__watch
+    toonic__server__quick__runtime__serve --> toonic__server__transport__app__create_app
+    toonic__server__quick__runtime__serve --> toonic__server__quick__runtime___serve_web
+    toonic__server__quick__runtime__serve --> toonic__server__quick__runtime___serve_headless
+    toonic__server__quick__runtime__run --> toonic__server__quick__runtime__monitor
+    toonic__server__quick__presets__security_audit --> toonic__server__quick__presets___apply_overrides
+    toonic__server__quick__presets__security_audit --> toonic__server__quick__runtime__watch
+    toonic__server__quick__presets__code_review --> toonic__server__quick__presets___apply_overrides
+    toonic__server__quick__presets__code_review --> toonic__server__quick__runtime__watch
+    toonic__server__quick__presets__log_monitor --> toonic__server__quick__presets___apply_overrides
+    toonic__server__quick__presets__log_monitor --> toonic__server__quick__runtime__watch
+    toonic__server__quick__presets__infra_health --> toonic__server__quick__presets___apply_overrides
+    toonic__server__quick__presets__infra_health --> toonic__server__quick__runtime__watch
+    toonic__server__quick__presets__cctv_monitor --> toonic__server__quick__presets___apply_overrides
+    toonic__server__quick__presets__cctv_monitor --> toonic__server__quick__runtime__watch
+    toonic__server__quick__presets__web_monitor --> toonic__server__quick__presets___apply_overrides
+    toonic__server__quick__presets__full_stack --> toonic__server__quick__presets___apply_overrides
+    toonic__server__quick__presets__full_stack --> toonic__server__quick__runtime__watch
+    toonic__server__watchers__stream__watcher__StreamWatcher____init__ --> toonic__server__watchers__stream__watcher___bool
+    toonic__server__watchers__stream__watcher__StreamWatcher___capture_loop --> toonic__server__watchers__stream__capture__capture_opencv
+    toonic__server__watchers__stream__watcher__StreamWatcher___capture_loop --> toonic__server__watchers__stream__capture__capture_mock
+    toonic__server__watchers__stream__capture__capture_opencv --> toonic__server__watchers__stream__detection__init_yolo
+    toonic__server__quick__parsing___detect_category_from_path --> toonic__server__quick__parsing___is_archive_suffix
+    toonic__server__quick__parsing__parse_source --> toonic__server__quick__parsing___detect_category_from_path
+    toonic__server__quick__parsing__parse_source --> toonic__server__quick__parsing___parse_protocol_url
+    toonic__server__quick__parsing__parse_source --> toonic__server__quick__parsing___parse_prefixed_source
+    toonic__server__quick__builder__ConfigBuilder__add --> toonic__server__quick__parsing__parse_source
+    toonic__server__quick__builder__ConfigBuilder__build --> toonic__server__triggers__dsl__load_triggers
+    toonic__server__quick__builder__ConfigBuilder__run --> toonic__server__quick__runtime__serve
+    toonic__server__quick__archive__unpack_archive --> toonic__server__quick__archive___is_zip_file
+    toonic__server__quick__archive__unpack_archive --> toonic__server__quick__archive___is_tar_file
+    toonic__server__quick__archive__unpack_archive --> toonic__server__quick__archive___extract_zip
+    toonic__server__quick__archive__unpack_archive --> toonic__server__quick__archive___extract_tar
+    toonic__server__quick__archive___collect_files_from_directory --> toonic__server__quick__archive___should_include_file
+    toonic__server__quick__archive__watch_archive --> toonic__server__quick__archive__unpack_archive
+    toonic__server__quick__archive__watch_archive --> toonic__server__quick__archive___collect_files_from_directory
+    toonic__server__quick__archive__watch_archive --> toonic__server__quick__runtime__watch
+    toonic__server__triggers__nlp2yaml__NLP2YAML__generate --> toonic__server__triggers__dsl__load_triggers
+    toonic__server__triggers__nlp2yaml__NLP2YAML__generate_yaml --> toonic__server__triggers__dsl__dump_triggers
+    toonic__server__llm__pipeline__LLMPipeline__execute --> toonic__server__llm__prompts__select_prompt_builder
+    toonic__server__triggers__scheduler__RuleState____init__ --> toonic__server__triggers__detectors__create_detectors
+    toonic__server__triggers__scheduler__TriggerScheduler__from_yaml --> toonic__server__triggers__dsl__load_triggers
+    toonic__server__triggers__detectors__create_detectors --> toonic__server__triggers__detectors__create_detector
+
+    classDef highCC fill:#ff6b6b,stroke:#c92a2a,color:#fff
+    classDef medCC fill:#ffd43b,stroke:#f08c00,color:#000
+    class examples__run_all__execute_all,toonic__core__detector__SpecDetector__detect,toonic__server__core__query__QueryAdapter___try_local_parse,toonic__server__watchers__network_watcher__NetworkWatcher___detect_changes,toonic__server__watchers__stream__events__check_event_and_emit,toonic__server__transport__routes__api__get_events_file,toonic__server__transport__routes__api__get_exchanges,toonic__server__watchers__database_watcher__DatabaseWatcher___detect_changes,toonic__server__watchers__stream__capture__capture_opencv,toonic__server__llm__parser__ResponseParser__parse_raw_to_dict,toonic__autopilot__prompts__AutopilotPrompt__build,toonic__server__watchers__directory_watcher__DirectoryWatcher___check_changes,toonic__formats__database__SqlHandler___extract_columns,toonic__autopilot__loop__AutopilotLoop__run,toonic__autopilot__executor__ActionExecutor___execute_code_change,toonic__server__triggers__scheduler__RuleState__evaluate,toonic__formats__data__CsvHandler__parse,toonic__autopilot__scaffold__ProjectScaffold__detect_spec,toonic__autopilot__scaffold__ProjectScaffold__generate highCC
+    class examples__run_all__verify_all,examples__run_all__main,examples__security_audit__enterprise_anomaly__AnomalyDetector__detect_anomalies,examples__security_audit__enterprise_compliance__ComplianceManager__generate_compliance_report,examples__security_audit__generate_report__generate_markdown_report,toonic__cli___event_printer,examples__security_audit__continuous_monitoring__SecurityMonitor__send_alert,examples__security_audit__continuous_monitoring__main,toonic__server____main____stop_process_using_port,toonic__server____main_____build_server_config,toonic__server____main_____build_trigger_config,toonic__server__client___execute_command,toonic__formats__audio__SpeechDetector__detect_speech_segments,toonic__formats__api__OpenApiHandler__sniff,toonic__server__main__ToonicServer___consume_watcher,toonic__server__main__ToonicServer___run_analysis,toonic__pipeline__Pipeline__batch,toonic__server__core__router__LLMRouter__query,toonic__server__core__query__QueryAdapter___generate_sql,toonic__server__core__history__ConversationHistory__recent,toonic__server__core__accumulator__ContextAccumulator__get_chunks,toonic__server__core__accumulator__ContextAccumulator___build_context,toonic__server__core__accumulator__ContextAccumulator___enforce_budget,toonic__server__watchers__base__WatcherRegistry__create,toonic__server__watchers__log_watcher__LogWatcher___to_toon,toonic__server__watchers__http_watcher__HttpWatcher___detect_changes,toonic__server__watchers__http_watcher__HttpWatcher___check_keywords,toonic__server__watchers__http_watcher__HttpWatcher___to_toon,toonic__server__watchers__file_watcher__FileWatcher___full_scan,toonic__server__watchers__file_watcher__FileWatcher___check_changes medCC

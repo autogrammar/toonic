@@ -100,3 +100,8 @@ htmlcov/
 .github/
 .ruff_cache/
 .taskill/
+
+# koru runtime artefacts (generated)
+.planfile/.koru/
+.koru/
+.planfile/sprints/*.bak-*

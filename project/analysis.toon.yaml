@@ -1,142 +1,316 @@
-# code2llm | 80f 14237L | python:80,shell:3 | 2026-04-19
-# CC̄=4.4 | critical:18/668 | dups:0 | cycles:0
+# code2llm | 158f 25637L | python:114,shell:21,yaml:15,yml:4,txt:1,toml:1 | 2026-09-08
+# generated in 0.08s
+# CC̅=4.1 | critical:19/693 | dups:0 | cycles:0
 
-HEALTH[18]:
-  🟡 CC    _try_local_parse CC=38 (limit:15)
-  🟡 CC    _execute_code_change CC=27 (limit:15)
+HEALTH[19]:
+  🟡 CC    execute_all CC=17 (limit:15)
   🟡 CC    detect CC=23 (limit:15)
-  🟡 CC    detect_spec CC=23 (limit:15)
-  🟡 CC    evaluate CC=21 (limit:15)
-  🟡 CC    generate CC=20 (limit:15)
-  🟡 CC    get_events_file CC=19 (limit:15)
-  🟡 CC    check_event_and_emit CC=19 (limit:15)
-  🟡 CC    _check_changes CC=18 (limit:15)
-  🟡 CC    _detect_changes CC=18 (limit:15)
-  🟡 CC    parse_raw_to_dict CC=18 (limit:15)
-  🟡 CC    run CC=18 (limit:15)
-  🟡 CC    parse CC=16 (limit:15)
-  🟡 CC    capture_opencv CC=16 (limit:15)
-  🟡 CC    _extract_columns CC=15 (limit:15)
-  🟡 CC    get_exchanges CC=15 (limit:15)
+  🟡 CC    _try_local_parse CC=38 (limit:15)
   🟡 CC    _detect_changes CC=15 (limit:15)
+  🟡 CC    check_event_and_emit CC=19 (limit:15)
+  🟡 CC    get_events_file CC=19 (limit:15)
+  🟡 CC    get_exchanges CC=15 (limit:15)
+  🟡 CC    _detect_changes CC=18 (limit:15)
+  🟡 CC    capture_opencv CC=16 (limit:15)
+  🟡 CC    parse_raw_to_dict CC=18 (limit:15)
   🟡 CC    build CC=15 (limit:15)
+  🟡 CC    _check_changes CC=18 (limit:15)
+  🟡 CC    _extract_columns CC=15 (limit:15)
+  🟡 CC    run CC=18 (limit:15)
+  🟡 CC    _execute_code_change CC=27 (limit:15)
+  🟡 CC    evaluate CC=21 (limit:15)
+  🟡 CC    parse CC=16 (limit:15)
+  🟡 CC    detect_spec CC=23 (limit:15)
+  🟡 CC    generate CC=20 (limit:15)
 
 REFACTOR[1]:
-  1. split 18 high-CC methods  (CC>15)
+  1. split 19 high-CC methods  (CC>15)
 
-PIPELINES[489]:
-  [1] Src [main]: main → watch
+PIPELINES[502]:
+  [1] Src [main]: main
       PURITY: 100% pure
-  [2] Src [main]: main → create_unified_toon → create_unified_spec
+  [2] Src [main]: main → list_examples
       PURITY: 100% pure
-  [3] Src [create_user]: create_user
+  [3] Src [main]: main
       PURITY: 100% pure
-  [4] Src [get_user]: get_user
+  [4] Src [__init__]: __init__
       PURITY: 100% pure
-  [5] Src [list_users]: list_users
+  [5] Src [fetch_threat_intelligence]: fetch_threat_intelligence
+      PURITY: 100% pure
+  [6] Src [_fetch_feed]: _fetch_feed
+      PURITY: 100% pure
+  [7] Src [check_indicators]: check_indicators
+      PURITY: 100% pure
+  [8] Src [main]: main → print_config_summary
+      PURITY: 100% pure
+  [9] Src [__init__]: __init__
+      PURITY: 100% pure
+  [10] Src [collect_baseline]: collect_baseline
+      PURITY: 100% pure
+  [11] Src [detect_anomalies]: detect_anomalies
+      PURITY: 100% pure
+  [12] Src [__init__]: __init__
+      PURITY: 100% pure
+  [13] Src [check_gdpr_compliance]: check_gdpr_compliance
+      PURITY: 100% pure
+  [14] Src [check_iso27001_compliance]: check_iso27001_compliance
+      PURITY: 100% pure
+  [15] Src [generate_compliance_report]: generate_compliance_report
+      PURITY: 100% pure
+  [16] Src [demo]: demo → audit_code → security_audit → _apply_overrides
+      PURITY: 100% pure
+  [17] Src [main]: main → load_exchanges
+      PURITY: 100% pure
+  [18] Src [main]: main → run_normal → generate_line → _fill
+      PURITY: 100% pure
+  [19] Src [_cmd_spec]: _cmd_spec
+      PURITY: 100% pure
+  [20] Src [_cmd_reproduce]: _cmd_reproduce
+      PURITY: 100% pure
+  [21] Src [_cmd_formats]: _cmd_formats
+      PURITY: 100% pure
+  [22] Src [_cmd_init]: _cmd_init
+      PURITY: 100% pure
+  [23] Src [_cmd_examples]: _cmd_examples → _cmd_examples_list → list_examples
+      PURITY: 100% pure
+  [24] Src [_event_printer]: _event_printer
+      PURITY: 100% pure
+  [25] Src [_cmd_autopilot]: _cmd_autopilot
+      PURITY: 100% pure
+  [26] Src [cli_main]: cli_main → _build_argument_parser
+      PURITY: 100% pure
+  [27] Src [_compute_hash]: _compute_hash
+      PURITY: 100% pure
+  [28] Src [_read_content]: _read_content
+      PURITY: 100% pure
+  [29] Src [_format_toon_header]: _format_toon_header
+      PURITY: 100% pure
+  [30] Src [detect]: detect
+      PURITY: 100% pure
+  [31] Src [detect_spec_format]: detect_spec_format
+      PURITY: 100% pure
+  [32] Src [main]: main → demo_parse_source → parse_source → _detect_category_from_path → ...(1 more)
+      PURITY: 100% pure
+  [33] Src [register]: register
+      PURITY: 100% pure
+  [34] Src [resolve]: resolve
+      PURITY: 100% pure
+  [35] Src [available]: available
+      PURITY: 100% pure
+  [36] Src [list_categories]: list_categories
+      PURITY: 100% pure
+  [37] Src [_check_deps]: _check_deps
+      PURITY: 100% pure
+  [38] Src [create_user]: create_user
+      PURITY: 100% pure
+  [39] Src [get_user]: get_user
+      PURITY: 100% pure
+  [40] Src [list_users]: list_users
+      PURITY: 100% pure
+  [41] Src [create_order]: create_order
+      PURITY: 100% pure
+  [42] Src [main]: main
+      PURITY: 100% pure
+  [43] Src [main]: main → demo_prompt_selection → select_prompt_builder
+      PURITY: 100% pure
+  [44] Src [main]: main → watch
+      PURITY: 100% pure
+  [45] Src [main]: main → create_unified_toon → create_unified_spec
+      PURITY: 100% pure
+  [46] Src [__init__]: __init__
+      PURITY: 100% pure
+  [47] Src [load_config]: load_config
+      PURITY: 100% pure
+  [48] Src [check_ssl_certificate]: check_ssl_certificate
+      PURITY: 100% pure
+  [49] Src [check_security_headers]: check_security_headers
+      PURITY: 100% pure
+  [50] Src [check_response_time]: check_response_time
       PURITY: 100% pure
 
 LAYERS:
-  toonic/                         CC̄=4.4    ←in:4  →out:20  !! split
-  │ !! scaffold                   580L  2C    5m  CC=23     ←1
-  │ client                     418L  1C   30m  CC=11     ←0
-  │ document                   404L  5C   22m  CC=9      ←1
-  │ !! database_watcher           387L  1C   11m  CC=18     ←0
-  │ !! network_watcher            386L  1C   13m  CC=15     ←0
-  │ process_watcher            386L  1C   16m  CC=14     ←0
-  │ main                       381L  1C   21m  CC=11     ←0
-  │ http_watcher               358L  1C   17m  CC=11     ←0
-  │ !! loop                       356L  2C   10m  CC=18     ←0
-  │ __main__                   345L  0C   11m  CC=9      ←0
-  │ history                    344L  2C   14m  CC=8      ←0
-  │ !! data                       343L  5C   18m  CC=16     ←1
-  │ !! directory_watcher          337L  1C   12m  CC=18     ←0
-  │ nlp2yaml                   336L  1C   13m  CC=13     ←0
-  │ audio                      335L  6C   14m  CC=11     ←1
-  │ detectors                  333L  9C   17m  CC=14     ←1
-  │ video                      329L  6C   17m  CC=8      ←1
-  │ broxeen_bridge             322L  0C    1m  CC=1      ←1
-  │ docker_watcher             297L  1C   12m  CC=14     ←0
-  │ cli                        295L  0C   15m  CC=9      ←0
-  │ evidence                   292L  4C   17m  CC=14     ←1
-  │ !! executor                   281L  2C   10m  CC=27     ←0
-  │ !! database                   258L  4C   10m  CC=15     ←1
-  │ pipeline                   244L  2C    6m  CC=10     ←4
-  │ infra                      238L  4C   11m  CC=9      ←1
-  │ config                     236L  4C   13m  CC=9      ←1
-  │ !! api                        236L  0C   12m  CC=19     ←1
-  │ !! query                      230L  1C    6m  CC=38     ←0
-  │ !! scheduler                  230L  3C   14m  CC=21     ←1
-  │ dsl                        228L  4C   11m  CC=13     ←3
-  │ !! events                     206L  0C    4m  CC=19     ←1
-  │ accumulator                201L  2C    8m  CC=11     ←0
-  │ !! capture                    198L  0C    3m  CC=16     ←1
-  │ log_watcher                188L  1C    9m  CC=12     ←0
-  │ presets                    180L  0C    8m  CC=3      ←1
-  │ router                     177L  2C    6m  CC=8      ←0
-  │ file_watcher               177L  1C   10m  CC=9      ←0
-  │ prompts                    177L  4C    5m  CC=11     ←2
-  │ config                     171L  3C    5m  CC=11     ←1
-  │ parsing                    169L  0C    5m  CC=8      ←1
-  │ api                        167L  3C    7m  CC=9      ←1
-  │ caller                     167L  1C    5m  CC=12     ←0
-  │ !! prompts                    163L  3C    3m  CC=15     ←0
-  │ watcher                    142L  1C    6m  CC=6      ←0
-  │ archive                    133L  0C    8m  CC=7      ←1
-  │ !! parser                     128L  1C    2m  CC=18     ←0
-  │ models                     127L  5C    5m  CC=4      ←0
-  │ runtime                    125L  0C    6m  CC=4      ←5
-  │ base                       124L  2C   10m  CC=10     ←1
-  │ __init__                   113L  0C    1m  CC=3      ←1
-  │ registry                   102L  1C    7m  CC=7      ←11
+  toonic/                         CC̄=4.3    ←in:0  →out:12  !! split
+  │ !! scaffold                   605L  2C    5m  CC=23     ←0
+  │ client                     441L  1C   30m  CC=11     ←0
+  │ document                   430L  5C   22m  CC=9      ←1
+  │ nlp2yaml                   415L  1C   13m  CC=13     ←0
+  │ !! network_watcher            409L  1C   13m  CC=15     ←0
+  │ __main__                   407L  0C   11m  CC=9      ←0
+  │ !! database_watcher           406L  1C   11m  CC=18     ←0
+  │ main                       404L  1C   21m  CC=11     ←0
+  │ process_watcher            394L  1C   16m  CC=14     ←0
+  │ !! data                       385L  5C   18m  CC=16     ←1
+  │ !! loop                       383L  2C   10m  CC=18     ←0
+  │ http_watcher               377L  1C   17m  CC=11     ←0
+  │ history                    365L  2C   14m  CC=8      ←0
+  │ !! directory_watcher          364L  1C   12m  CC=18     ←0
+  │ detectors                  358L  9C   17m  CC=14     ←1
+  │ audio                      356L  6C   14m  CC=11     ←1
+  │ broxeen_bridge             347L  0C    1m  CC=1      ←1
+  │ video                      345L  6C   17m  CC=8      ←1
+  │ cli                        328L  0C   15m  CC=9      ←0
+  │ docker_watcher             327L  1C   12m  CC=14     ←0
+  │ evidence                   315L  4C   17m  CC=14     ←1
+  │ !! executor                   303L  2C   10m  CC=27     ←0
+  │ !! database                   283L  4C   10m  CC=15     ←1
+  │ dsl                        273L  4C   11m  CC=13     ←4
+  │ infra                      271L  4C   11m  CC=9      ←1
+  │ !! query                      269L  1C    6m  CC=38     ←0
+  │ config                     266L  4C   13m  CC=9      ←1
+  │ pipeline                   253L  2C    6m  CC=10     ←0
+  │ accumulator                251L  2C    8m  CC=11     ←0
+  │ builder                    247L  1C   25m  CC=4      ←0
+  │ !! scheduler                  247L  3C   14m  CC=21     ←0
+  │ !! api                        242L  0C   12m  CC=19     ←0
+  │ parsing                    238L  0C    5m  CC=8      ←2
+  │ !! events                     227L  0C    4m  CC=19     ←1
+  │ !! capture                    215L  0C    3m  CC=16     ←1
+  │ file_watcher               205L  1C   10m  CC=9      ←0
+  │ log_watcher                201L  1C    9m  CC=12     ←0
+  │ config                     200L  3C    5m  CC=11     ←0
+  │ router                     199L  2C    6m  CC=8      ←0
+  │ prompts                    199L  4C    5m  CC=11     ←2
+  │ presets                    198L  0C    8m  CC=3      ←1
+  │ caller                     190L  1C    5m  CC=12     ←0
+  │ api                        182L  3C    7m  CC=9      ←1
+  │ !! prompts                    182L  3C    3m  CC=15     ←0
+  │ watcher                    146L  1C    6m  CC=6      ←0
+  │ __init__                   141L  0C    1m  CC=3      ←1
+  │ archive                    135L  0C    8m  CC=7      ←1
+  │ models                     134L  5C    5m  CC=4      ←0
+  │ !! parser                     131L  1C    2m  CC=18     ←0
+  │ base                       126L  2C   10m  CC=10     ←0
+  │ runtime                    125L  0C    6m  CC=4      ←6
+  │ registry                    99L  1C    7m  CC=7      ←0
+  │ detection                   96L  0C    3m  CC=8      ←1
   │ app                         91L  0C    2m  CC=2      ←2
-  │ detection                   85L  0C    3m  CC=8      ←1
-  │ protocols                   66L  2C    6m  CC=1      ←0
-  │ pipeline                    63L  1C    1m  CC=5      ←0
-  │ history                     60L  0C    6m  CC=2      ←1
-  │ !! detector                    52L  1C    2m  CC=23     ←1
-  │ sources                     50L  0C    5m  CC=2      ←1
+  │ protocols                   69L  2C    6m  CC=1      ←0
+  │ pipeline                    65L  1C    1m  CC=5      ←0
+  │ history                     60L  0C    6m  CC=2      ←0
+  │ !! detector                    54L  1C    2m  CC=23     ←0
+  │ sources                     49L  0C    5m  CC=2      ←0
+  │ websocket                   47L  0C    1m  CC=1      ←0
   │ __init__                    47L  0C    0m  CC=0.0    ←0
-  │ websocket                   42L  0C    1m  CC=1      ←1
   │ __init__                    42L  0C    0m  CC=0.0    ←0
+  │ models                      41L  1C    2m  CC=1      ←0
   │ __init__                    41L  0C    0m  CC=0.0    ←0
-  │ models                      40L  1C    2m  CC=1      ←0
-  │ base                        38L  1C    3m  CC=3      ←0
-  │ models                      27L  2C    0m  CC=0.0    ←0
+  │ base                        37L  1C    3m  CC=3      ←0
+  │ models                      30L  2C    0m  CC=0.0    ←0
+  │ __init__                    27L  0C    0m  CC=0.0    ←0
   │ __init__                    27L  0C    0m  CC=0.0    ←0
   │ __init__                    26L  0C    0m  CC=0.0    ←0
+  │ __init__                    26L  0C    0m  CC=0.0    ←0
   │ stream_watcher              22L  0C    0m  CC=0.0    ←0
-  │ __init__                    19L  0C    0m  CC=0.0    ←0
-  │ __init__                    18L  0C    0m  CC=0.0    ←0
-  │ __init__                    14L  0C    0m  CC=0.0    ←0
+  │ __init__                    15L  0C    0m  CC=0.0    ←0
   │ __init__                    13L  0C    0m  CC=0.0    ←0
   │ rest_api                    10L  0C    0m  CC=0.0    ←0
-  │ __main__                     5L  0C    0m  CC=0.0    ←0
+  │ __main__                     6L  0C    0m  CC=0.0    ←0
   │ __init__                     1L  0C    0m  CC=0.0    ←0
   │ __init__                     1L  0C    0m  CC=0.0    ←0
   │ __init__                     1L  0C    0m  CC=0.0    ←0
   │
   ./                              CC̄=4.0    ←in:0  →out:0
-  │ unified_toon               119L  0C    3m  CC=7      ←0
+  │ !! planfile.yaml             3217L  0C    0m  CC=0.0    ←0
+  │ goal.yaml                  428L  0C    0m  CC=0.0    ←0
+  │ Taskfile.yml               181L  0C    0m  CC=0.0    ←0
+  │ koru.yaml                  146L  0C    0m  CC=0.0    ←0
+  │ unified_toon               124L  0C    3m  CC=7      ←0
+  │ Makefile                   114L  0C    0m  CC=0.0    ←0
+  │ pyproject.toml              99L  0C    0m  CC=0.0    ←0
+  │ prefact.yaml                82L  0C    0m  CC=0.0    ←0
+  │ toonic-server.yaml          46L  0C    0m  CC=0.0    ←0
+  │ local.dev.txt               11L  0C    0m  CC=0.0    ←0
   │ project.sh                  11L  0C    0m  CC=0.0    ←0
+  │ pyqual.yaml                 10L  0C    0m  CC=0.0    ←0
+  │
+  examples/                       CC̄=3.0    ←in:5  →out:1
+  │ !! continuous_monitoring      575L  1C   16m  CC=11     ←0
+  │ !! run_all                    553L  0C   12m  CC=17     ←1
+  │ enterprise_config.yaml     423L  0C    0m  CC=0.0    ←0
+  │ QUICK_DEPLOYMENT.sh        384L  0C   18m  CC=0.0    ←0
+  │ enterprise_monitor         327L  1C   10m  CC=11     ←0
+  │ remediation_script.sh      305L  0C    4m  CC=0.0    ←0
+  │ generate_logs              200L  0C    6m  CC=7      ←0
+  │ generate_report            195L  0C    4m  CC=12     ←0
+  │ demo_pipeline              191L  0C    5m  CC=3      ←0
+  │ demo_accumulator           158L  0C    1m  CC=5      ←0
+  │ demo_quick                 156L  0C    5m  CC=3      ←0
+  │ quick_audit                148L  0C    5m  CC=5      ←0
+  │ monitoring_config.yaml     136L  0C    0m  CC=0.0    ←0
+  │ enterprise_compliance      119L  1C    4m  CC=10     ←0
+  │ example-triggers.yaml       85L  0C    0m  CC=0.0    ←0
+  │ enterprise_anomaly          83L  1C    3m  CC=11     ←0
+  │ main                        82L  2C   10m  CC=4      ←0
+  │ toonic-server.yaml          78L  0C    0m  CC=0.0    ←0
+  │ enterprise_threat_intel     76L  1C    4m  CC=5      ←0
+  │ example-triggers.yaml       74L  0C    0m  CC=0.0    ←0
+  │ enterprise_features         72L  0C    1m  CC=4      ←0
+  │ example-triggers.yaml       68L  0C    0m  CC=0.0    ←0
+  │ toonic-server.yaml          67L  0C    0m  CC=0.0    ←0
+  │ example-triggers.yaml       60L  0C    0m  CC=0.0    ←0
+  │ enterprise_types            57L  3C    0m  CC=0.0    ←0
+  │ toonic-server.yaml          52L  0C    0m  CC=0.0    ←0
+  │ run                         43L  0C    1m  CC=3      ←0
+  │ run                         40L  0C    1m  CC=2      ←0
+  │ INSTALL_REQUIREMENTS.sh     36L  0C    0m  CC=0.0    ←0
+  │ run                         33L  0C    0m  CC=0.0    ←0
+  │ run                         33L  0C    0m  CC=0.0    ←0
+  │ run                         27L  0C    0m  CC=0.0    ←0
+  │ run                         25L  0C    0m  CC=0.0    ←0
+  │ _helpers                    24L  0C    2m  CC=3      ←1
+  │ run                         23L  0C    0m  CC=0.0    ←0
+  │ run                         23L  0C    0m  CC=0.0    ←0
+  │ run                         22L  0C    0m  CC=0.0    ←0
+  │ run                         22L  0C    0m  CC=0.0    ←0
+  │ run                         20L  0C    0m  CC=0.0    ←0
+  │ run                         19L  0C    0m  CC=0.0    ←0
+  │ run                         19L  0C    0m  CC=0.0    ←0
+  │ run                         18L  0C    0m  CC=0.0    ←0
+  │ run                         18L  0C    0m  CC=0.0    ←0
+  │ run                         18L  0C    0m  CC=0.0    ←0
+  │ run                         18L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                  13L  0C    0m  CC=0.0    ←0
+  │ run                         12L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                  11L  0C    0m  CC=0.0    ←0
+  │ config                      11L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                  10L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                  10L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   9L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   9L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   9L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   9L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   9L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   8L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   8L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   8L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   8L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   7L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   7L  0C    0m  CC=0.0    ←0
+  │ run_cli.sh                   4L  0C    0m  CC=0.0    ←0
   │
   docker/                         CC̄=0.0    ←in:0  →out:0
   │ demo-autopilot.sh          126L  0C    0m  CC=0.0    ←0
+  │ docker-compose.yml         100L  0C    0m  CC=0.0    ←0
+  │ docker-compose.test.yml     36L  0C    0m  CC=0.0    ←0
+  │ docker-compose.autopilot.yml    35L  0C    0m  CC=0.0    ←0
+  │ Dockerfile                  21L  0C    0m  CC=0.0    ←0
   │
 
 COUPLING:
-                              toonic       toonic.core    toonic.formats     toonic.server  toonic.autopilot      unified_toon
-            toonic                ──                10                 9                ←3                 1                ←1  !! fan-out
-       toonic.core               ←10                ──                ←9                                                        hub
-    toonic.formats                ←9                 9                ──                                                        hub
-     toonic.server                 3                                                    ──                                    
-  toonic.autopilot                ←1                                                                      ──                  
-      unified_toon                 1                                                                                        ──
+                                                    toonic                toonic.server               toonic.formats                     examples    examples.programmatic-api      examples.security-audit  examples.archive-monitoring    examples.protocol-recipes
+                       toonic                           ──                                                         9                            3                                                                                                                      !! fan-out
+                toonic.server                                                        ──                                                        ←1                           ←4                           ←4                           ←1                           ←1  hub
+               toonic.formats                           ←9                                                        ──                                                                                                                                                   hub
+                     examples                           ←3                            1                                                        ──                                                                                     ←2                               hub
+    examples.programmatic-api                                                         4                                                                                     ──                                                                                       
+      examples.security-audit                                                         4                                                                                                                  ──                                                          
+  examples.archive-monitoring                                                         1                                                         2                                                                                     ──                             
+    examples.protocol-recipes                                                         1                                                                                                                                                                            ──
   CYCLES: none
-  HUB: toonic.core/ (fan-in=19)
   HUB: toonic.formats/ (fan-in=9)
-  SMELL: toonic.formats/ fan-out=9 → split needed
-  SMELL: toonic/ fan-out=20 → split needed
+  HUB: toonic.server/ (fan-in=11)
+  HUB: examples/ (fan-in=5)
+  SMELL: toonic/ fan-out=12 → split needed
 
 EXTERNAL:
   validation: run `vallm batch .` → validation.toon

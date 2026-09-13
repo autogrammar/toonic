@@ -1,0 +1,748 @@
+# toonic | 158f 25637L | yaml:15,txt:1,toml:1,shell:21,yml:4,python:114 | 2026-09-08
+# generated in 0.05s
+# producer: code2llm | artifact: map.toon.yaml | schema: 1
+# stats: 693 func | 0 cls | 158 mod | CC̄=4.1 | critical:19 | cycles:0
+# alerts[5]: fan-out register_broxeen_routes=44; CC QueryAdapter._try_local_parse=38; fan-out capture_opencv=28; CC ActionExecutor._execute_code_change=27; fan-out check_event_and_emit=27
+# hotspots[5]: register_broxeen_routes fan=44; capture_opencv fan=28; check_event_and_emit fan=27; AutopilotLoop.run fan=26; DatabaseWatcher._check_sqlite fan=24
+# evolution: CC̄ 4.4→4.1 (improved -0.3)
+# Keys: M=modules, D=details, i=imports, e=exports, c=classes, f=functions, m=methods
+M[158]:
+  Makefile,114
+  Taskfile.yml,181
+  docker/Dockerfile,21
+  docker/demo-autopilot.sh,126
+  docker/docker-compose.yml,100
+  docker/docker-compose.autopilot.yml,35
+  docker/docker-compose.test.yml,36
+  examples/_helpers.py,24
+  examples/archive-monitoring/run.py,40
+  examples/archive-monitoring/run_cli.sh,8
+  examples/code-analysis/run.py,19
+  examples/code-analysis/run_cli.sh,9
+  examples/code-analysis/sample-project/config.py,11
+  examples/code-analysis/sample-project/main.py,82
+  examples/data-formats/run.py,22
+  examples/data-formats/run_cli.sh,10
+  examples/db-archive-triage/run.py,33
+  examples/directory-watching/run.py,18
+  examples/directory-watching/run_cli.sh,9
+  examples/http-monitoring/run.py,18
+  examples/http-monitoring/run_cli.sh,8
+  examples/infra-monitoring/example-triggers.yaml,85
+  examples/infra-monitoring/run.py,18
+  examples/infra-monitoring/run_cli.sh,8
+  examples/infra-monitoring/toonic-server.yaml,67
+  examples/infra-triage/run.py,27
+  examples/log-monitoring/example-triggers.yaml,60
+  examples/log-monitoring/generate_logs.py,200
+  examples/log-monitoring/run.py,19
+  examples/log-monitoring/run_cli.sh,9
+  examples/multi-source/example-triggers.yaml,68
+  examples/multi-source/run.py,22
+  examples/multi-source/run_cli.sh,11
+  examples/multi-source/toonic-server.yaml,78
+  examples/programmatic-api/demo_accumulator.py,158
+  examples/programmatic-api/demo_pipeline.py,191
+  examples/programmatic-api/demo_quick.py,156
+  examples/programmatic-api/run_cli.sh,4
+  examples/protocol-recipes/run.py,43
+  examples/realtime-api/run.py,33
+  examples/run_all.py,553
+  examples/security-audit-code/run.py,12
+  examples/security-audit-code/run_cli.sh,9
+  examples/security-audit-continuous/run.py,23
+  examples/security-audit-continuous/run_cli.sh,10
+  examples/security-audit-fullstack/run.py,25
+  examples/security-audit-fullstack/run_cli.sh,13
+  examples/security-audit-web/run.py,20
+  examples/security-audit-web/run_cli.sh,8
+  examples/security-audit/INSTALL_REQUIREMENTS.sh,36
+  examples/security-audit/QUICK_DEPLOYMENT.sh,384
+  examples/security-audit/continuous_monitoring.py,575
+  examples/security-audit/enterprise_anomaly.py,83
+  examples/security-audit/enterprise_compliance.py,119
+  examples/security-audit/enterprise_config.yaml,423
+  examples/security-audit/enterprise_features.py,72
+  examples/security-audit/enterprise_monitor.py,327
+  examples/security-audit/enterprise_threat_intel.py,76
+  examples/security-audit/enterprise_types.py,57
+  examples/security-audit/generate_report.py,195
+  examples/security-audit/monitoring_config.yaml,136
+  examples/security-audit/quick_audit.py,148
+  examples/security-audit/remediation_script.sh,305
+  examples/security-audit/run_cli.sh,9
+  examples/video-captioning/run.py,23
+  examples/video-captioning/run_cli.sh,7
+  examples/video-monitoring/example-triggers.yaml,74
+  examples/video-monitoring/run.py,18
+  examples/video-monitoring/run_cli.sh,7
+  examples/video-monitoring/toonic-server.yaml,52
+  goal.yaml,428
+  koru.yaml,146
+  local.dev.txt,11
+  planfile.yaml,3217
+  prefact.yaml,82
+  project.sh,11
+  pyproject.toml,99
+  pyqual.yaml,10
+  toonic/__init__.py,42
+  toonic-server.yaml,46
+  toonic/__main__.py,6
+  toonic/autopilot/__init__.py,13
+  toonic/autopilot/executor.py,303
+  toonic/autopilot/loop.py,383
+  toonic/autopilot/prompts.py,182
+  toonic/autopilot/scaffold.py,605
+  toonic/cli.py,328
+  toonic/core/__init__.py,26
+  toonic/core/base.py,37
+  toonic/core/detector.py,54
+  toonic/core/models.py,41
+  toonic/core/protocols.py,69
+  toonic/core/registry.py,99
+  toonic/formats/__init__.py,141
+  toonic/formats/api.py,182
+  toonic/formats/audio.py,356
+  toonic/formats/config.py,266
+  toonic/formats/data.py,385
+  toonic/formats/database.py,283
+  toonic/formats/document.py,430
+  toonic/formats/evidence.py,315
+  toonic/formats/infra.py,271
+  toonic/formats/video.py,345
+  toonic/pipeline.py,253
+  toonic/server/__init__.py,41
+  toonic/server/__main__.py,407
+  toonic/server/client.py,441
+  toonic/server/config.py,200
+  toonic/server/core/__init__.py,1
+  toonic/server/core/accumulator.py,251
+  toonic/server/core/history.py,365
+  toonic/server/core/query.py,269
+  toonic/server/core/router.py,199
+  toonic/server/llm/__init__.py,27
+  toonic/server/llm/caller.py,190
+  toonic/server/llm/parser.py,131
+  toonic/server/llm/pipeline.py,65
+  toonic/server/llm/prompts.py,199
+  toonic/server/main.py,404
+  toonic/server/models.py,134
+  toonic/server/quick/__init__.py,47
+  toonic/server/quick/archive.py,135
+  toonic/server/quick/builder.py,247
+  toonic/server/quick/parsing.py,238
+  toonic/server/quick/presets.py,198
+  toonic/server/quick/runtime.py,125
+  toonic/server/transport/__init__.py,1
+  toonic/server/transport/app.py,91
+  toonic/server/transport/broxeen_bridge.py,347
+  toonic/server/transport/rest_api.py,10
+  toonic/server/transport/routes/__init__.py,1
+  toonic/server/transport/routes/api.py,242
+  toonic/server/transport/routes/history.py,60
+  toonic/server/transport/routes/sources.py,49
+  toonic/server/transport/routes/websocket.py,47
+  toonic/server/triggers/__init__.py,27
+  toonic/server/triggers/detectors.py,358
+  toonic/server/triggers/dsl.py,273
+  toonic/server/triggers/nlp2yaml.py,415
+  toonic/server/triggers/scheduler.py,247
+  toonic/server/watchers/__init__.py,26
+  toonic/server/watchers/base.py,126
+  toonic/server/watchers/database_watcher.py,406
+  toonic/server/watchers/directory_watcher.py,364
+  toonic/server/watchers/docker_watcher.py,327
+  toonic/server/watchers/file_watcher.py,205
+  toonic/server/watchers/http_watcher.py,377
+  toonic/server/watchers/log_watcher.py,201
+  toonic/server/watchers/network_watcher.py,409
+  toonic/server/watchers/process_watcher.py,394
+  toonic/server/watchers/stream/__init__.py,15
+  toonic/server/watchers/stream/capture.py,215
+  toonic/server/watchers/stream/detection.py,96
+  toonic/server/watchers/stream/events.py,227
+  toonic/server/watchers/stream/models.py,30
+  toonic/server/watchers/stream/watcher.py,146
+  toonic/server/watchers/stream_watcher.py,22
+  unified_toon.py,124
+D:
+  toonic/server/core/query.py:
+    e: QueryAdapter
+    QueryAdapter: __init__(1),nlp_query(2),sql_query(1),_execute_query(3),_try_local_parse(1),_generate_sql(2)  # Translates NLP queries to SQL and executes against history D...
+  toonic/autopilot/executor.py:
+    e: ExecutionResult,ActionExecutor
+    ExecutionResult:  # Result of executing an action...
+    ActionExecutor: __init__(4),execute(1),_execute_code_change(1),_execute_delete(1),_execute_tests(0),_resolve_path(1),_write_file(2),_extract_code(0),_extract_file_blocks(0),get_history(0)  # Executes LLM-generated actions on the project filesystem...
+  toonic/core/detector.py:
+    e: SpecDetector
+    SpecDetector: detect(0),detect_spec_format(0)  # Wykrywa typ logiki z nagłówka pliku spec (YAML/TOON/JSON).
+
+...
+  toonic/autopilot/scaffold.py:
+    e: ProjectSpec,ProjectScaffold,_python_project,_node_project
+    ProjectSpec:  # Parsed project specification...
+    ProjectScaffold: detect_spec(2),generate(1),init(4)  # Generate a full project scaffold from a description...
+    _python_project(spec;project_dir)
+    _node_project(spec;project_dir)
+  toonic/server/triggers/scheduler.py:
+    e: TriggerEvent,RuleState,TriggerScheduler
+    TriggerEvent: __post_init__(0),to_dict(0)  # Fired when a trigger rule decides to dispatch...
+    RuleState: __init__(1),evaluate(2),get_stats(0)  # Runtime state for a single trigger rule...
+    TriggerScheduler: __init__(1),on_trigger(1),evaluate(2),evaluate_async(2),add_rule(1),remove_rule(1),get_stats(0),from_yaml(1),default_periodic(2)  # Manages all trigger rules and evaluates incoming data agains...
+  toonic/server/watchers/stream/events.py:
+    e: check_event_and_emit,_select_event_frames,_extract_roi_crops,emit_heartbeat
+    check_event_and_emit(watcher;cv2;np)
+    _select_event_frames(watcher;frames)
+    _extract_roi_crops(watcher;cv2;frames)
+    emit_heartbeat(watcher;cv2;small;scene_score)
+  toonic/server/transport/routes/api.py:
+    e: set_server,_get_server,get_status,get_actions,analyze_now,get_events,get_triggers,get_data_dir,list_formats,convert_file,get_events_file,get_exchanges
+    set_server(server)
+    _get_server()
+    get_status()
+    get_actions(limit)
+    analyze_now(body)
+    get_events(limit;event_type)
+    get_triggers()
+    get_data_dir()
+    list_formats()
+    convert_file(body)
+    get_events_file(start;limit;event_type;q;max_bytes)
+    get_exchanges(start;limit;max_bytes)
+  toonic/server/watchers/database_watcher.py:
+    e: DatabaseWatcher
+    DatabaseWatcher(BaseWatcher): __init__(2),_detect_db_type(0),start(0),stop(0),_poll_loop(0),_check(0),_check_sqlite(1),_check_postgresql(1),_detect_changes(1),_to_toon(1),supports(1)  # Watches databases for schema changes, row count changes, and...
+  toonic/server/llm/parser.py:
+    e: ResponseParser
+    ResponseParser: parse(2),parse_raw_to_dict(1)  # Parses raw LLM response dict into ActionResponse...
+  toonic/server/watchers/directory_watcher.py:
+    e: DirectoryWatcher
+    DirectoryWatcher(BaseWatcher): __init__(2),start(0),stop(0),_initial_scan(0),_poll_loop(0),_check_changes(0),_take_snapshot(0),_walk(2),_build_tree_toon(1),_build_diff_toon(5),_human_size(0),supports(1)  # Watches directory trees for structural changes (new/deleted/...
+  toonic/autopilot/loop.py:
+    e: AutopilotConfig,AutopilotLoop
+    AutopilotConfig:  # Configuration for the autopilot loop...
+    AutopilotLoop: __init__(1),run(1),stop(0),_fix_loop(4),_scan_project(0),_read_roadmap(0),_update_roadmap(1),_is_roadmap_complete(0),_format_previous_actions(0),_emit(2)  # Main autonomous development loop...
+  examples/run_all.py:
+    e: _repo_root,_example_env,_run_py,verify_imports,verify_presets,verify_config_builds,verify_demos,verify_all,execute_all,list_examples,show_example,main
+    _repo_root()
+    _example_env()
+    _run_py(script)
+    verify_imports()
+    verify_presets()
+    verify_config_builds()
+    verify_demos()
+    verify_all()
+    execute_all()
+    list_examples()
+    show_example(name)
+    main()
+  toonic/server/watchers/stream/capture.py:
+    e: capture_opencv,_handle_basic_mode,capture_mock
+    capture_opencv(watcher)
+    _handle_basic_mode(watcher;cv2;small;gray;now;is_keyframe;scene_score;send_h)
+    capture_mock(watcher)
+  toonic/formats/data.py:
+    e: ColumnSpec,TableLogic,JsonSchemaLogic,CsvHandler,JsonDataHandler,register_data_handlers
+    ColumnSpec:  # Specyfikacja kolumny tabeli...
+    TableLogic: to_dict(0),complexity(0)  # Logika danych tabelarycznych — CSV, Excel, SQL wyniki...
+    JsonSchemaLogic: to_dict(0),complexity(0)  # Logika danych JSON — schemat i struktura...
+    CsvHandler(BaseHandlerMixin): parse(1),_infer_dtype(1),to_spec(2),_to_toon(1),_to_yaml(1),reproduce(3),sniff(2)  # Handler dla CSV/TSV...
+    JsonDataHandler(BaseHandlerMixin): parse(1),_compute_depth(2),_count_keys(1),to_spec(2),reproduce(3),sniff(2)  # Handler dla plików z danymi JSON (nie JSON Schema, nie packa...
+    register_data_handlers()
+  toonic/server/watchers/network_watcher.py:
+    e: NetworkWatcher
+    NetworkWatcher(BaseWatcher): __init__(2),start(0),stop(0),_poll_loop(0),_check(0),_check_target(1),_resolve_dns(1),_ping(1),_tcp_ping(1),_check_ports(2),_detect_changes(1),_to_toon(1),supports(1)  # Watches network endpoints for connectivity, latency, and DNS...
+  toonic/autopilot/prompts.py:
+    e: AutopilotPrompt,ScaffoldPrompt,FixPrompt
+    AutopilotPrompt: build(7)  # Prompt that instructs LLM to generate concrete file changes ...
+    ScaffoldPrompt: build(4)  # Prompt for initial project scaffolding from a description.
+
+...
+    FixPrompt: build(3)  # Prompt specifically for fixing test failures...
+  toonic/formats/database.py:
+    e: ColumnDef,TableDef,SqlSchemaLogic,SqlHandler,register_database_handlers
+    ColumnDef:  # Definicja kolumny tabeli SQL...
+    TableDef:  # Definicja tabeli SQL...
+    SqlSchemaLogic: to_dict(0),complexity(0)  # Logika schematu SQL — DDL, migracje, procedury...
+    SqlHandler(BaseHandlerMixin): parse(1),_extract_tables(1),_extract_columns(1),to_spec(2),_to_toon(1),reproduce(3),sniff(2)  # Handler dla SQL DDL/DML...
+    register_database_handlers()
+  toonic/server/watchers/process_watcher.py:
+    e: ProcessWatcher
+    ProcessWatcher(BaseWatcher): __init__(2),_parse_target(0),start(0),stop(0),_poll_loop(0),_check(0),_check_process_name(1),_check_pid(1),_check_port(1),_check_service(1),_check_health(1),_find_processes(1),_read_proc_info(1),_detect_changes(1),_to_toon(1),supports(1)  # Watches system processes, ports, and service health...
+  toonic/server/watchers/docker_watcher.py:
+    e: DockerWatcher
+    DockerWatcher(BaseWatcher): __init__(2),start(0),stop(0),_check_docker(0),_poll_loop(0),_check(0),_list_containers(0),_fetch_stats(1),_fetch_logs(1),_detect_changes(1),_to_toon(1),supports(1)  # Watches Docker containers for status changes, resource usage...
+  toonic/formats/evidence.py:
+    e: EvidenceNode,EvidenceGraph,EvidenceGraphBuilder,EvidenceGraphHandler,register_evidence_handlers
+    EvidenceNode:  # Pojedynczy węzeł dowodowy w Evidence Graph...
+    EvidenceGraph: to_dict(0),complexity(0)  # Multimodalny graf dowodowy — implementuje FileLogic Protocol...
+    EvidenceGraphBuilder: __init__(0),add_code_evidence(2),add_document_evidence(2),add_video_evidence(2),add_audio_evidence(2),add_database_evidence(2),add_test_evidence(2),build(1),_auto_link_relations(0)  # Buduje Evidence Graph z wielu źródeł...
+    EvidenceGraphHandler(BaseHandlerMixin): parse(1),to_spec(2),_to_toon(1),reproduce(3),sniff(2)  # Handler dla Evidence Graph...
+    register_evidence_handlers()
+  toonic/server/triggers/detectors.py:
+    e: DetectionResult,BaseDetector,MotionDetector,SceneChangeDetector,ObjectDetector,AudioLevelDetector,SpeechDetector,PatternDetector,AnomalyDetector,create_detector,create_detectors
+    DetectionResult: __post_init__(0),to_dict(0)  # Result of a single detection evaluation...
+    BaseDetector: __init__(1),evaluate(1),_check_duration(1),_check_count_window(0)  # Base class for event detectors...
+    MotionDetector(BaseDetector): evaluate(1)  # Detect motion based on frame difference score...
+    SceneChangeDetector(BaseDetector): evaluate(1)  # Detect significant scene changes...
+    ObjectDetector(BaseDetector): evaluate(1)  # Detect specific objects via frame analysis metadata.
+
+Uses L...
+    AudioLevelDetector(BaseDetector): evaluate(1)  # Detect audio level exceeding threshold...
+    SpeechDetector(BaseDetector): evaluate(1)  # Detect speech activity...
+    PatternDetector(BaseDetector): __init__(1),evaluate(1)  # Detect text patterns (regex) in log/text data...
+    AnomalyDetector(BaseDetector): __init__(1),evaluate(1)  # Detect anomalies — significant deviation from recent history...
+    create_detector(condition)
+    create_detectors(conditions)
+  toonic/server/triggers/nlp2yaml.py:
+    e: NLP2YAML
+    NLP2YAML: __init__(2),generate(3),generate_yaml(3),_try_local_parse(3),_parse_object_condition(2),_parse_motion_condition(2),_parse_scene_change_condition(1),_parse_pattern_condition(2),_parse_audio_conditions(3),_build_trigger_rule(7),_generate_via_llm(3),_extract_time(1),_extract_float(2)  # Converts natural language to YAML trigger configuration via ...
+  toonic/server/triggers/dsl.py:
+    e: EventCondition,FallbackConfig,TriggerRule,TriggerConfig,load_triggers,dump_triggers
+    EventCondition: to_dict(0),from_dict(1)  # Single event detection condition...
+    FallbackConfig: to_dict(0),from_dict(1)  # Fallback behavior when no events fire...
+    TriggerRule: to_dict(0),from_dict(1)  # Single trigger rule — when and how to send data to LLM...
+    TriggerConfig: to_dict(0),from_dict(1),get_rules_for_source(1)  # Top-level trigger configuration (multiple rules)...
+    load_triggers(yaml_str)
+    dump_triggers(config)
+  examples/security-audit/generate_report.py:
+    e: load_exchanges,load_history,generate_markdown_report,main
+    load_exchanges(data_dir)
+    load_history(data_dir)
+    generate_markdown_report(exchanges;history;goal)
+    main()
+  toonic/server/watchers/log_watcher.py:
+    e: LogWatcher,_detect_max_severity
+    LogWatcher(BaseWatcher): __init__(2),start(0),stop(0),_initial_tail(0),_tail_loop(0),_check_new_lines(0),_to_toon(3),supports(1)  # Tails log files and emits TOON-compressed log context...
+    _detect_max_severity(lines)
+  toonic/server/llm/caller.py:
+    e: LLMCaller
+    LLMCaller: __post_init__(0),select_model(2),_litellm_model_id(1),call(4),_mock_response(3)  # Calls LLM API with retry, timeout, and metrics...
+  examples/security-audit/enterprise_anomaly.py:
+    e: AnomalyDetector
+    AnomalyDetector: __init__(1),collect_baseline(1),detect_anomalies(1)  # ML-based anomaly detection for security events...
+  examples/security-audit/continuous_monitoring.py:
+    e: SecurityMonitor,main
+    SecurityMonitor: __init__(1),load_config(1),check_ssl_certificate(0),check_security_headers(0),check_response_time(0),check_content_changes(0),check_dependencies(0),run_all_checks(0),calculate_security_score(1),send_alert(1),send_email_alert(2),send_webhook_alert(2),save_monitoring_data(1),run_monitoring_cycle(0),start_daemon(0)  # Continuous security monitoring system...
+    main()
+  toonic/server/client.py:
+    e: ToonicClient,_print_help,_print_status,_print_actions,_print_formats,_cmd_analyze,_cmd_add,_cmd_convert,_cmd_model,_print_history,_print_history_stats,_cmd_query,_cmd_sql,_get_command_handler,_should_exit,_execute_command,run_shell,main
+    ToonicClient: __init__(1),get_status(0),get_actions(1),get_formats(0),analyze(2),add_source(2),convert(2),get_history(1),get_history_stats(0),nlp_query(1),sql_query(1),_get(1),_post(2)  # REST + WebSocket client for Toonic Server...
+    _print_help()
+    _print_status(client)
+    _print_actions(client;parts)
+    _print_formats(client)
+    _cmd_analyze(client;parts;current_model)
+    _cmd_add(client;parts)
+    _cmd_convert(client;parts)
+    _cmd_model(parts;current_model)
+    _print_history(client;parts)
+    _print_history_stats(client)
+    _cmd_query(client;parts)
+    _cmd_sql(client;line)
+    _get_command_handler(cmd)
+    _should_exit(cmd)
+    _execute_command(cmd;parts;line;client;current_model)
+    run_shell(base_url)
+    main()
+  toonic/formats/audio.py:
+    e: SpeechSegment,AudioLogic,MuLawCodec,TelephonyFilter,SpeechDetector,AudioFileHandler,register_audio_handlers
+    SpeechSegment:  # Pojedynczy segment wykrytej mowy...
+    AudioLogic: to_dict(0),complexity(0)  # Logika audio — implementuje FileLogic Protocol...
+    MuLawCodec: compress(0),decompress(0)  # μ-law kompresja/dekompresja — standard G.711 telephony...
+    TelephonyFilter: lowpass_3khz(1)  # Filtr dolnoprzepustowy 3kHz — pasmo telefoniczne ITU-T G.711...
+    SpeechDetector: __init__(2),_get_vad(0),detect_speech_segments(3)  # Voice Activity Detection z WebRTC VAD...
+    AudioFileHandler(BaseHandlerMixin): parse(1),to_spec(2),_to_toon(1),reproduce(3),sniff(2)  # Handler dla plików audio (.wav, .mp3, .flac, .ogg)...
+    register_audio_handlers()
+  toonic/server/main.py:
+    e: ToonicServer
+    ToonicServer: __init__(2),start(0),stop(0),add_source(1),remove_source(1),_consume_watcher(2),_on_trigger_fired(1),_analysis_loop(0),_one_shot(0),_run_analysis(1),analyze_now(2),on_event(1),remove_listener(1),_emit_event(2),get_status(0),get_event_log(2),get_actions(1),get_history(1),get_history_stats(0),nlp_query(1),sql_query(1)  # Main server — connects watchers → accumulator → LLM router →...
+  toonic/server/core/accumulator.py:
+    e: BudgetConfig,ContextAccumulator
+    BudgetConfig:  # Token budget configuration per category...
+    ContextAccumulator: __init__(3),update(1),get_context(2),get_chunks(2),_build_context(2),_enforce_budget(1),get_stats(0),clear(1)  # Manages context window for LLM — allocates token budget per ...
+  toonic/server/watchers/http_watcher.py:
+    e: HttpWatcher
+    HttpWatcher(BaseWatcher): __init__(2),start(0),stop(0),_poll_loop(0),_check_endpoint(0),_update_result_with_fetch(6),_detect_changes(4),_check_keywords(2),_check_ssl_and_update(1),_update_state(3),_handle_check_error(2),_update_history(1),_emit_if_needed(1),_fetch(0),_check_ssl_cert(0),_to_toon(1),supports(1)  # Watches HTTP/HTTPS endpoints for availability, content chang...
+  examples/security-audit/enterprise_monitor.py:
+    e: EnterpriseSecurityMonitor
+    EnterpriseSecurityMonitor: __init__(1),load_config(1),collect_metrics(0),analyze_security_headers(0),analyze_ssl_configuration(0),run_enterprise_analysis(0),_calculate_compliance_score(1),_calculate_security_score(2),_save_results(1),_generate_markdown_report(2)  # Enterprise-grade security monitoring system...
+  toonic/server/llm/prompts.py:
+    e: PromptBuilder,GenericPrompt,CodeAnalysisPrompt,CCTVEventPrompt,select_prompt_builder
+    PromptBuilder(Protocol): build(3)  # Builds prompt from context. Different implementations per us...
+    GenericPrompt: build(3)  # Default prompt — works for any data type...
+    CodeAnalysisPrompt: build(3)  # Prompt optimized for code analysis — understands TOON spec...
+    CCTVEventPrompt: build(3)  # Prompt for CCTV — enforces event analysis instead of scene d...
+    select_prompt_builder(goal;categories)
+  toonic/server/config.py:
+    e: ModelConfig,SourceConfig,ServerConfig,_load_dotenv
+    ModelConfig:  # LLM model configuration...
+    SourceConfig:  # Data source configuration...
+    ServerConfig: from_dict(1),from_yaml_file(1),from_env(0),to_dict(0)  # Main server configuration...
+    _load_dotenv()
+  examples/security-audit/enterprise_compliance.py:
+    e: ComplianceManager
+    ComplianceManager: __init__(1),check_gdpr_compliance(2),check_iso27001_compliance(2),generate_compliance_report(1)  # Compliance management and automation...
+  toonic/pipeline.py:
+    e: ReproductionResult,Pipeline
+    ReproductionResult:  # Wynik operacji reprodukcji...
+    Pipeline: _ensure_initialized(0),to_spec(2),reproduce(3),roundtrip(3),batch(3),formats(-1)  # Fasada nad całym przepływem parse ↔ reproduce.
+
+Trzy kierunk...
+  toonic/server/watchers/base.py:
+    e: BaseWatcher,WatcherRegistry
+    BaseWatcher: __init__(2),start(0),stop(0),get_chunks(0),emit(1),supports(1)  # Base class for all data source watchers...
+    WatcherRegistry: register(1),resolve(1),create(3),list_all(0)  # Registry of available watchers...
+  toonic/cli.py:
+    e: _cmd_spec,_cmd_reproduce,_cmd_formats,_cmd_init,_cmd_examples_list,_cmd_examples_verify,_cmd_examples_show,_cmd_examples_preset,_cmd_examples_run_demo,_cmd_examples,_event_printer,_cmd_autopilot,_get_command_handler,_build_argument_parser,cli_main
+    _cmd_spec(parsed)
+    _cmd_reproduce(parsed)
+    _cmd_formats(parsed)
+    _cmd_init(parsed)
+    _cmd_examples_list()
+    _cmd_examples_verify()
+    _cmd_examples_show(name)
+    _cmd_examples_preset(name;sources)
+    _cmd_examples_run_demo(script_name)
+    _cmd_examples(parsed)
+    _event_printer(event_type;data)
+    _cmd_autopilot(parsed)
+    _get_command_handler(cmd)
+    _build_argument_parser()
+    cli_main(args)
+  toonic/server/__main__.py:
+    e: check_port_occupied,stop_process_using_port,ensure_port_available,parse_args,parse_source_string,_build_server_config,_build_trigger_config,_run_no_web_mode,_run_web_mode,run_server,main
+    check_port_occupied(host;port)
+    stop_process_using_port(host;port)
+    ensure_port_available(host;port)
+    parse_args()
+    parse_source_string(source_str)
+    _build_server_config(args)
+    _build_trigger_config(args)
+    _run_no_web_mode(server;config)
+    _run_web_mode(server;config;args)
+    run_server(args)
+    main()
+  toonic/formats/api.py:
+    e: EndpointSpec,ApiLogic,OpenApiHandler,register_api_handlers
+    EndpointSpec:  # Specyfikacja endpointu API...
+    ApiLogic: to_dict(0),complexity(0)  # Logika API — OpenAPI, GraphQL...
+    OpenApiHandler(BaseHandlerMixin): parse(1),to_spec(2),reproduce(3),sniff(2)  # Handler dla OpenAPI/Swagger specs...
+    register_api_handlers()
+  toonic/server/watchers/file_watcher.py:
+    e: FileWatcher
+    FileWatcher(BaseWatcher): __init__(2),start(0),stop(0),_full_scan(0),_poll_loop(0),_check_changes(0),_convert_file(1),_detect_category(1),_should_skip(1),supports(1)  # Watches a directory for file changes, converts to TOON specs...
+  toonic/formats/config.py:
+    e: ConfigEntry,ConfigLogic,DockerfileHandler,EnvHandler,register_config_handlers
+    ConfigEntry:  # Pojedynczy wpis konfiguracyjny...
+    ConfigLogic: to_dict(0),complexity(0)  # Logika pliku konfiguracyjnego...
+    DockerfileHandler(BaseHandlerMixin): parse(1),to_spec(2),reproduce(3),sniff(2)  # Handler dla Dockerfile...
+    EnvHandler(BaseHandlerMixin): parse(1),_infer_type(1),_categorize(1),to_spec(2),reproduce(3),sniff(2)  # Handler dla plików .env...
+    register_config_handlers()
+  toonic/formats/infra.py:
+    e: InfraResource,InfraLogic,KubernetesHandler,GithubActionsHandler,register_infra_handlers
+    InfraResource:  # Zasób infrastrukturalny...
+    InfraLogic: to_dict(0),complexity(0)  # Logika infrastruktury — Kubernetes, Terraform, CI/CD...
+    KubernetesHandler(BaseHandlerMixin): parse(1),to_spec(2),reproduce(3),sniff(2)  # Handler dla manifestów Kubernetes...
+    GithubActionsHandler(BaseHandlerMixin): parse(1),to_spec(2),reproduce(3),sniff(2)  # Handler dla GitHub Actions workflow...
+    register_infra_handlers()
+  toonic/formats/document.py:
+    e: DocumentSection,DocumentLogic,MarkdownHandler,TextHandler,RstHandler,register_document_handlers
+    DocumentSection:  # Pojedyncza sekcja dokumentu...
+    DocumentLogic: to_dict(0),complexity(0)  # Logika dokumentu — implementuje FileLogic Protocol...
+    MarkdownHandler(BaseHandlerMixin): parse(1),_extract_sections(1),_summarize(2),to_spec(2),_to_toon(1),_to_yaml(1),reproduce(3),_reproduce_template(1),_chunk_by_sections(1),_get_chunk_prompt(2),sniff(2)  # Handler dla plików Markdown (.md, .markdown)...
+    TextHandler(BaseHandlerMixin): parse(1),to_spec(2),reproduce(3),sniff(2)  # Handler dla plików tekstowych (.txt)...
+    RstHandler(BaseHandlerMixin): parse(1),to_spec(2),reproduce(3),sniff(2)  # Handler dla reStructuredText (.rst)...
+    register_document_handlers()
+  toonic/server/core/router.py:
+    e: LLMRequest,LLMRouter
+    LLMRequest: __post_init__(0)  # Request to send to an LLM...
+    LLMRouter: __init__(2),query(1),_get_model_for_category(1),_record_exchange(6),get_stats(0)  # Routes LLM requests to appropriate models based on content c...
+  toonic/server/core/history.py:
+    e: ExchangeRecord,ConversationHistory
+    ExchangeRecord: __post_init__(0),to_dict(0)  # Single LLM exchange record...
+    ConversationHistory: __init__(2),_init_db(0),_conn(0),record(1),get(1),recent(6),search(4),execute_sql(2),stats(0),clear(1),_row_to_record(1),_parse_duration(0)  # SQLite-backed conversation history for all LLM exchanges...
+  toonic/server/watchers/stream/detection.py:
+    e: init_yolo,run_detection,_detect_sync
+    init_yolo(watcher)
+    run_detection(watcher;frame)
+    _detect_sync(watcher;frame)
+  toonic/server/quick/parsing.py:
+    e: _is_archive_suffix,_detect_category_from_path,_parse_protocol_url,_parse_prefixed_source,parse_source
+    _is_archive_suffix(suffixes)
+    _detect_category_from_path(source_str)
+    _parse_protocol_url(source_str)
+    _parse_prefixed_source(source_str)
+    parse_source(source)
+  toonic/formats/video.py:
+    e: KeyframeSpec,VideoSegment,VideoLogic,LowQRTSPExtractor,SceneDetector,VideoFileHandler,register_video_handlers
+    KeyframeSpec:  # Pojedynczy keyframe z video...
+    VideoSegment:  # Segment video — zgrupowane keyframes + audio...
+    VideoLogic: to_dict(0),complexity(0)  # Logika video — implementuje FileLogic Protocol...
+    LowQRTSPExtractor: __init__(4),start(0),stop(0),_capture_thread(3),get_sync_frame(0),get_all_recent(1)  # Pure OpenCV RTSP → low-quality keyframe buffer...
+    SceneDetector: __init__(1),is_scene_change(1),detect_from_file(2)  # Detekcja zmian scen — pixel diff bez AI...
+    VideoFileHandler(BaseHandlerMixin): parse(1),to_spec(2),_to_toon(1),reproduce(3),sniff(2)  # Handler dla plików video (.mp4, .avi, .mkv, .mov, .webm)...
+    register_video_handlers()
+  examples/log-monitoring/generate_logs.py:
+    e: _fill,generate_line,run_normal,run_error_spike,run_mixed,main
+    _fill(template)
+    generate_line(level)
+    run_normal(out;count;delay)
+    run_error_spike(out;count;delay)
+    run_mixed(out;duration;delay)
+    main()
+  toonic/core/registry.py:
+    e: FormatRegistry
+    FormatRegistry: register(1),resolve(2),get_by_category(1),available(0),list_categories(0),_check_deps(1),reset(0)  # Centralny rejestr handlerów z dwuetapowym rozwiązywaniem.
+
+R...
+  unified_toon.py:
+    e: create_unified_toon,create_unified_spec,main
+    create_unified_toon(source_dir;output_file;fmt)
+    create_unified_spec(files_data;source_dir)
+    main()
+  toonic/server/quick/archive.py:
+    e: _is_zip_file,_is_tar_file,_extract_zip,_extract_tar,unpack_archive,_should_include_file,_collect_files_from_directory,watch_archive
+    _is_zip_file(filename)
+    _is_tar_file(filename)
+    _extract_zip(archive_path;out_dir)
+    _extract_tar(archive_path;out_dir)
+    unpack_archive(archive_path;output_dir)
+    _should_include_file(p)
+    _collect_files_from_directory(root;max_files)
+    watch_archive(archive_path)
+  toonic/server/watchers/stream/watcher.py:
+    e: StreamWatcher,_bool
+    StreamWatcher(BaseWatcher): __init__(2),start(0),stop(0),_capture_loop(0),supports(1)  # Watches RTSP/HTTP streams with optional YOLO pre-detection.
+...
+    _bool(v)
+  examples/programmatic-api/demo_accumulator.py:
+    e: main
+    main()
+  examples/security-audit/enterprise_threat_intel.py:
+    e: ThreatIntelligenceManager
+    ThreatIntelligenceManager: __init__(1),fetch_threat_intelligence(0),_fetch_feed(2),check_indicators(2)  # Threat intelligence integration and analysis...
+  examples/security-audit/quick_audit.py:
+    e: audit_code,audit_website,continuous_monitoring,full_stack_audit,demo
+    audit_code(path)
+    audit_website(url)
+    continuous_monitoring(path;log)
+    full_stack_audit(code;logs;network;db)
+    demo()
+  toonic/server/llm/pipeline.py:
+    e: LLMPipeline
+    LLMPipeline: execute(4)  # Orchestrates the full LLM flow: prompt → model → call → pars...
+  examples/security-audit/enterprise_features.py:
+    e: main
+    main()
+  examples/code-analysis/sample-project/main.py:
+    e: UserService,OrderService,main
+    UserService: __init__(1),create_user(2),get_user(1),list_users(1),deactivate_user(1)  # Manages user operations...
+    OrderService: __init__(0),create_order(3),get_orders(1),process_payment(1)  # Manages orders — has intentional issues for analysis...
+    main()
+  toonic/server/quick/runtime.py:
+    e: watch,monitor,_serve_web,_serve_headless,serve,run
+    watch()
+    monitor()
+    _serve_web(app;server;host;port)
+    _serve_headless(server)
+    serve(server;web;host;port)
+    run()
+  toonic/server/quick/builder.py:
+    e: ConfigBuilder
+    ConfigBuilder: __init__(0),add(1),code(1),logs(1),video(1),docker(1),database(1),network(1),process(1),http(1),directory(1),goal(1),interval(1),model(1),port(1),host(1),tokens(2),when(1),triggers(1),no_web(0),no_history(0),log_level(1),build_config(0),build(0),run(0)  # Fluent builder for ServerConfig + ToonicServer.
+
+Usage:
+    ...
+  toonic/server/models.py:
+    e: SourceCategory,ContentType,ContextChunk,ActionResponse,ServerEvent
+    SourceCategory(str,Enum):
+    ContentType(str,Enum):  # Content type — allows Accumulator to make intelligent decisi...
+    ContextChunk: __post_init__(0),to_dict(0)  # Single chunk of context from a data source...
+    ActionResponse: to_dict(0)  # LLM response → action to execute...
+    ServerEvent: __post_init__(0),to_dict(0)  # Event emitted by the server to clients...
+  toonic/core/base.py:
+    e: BaseHandlerMixin
+    BaseHandlerMixin: _compute_hash(1),_read_content(2),_format_toon_header(2)  # Domyślne implementacje wspólne dla wielu handlerów.
+
+Handler...
+  examples/programmatic-api/demo_quick.py:
+    e: demo_parse_source,demo_config_builder,demo_watch,demo_options,main
+    demo_parse_source()
+    demo_config_builder()
+    demo_watch()
+    demo_options()
+    main()
+  examples/programmatic-api/demo_pipeline.py:
+    e: demo_prompt_selection,demo_prompt_building,demo_response_parser,demo_pipeline,main
+    demo_prompt_selection()
+    demo_prompt_building()
+    demo_response_parser()
+    demo_pipeline()
+    main()
+  toonic/formats/__init__.py:
+    e: initialize_all_handlers
+    initialize_all_handlers()
+  examples/protocol-recipes/run.py:
+    e: main
+    main()
+  examples/_helpers.py:
+    e: print_config_summary,print_to_run_hint
+    print_config_summary(cfg;title)
+    print_to_run_hint(preset_or_fn;example_args)
+  toonic/server/quick/presets.py:
+    e: _apply_overrides,security_audit,code_review,log_monitor,infra_health,cctv_monitor,web_monitor,full_stack
+    _apply_overrides(builder;overrides)
+    security_audit()
+    code_review()
+    log_monitor()
+    infra_health()
+    cctv_monitor()
+    web_monitor()
+    full_stack()
+  examples/archive-monitoring/run.py:
+    e: main
+    main()
+  toonic/server/transport/app.py:
+    e: _load_template,create_app
+    _load_template(name)
+    create_app(server)
+  toonic/server/transport/routes/sources.py:
+    e: set_server,_get_server,list_sources,add_source,remove_source
+    set_server(server)
+    _get_server()
+    list_sources()
+    add_source(body)
+    remove_source(source_id)
+  toonic/server/transport/routes/history.py:
+    e: set_server,_get_server,get_history,get_history_stats,nlp_query,sql_query
+    set_server(server)
+    _get_server()
+    get_history(limit;category;model;action_type)
+    get_history_stats()
+    nlp_query(body)
+    sql_query(body)
+  toonic/server/transport/broxeen_bridge.py:
+    e: register_broxeen_routes
+    register_broxeen_routes(app;server)
+  toonic/server/transport/routes/websocket.py:
+    e: register
+    register(app;server;ws_clients)
+  toonic/core/protocols.py:
+    e: FileLogic,FileHandler
+    FileLogic(Protocol): to_dict(0),complexity(0)  # Dane logiczne pliku — minimalny interfejs.
+
+Zastępuje potrze...
+    FileHandler(Protocol): parse(1),to_spec(2),reproduce(3),sniff(2)  # Jeden handler = jeden typ pliku. Trzy metody, nie trzy klasy...
+  toonic/core/models.py:
+    e: CodeLogicBase
+    CodeLogicBase: to_dict(0),complexity(0)  # Bazowy model logiki kodu — adaptacja istniejącego ProjectInf...
+  goal.yaml:
+  local.dev.txt:
+  Makefile:
+  toonic-server.yaml:
+  planfile.yaml:
+  koru.yaml:
+  pyproject.toml:
+  pyqual.yaml:
+  project.sh:
+  prefact.yaml:
+  examples/infra-monitoring/run_cli.sh:
+  Taskfile.yml:
+  examples/code-analysis/run_cli.sh:
+  examples/video-monitoring/run_cli.sh:
+  examples/video-monitoring/example-triggers.yaml:
+  examples/video-monitoring/toonic-server.yaml:
+  examples/programmatic-api/run_cli.sh:
+  examples/infra-monitoring/example-triggers.yaml:
+  examples/http-monitoring/run_cli.sh:
+  examples/archive-monitoring/run_cli.sh:
+  examples/infra-monitoring/toonic-server.yaml:
+  examples/video-monitoring/run.py:
+  examples/security-audit/enterprise_config.yaml:
+  examples/security-audit/monitoring_config.yaml:
+  examples/security-audit/INSTALL_REQUIREMENTS.sh:
+  examples/security-audit/run_cli.sh:
+  examples/security-audit/remediation_script.sh:
+    e: print_status,print_warning,print_error,log_message
+    print_status()
+    print_warning()
+    print_error()
+    log_message()
+  examples/security-audit/QUICK_DEPLOYMENT.sh:
+    e: print_header,print_step,print_info,print_warning,print_error,check_requirements,create_directories,install_tools,setup_service_user,configure_monitoring,setup_nginx,setup_cron_jobs,setup_logrotate,create_management_scripts,run_initial_tests,start_services,print_summary,main
+    print_header()
+    print_step()
+    print_info()
+    print_warning()
+    print_error()
+    check_requirements()
+    create_directories()
+    install_tools()
+    setup_service_user()
+    configure_monitoring()
+    setup_nginx()
+    setup_cron_jobs()
+    setup_logrotate()
+    create_management_scripts()
+    run_initial_tests()
+    start_services()
+    print_summary()
+    main()
+  examples/code-analysis/run.py:
+  examples/http-monitoring/run.py:
+  examples/video-captioning/run_cli.sh:
+  examples/security-audit-continuous/run_cli.sh:
+  examples/video-captioning/run.py:
+  examples/log-monitoring/example-triggers.yaml:
+  examples/log-monitoring/run_cli.sh:
+  examples/security-audit-continuous/run.py:
+  examples/db-archive-triage/run.py:
+  examples/multi-source/run_cli.sh:
+  examples/multi-source/example-triggers.yaml:
+  examples/log-monitoring/run.py:
+  examples/security-audit-web/run_cli.sh:
+  examples/multi-source/toonic-server.yaml:
+  examples/security-audit-web/run.py:
+  examples/security-audit-code/run_cli.sh:
+  examples/realtime-api/run.py:
+  examples/security-audit-fullstack/run_cli.sh:
+  examples/data-formats/run_cli.sh:
+  examples/multi-source/run.py:
+  examples/directory-watching/run_cli.sh:
+  examples/security-audit-fullstack/run.py:
+  docker/docker-compose.test.yml:
+  docker/docker-compose.yml:
+  docker/demo-autopilot.sh:
+  examples/directory-watching/run.py:
+  docker/docker-compose.autopilot.yml:
+  docker/Dockerfile:
+  examples/security-audit-code/run.py:
+  toonic/__init__.py:
+  toonic/__main__.py:
+  examples/data-formats/run.py:
+  toonic/core/__init__.py:
+  examples/security-audit/enterprise_types.py:
+    e: SecurityEvent,ThreatIntelligence,ComplianceCheck
+    SecurityEvent:  # Security event data structure...
+    ThreatIntelligence:  # Threat intelligence data structure...
+    ComplianceCheck:  # Compliance check result...
+  examples/infra-triage/run.py:
+  examples/infra-monitoring/run.py:
+  examples/code-analysis/sample-project/config.py:
+  toonic/server/quick/__init__.py:
+  toonic/server/__init__.py:
+  toonic/server/transport/rest_api.py:
+  toonic/server/transport/__init__.py:
+  toonic/server/transport/routes/__init__.py:
+  toonic/server/core/__init__.py:
+  toonic/server/watchers/__init__.py:
+  toonic/server/watchers/stream_watcher.py:
+  toonic/server/watchers/stream/__init__.py:
+  toonic/server/watchers/stream/models.py:
+    e: Detection,FrameRecord
+    Detection:  # Single object detection from YOLO or similar...
+    FrameRecord:  # Buffered frame with optional detections...
+  toonic/server/triggers/__init__.py:
+  toonic/server/llm/__init__.py:
+  toonic/autopilot/__init__.py:

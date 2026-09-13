@@ -1,0 +1,44 @@
+flowchart TD
+%% generated in 0.02s
+
+    %% Entry points (blue)
+    classDef entry fill:#4dabf7,stroke:#1971c2,color:#fff
+
+    subgraph CLI
+        toonic__cli___cmd_spec["_cmd_spec"]
+        toonic__cli___cmd_reproduce["_cmd_reproduce"]
+        toonic__cli___cmd_formats["_cmd_formats"]
+        toonic__cli___cmd_init["_cmd_init"]
+        toonic__cli___cmd_examples_list["_cmd_examples_list"]
+        toonic__cli___cmd_examples_verify["_cmd_examples_verify"]
+        toonic__cli___cmd_examples_show["_cmd_examples_show"]
+        toonic__cli___cmd_examples_preset["_cmd_examples_preset"]
+        toonic__cli___cmd_examples_run_demo["_cmd_examples_run_demo"]
+        toonic__cli___cmd_examples["_cmd_examples"]
+        toonic__cli___event_printer["_event_printer"]
+        toonic__cli___cmd_autopilot["_cmd_autopilot"]
+        toonic__cli___get_command_handler["_get_command_handler"]
+        toonic__cli___build_argument_parser["_build_argument_parser"]
+        toonic__cli__cli_main["cli_main"]
+    end
+
+    subgraph Core
+        toonic__core__base__BaseHandlerMixin___compute_hash["_compute_hash"]
+        toonic__core__base__BaseHandlerMixin___read_content["_read_content"]
+        toonic__core__base__BaseHandlerMixin___format_toon_header["_format_toon_header"]
+        toonic__core__detector__SpecDetector__detect["detect"]
+        toonic__core__detector__SpecDetector__detect_spec_format["detect_spec_format"]
+        toonic__core__registry__FormatRegistry__register["register"]
+        toonic__core__registry__FormatRegistry__resolve["resolve"]
+        toonic__core__registry__FormatRegistry__get_by_category["get_by_category"]
+        toonic__core__registry__FormatRegistry__available["available"]
+        toonic__core__registry__FormatRegistry__list_categories["list_categories"]
+        toonic__core__registry__FormatRegistry___check_deps["_check_deps"]
+        toonic__core__registry__FormatRegistry__reset["reset"]
+        unified_toon__main["main"]
+        toonic__server____main____main["main"]
+        toonic__server__client__ToonicClient__get_status["get_status"]
+        ...["+461 more"]
+    end
+
+    class toonic__cli___cmd_spec,toonic__cli___cmd_reproduce,toonic__cli___cmd_formats,toonic__cli___cmd_init,toonic__cli___cmd_examples_list,toonic__cli___cmd_examples_verify,toonic__cli___cmd_examples_show,toonic__cli___cmd_examples_preset,toonic__cli___cmd_examples_run_demo,toonic__cli___cmd_examples entry
