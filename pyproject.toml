@@ -44,6 +44,7 @@ dev = ["pytest>=7.0", "pytest-asyncio>=0.23", "pytest-cov>=4.0", "pyyaml>=6.0", 
 toonic = "toonic.cli:cli_main"
 toonic-server = "toonic.server.__main__:main"
 toonic-client = "toonic.server.client:main"
+toonic-mcp = "toonic.mcp_server:main"
 
 [project.urls]
 Homepage = "https://github.com/wronai/toonic"
