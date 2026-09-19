@@ -56,7 +56,7 @@ include = ["toonic*"]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
-addopts = "-v --tb=short"
+addopts = "-p wellmanifest_governance -v --tb=short"
 
 [tool.costs]
 # AI Cost tracking configuration
@@ -80,3 +80,8 @@ dev = [
     "pyyaml>=6.0.3",
 ]
 automation = ["goal>=2.2.0"]
+
+[tool.wellmanifest]
+standard = "0.20.35"
+revision = "cfaa0bf0ea6b0e7349fed0bb62b5ce15792d687d"
+gate = "project/governance-check.sh"
