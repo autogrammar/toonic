@@ -298,6 +298,11 @@ def _build_argument_parser() -> Any:
 
 
 def cli_main(args: List[str] | None = None) -> None:
+    try:
+        from .autoupdate import check_for_updates
+        check_for_updates("toonic")
+    except Exception:
+        pass
     """Uproszczony CLI — dwa główne polecenia.
 
     toonic spec <source> [--fmt toon] [-o output]
