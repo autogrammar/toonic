@@ -2,8 +2,8 @@
 
 - **ID**: ticket-001
 - **Owner**: antigravity
-- **Status**: IN_PROGRESS
-- **Workflow state**: EDIT
+- **Status**: PLAN
+- **Workflow state**: PLAN
 - **Created**: 2026-09-19
 
 ## Goal and scope

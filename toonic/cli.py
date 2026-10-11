@@ -307,6 +307,11 @@ def cli_main(args: List[str] | None = None) -> None:
     toonic autopilot [DIR] [--goal GOAL] [--max-iter N]
     toonic examples [--list] [--verify] [--preset NAME] [SOURCES...]
     """
+    try:
+        from .autoupdate import check_for_updates
+        check_for_updates("toonic")
+    except Exception:
+        pass
     parser = _build_argument_parser()
     parsed = parser.parse_args(args)
 
