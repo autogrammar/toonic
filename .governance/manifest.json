@@ -41,7 +41,8 @@
           "lib/**",
           "packages/**",
           "test/**",
-          "tests/**"
+          "tests/**",
+          "toonic/**"
         ]
       },
       "governance": {
@@ -109,7 +110,10 @@
           "events/**",
           "error/**",
           "models/**",
-          "proto/**"
+          "proto/**",
+          "toonic/**",
+          "tests/**",
+          ".governance/manifest.json"
         ]
       },
       "interfaces": {
