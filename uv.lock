@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.10"
 resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'win32'",
@@ -1090,7 +1090,7 @@ wheels = [
 
 [[package]]
 name = "goal"
-version = "2.2.0"
+version = "2.2.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -1100,9 +1100,9 @@ dependencies = [
     { name = "tomlkit" },
     { name = "typer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c7/9c/135e3f67a7324c3c49ef4246f5518b59ad90226e62c3d30ae20cba005c1d/goal-2.2.0.tar.gz", hash = "sha256:e9e2c1ac9493dae3b887b16d503f7c1f83d02ddcbdd3c5cf58d44a458bb2662f", size = 399786, upload-time = "2026-09-05T19:41:55.329Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/63/8c/3957e25ed3a5b146eba9666e9088ef685326a26871c31a579bcb7e28a7c3/goal-2.2.1.tar.gz", hash = "sha256:259f9f8e797c388d75907a067db461d9a4595ed110da2e11db08227201eb625c", size = 448495, upload-time = "2026-10-18T14:49:25.222Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/24/69/8a4cf5710683bb777f1f6e4cd44dd3907befe97b94c6ea6e97d4305b4e44/goal-2.2.0-py3-none-any.whl", hash = "sha256:0d8f93aa317ac92a66b64b797e210a5d66044ce8db2cb05b012b03d42aced95e", size = 349709, upload-time = "2026-09-05T19:41:53.615Z" },
+    { url = "https://files.pythonhosted.org/packages/55/ba/66cb12c9b0fb329e27725de9c361feccd3a098da5bae6180ef69e18edc7f/goal-2.2.1-py3-none-any.whl", hash = "sha256:a687dee26c3c86b5be8fb52bc897726b06647eeb8462382c1b8c604feb08752e", size = 375128, upload-time = "2026-10-18T14:49:22.07Z" },
 ]
 
 [[package]]
@@ -3808,6 +3808,9 @@ dev = [
     { name = "httpx" },
     { name = "pyyaml" },
 ]
+
+[package.group-requires-python]
+automation = ">=3.12"
 
 [package.metadata]
 requires-dist = [
